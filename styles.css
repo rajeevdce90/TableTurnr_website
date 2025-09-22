@@ -3630,6 +3630,401 @@ p {
     }
 }
 
+/* Industry Solutions Section */
+.industry-solutions {
+    padding: 100px 0;
+    background: white;
+}
+
+.solutions-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.solutions-header h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.solutions-header .section-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.solutions-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.solution-tab-button {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 140px;
+    position: relative;
+}
+
+.solution-tab-button:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.solution-tab-button.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.25);
+}
+
+.tab-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.solution-tab-button span {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.solutions-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.solution-content {
+    display: none;
+    animation: fadeInContent 0.5s ease-in-out;
+}
+
+.solution-content.active {
+    display: block;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.solution-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.solution-text h3 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.solution-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.solution-benefits {
+    margin-bottom: 2.5rem;
+}
+
+.benefit-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+}
+
+.benefit-point i {
+    color: #10b981;
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.benefit-point span {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.solution-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+    min-width: 120px;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 2rem;
+    color: #667eea;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.stat-item span {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.solution-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution-mockup {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    max-width: 400px;
+}
+
+.solution-mockup:hover {
+    transform: translateY(-8px);
+}
+
+.solution-mockup img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.solutions-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.solutions-cta .btn {
+    margin-bottom: 1rem;
+}
+
+.solutions-note {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Responsive Industry Solutions */
+@media (max-width: 1024px) {
+    .solution-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .solution-visual {
+        order: -1;
+    }
+
+    .solution-stats {
+        justify-content: center;
+    }
+
+    .solutions-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .solution-text h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .industry-solutions {
+        padding: 80px 0;
+    }
+
+    .solutions-header {
+        margin-bottom: 3rem;
+    }
+
+    .solutions-header h2 {
+        font-size: 2rem;
+    }
+
+    .solutions-header .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .solutions-tabs {
+        gap: 0.75rem;
+        margin-bottom: 3rem;
+    }
+
+    .solution-tab-button {
+        padding: 1rem 1.5rem;
+        min-width: 120px;
+    }
+
+    .tab-icon {
+        font-size: 1.5rem;
+    }
+
+    .solution-tab-button span {
+        font-size: 0.85rem;
+    }
+
+    .solution-layout {
+        gap: 2rem;
+    }
+
+    .solution-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .solution-description {
+        font-size: 1rem;
+    }
+
+    .benefit-point {
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 0;
+    }
+
+    .benefit-point span {
+        font-size: 0.9rem;
+    }
+
+    .solution-stats {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .stat-item {
+        padding: 1rem;
+        min-width: 100px;
+        max-width: 200px;
+    }
+
+    .stat-item strong {
+        font-size: 1.5rem;
+    }
+
+    .stat-item span {
+        font-size: 0.85rem;
+    }
+
+    .solution-mockup {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .industry-solutions {
+        padding: 60px 0;
+    }
+
+    .solutions-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .solutions-header .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .solutions-tabs {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    .solution-tab-button {
+        padding: 0.75rem 1rem;
+        min-width: auto;
+    }
+
+    .tab-icon {
+        font-size: 1.25rem;
+    }
+
+    .solution-tab-button span {
+        font-size: 0.8rem;
+    }
+
+    .solution-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .solution-description {
+        font-size: 0.95rem;
+    }
+
+    .benefit-point {
+        gap: 0.75rem;
+    }
+
+    .benefit-point span {
+        font-size: 0.85rem;
+    }
+
+    .solution-stats {
+        gap: 0.75rem;
+    }
+
+    .stat-item {
+        padding: 0.75rem;
+    }
+
+    .stat-item strong {
+        font-size: 1.25rem;
+    }
+
+    .stat-item span {
+        font-size: 0.8rem;
+    }
+
+    .solution-mockup {
+        padding: 1rem;
+        max-width: 280px;
+    }
+
+    .solutions-cta {
+        margin-top: 3rem;
+    }
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;

@@ -257,6 +257,29 @@ if (roiSection) {
     roiObserver.observe(roiSection);
 }
 
+// Industry Solutions Tab Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const solutionTabs = document.querySelectorAll('.solution-tab-button');
+    const solutionContents = document.querySelectorAll('.solution-content');
+
+    solutionTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetSolution = this.getAttribute('data-solution');
+
+            // Remove active class from all tabs and contents
+            solutionTabs.forEach(btn => btn.classList.remove('active'));
+            solutionContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(targetSolution);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+});
+
 // Add loading states to buttons
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', function() {
