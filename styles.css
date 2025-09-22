@@ -3208,6 +3208,428 @@ p {
     }
 }
 
+/* Social Proof Section */
+.social-proof {
+    padding: 60px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.social-proof-content {
+    text-align: center;
+}
+
+.social-proof-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.logos-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    mask: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.logo-scroll {
+    display: flex;
+    align-items: center;
+    animation: scroll-logos 30s linear infinite;
+    gap: 4rem;
+    width: calc(200% + 4rem);
+}
+
+.logo-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.logo-placeholder {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-placeholder:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+}
+
+.logo-placeholder span {
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.logos-container:hover .logo-scroll {
+    animation-play-state: paused;
+}
+
+/* Responsive Social Proof */
+@media (max-width: 768px) {
+    .social-proof {
+        padding: 40px 0;
+    }
+
+    .social-proof-title {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .logo-scroll {
+        gap: 2rem;
+    }
+
+    .logo-item {
+        min-width: 140px;
+    }
+
+    .logo-placeholder {
+        padding: 1rem 1.5rem;
+        min-height: 60px;
+    }
+
+    .logo-placeholder span {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-proof-title {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .logo-scroll {
+        gap: 1.5rem;
+    }
+
+    .logo-item {
+        min-width: 120px;
+    }
+
+    .logo-placeholder {
+        padding: 0.75rem 1rem;
+        min-height: 50px;
+    }
+
+    .logo-placeholder span {
+        font-size: 0.8rem;
+    }
+}
+
+/* ROI Benefits Section */
+.roi-benefits {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.roi-benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)" /></svg>');
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.roi-benefits-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.roi-benefits h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.roi-benefits .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.benefit-card:hover::before {
+    opacity: 1;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.benefit-card.primary {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.benefit-card.primary:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.benefit-icon {
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.benefit-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    line-height: 1;
+}
+
+.benefit-card.primary .benefit-number {
+    font-size: 4rem;
+}
+
+.benefit-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-description {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.roi-cta {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.roi-cta .btn {
+    margin-bottom: 1rem;
+    background: white;
+    color: #667eea;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.roi-cta .btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.roi-guarantee {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive ROI Benefits */
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .roi-benefits h2 {
+        font-size: 2.5rem;
+    }
+
+    .benefit-card.primary {
+        transform: none;
+    }
+
+    .benefit-card.primary:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .roi-benefits {
+        padding: 80px 0;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .roi-benefits h2 {
+        font-size: 2rem;
+    }
+
+    .roi-benefits .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .benefit-number {
+        font-size: 3rem;
+    }
+
+    .benefit-card.primary .benefit-number {
+        font-size: 3.5rem;
+    }
+
+    .benefit-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-label {
+        font-size: 1.1rem;
+    }
+
+    .benefit-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roi-benefits {
+        padding: 60px 0;
+    }
+
+    .roi-benefits-header {
+        margin-bottom: 3rem;
+    }
+
+    .roi-benefits h2 {
+        font-size: 1.8rem;
+    }
+
+    .roi-benefits .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .benefit-number {
+        font-size: 2.5rem;
+    }
+
+    .benefit-card.primary .benefit-number {
+        font-size: 3rem;
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .benefit-label {
+        font-size: 1rem;
+    }
+
+    .benefit-description {
+        font-size: 0.85rem;
+    }
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;

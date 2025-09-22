@@ -205,6 +205,58 @@ document.querySelectorAll('.feature-card, .problem-item, .pricing-card').forEach
     observer.observe(el);
 });
 
+// Number Counter Animation for ROI Benefits
+function animateNumbers() {
+    const numbers = document.querySelectorAll('.benefit-number');
+
+    numbers.forEach(number => {
+        const target = parseInt(number.getAttribute('data-value'));
+        const increment = target / 100;
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+
+            // Format the number based on its value
+            if (target >= 1000) {
+                // For large numbers like 75000, add dollar sign and commas
+                if (number.textContent.includes('$')) {
+                    number.textContent = '$' + Math.floor(current).toLocaleString();
+                } else {
+                    number.textContent = Math.floor(current).toLocaleString();
+                }
+            } else if (number.textContent.includes('%')) {
+                // For percentages
+                number.textContent = Math.floor(current) + '%';
+            } else {
+                // For regular numbers
+                number.textContent = Math.floor(current);
+            }
+        }, 20);
+    });
+}
+
+// Observe ROI section for animation trigger
+const roiObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateNumbers();
+            roiObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+// Start observing the ROI section
+const roiSection = document.querySelector('.roi-benefits');
+if (roiSection) {
+    roiObserver.observe(roiSection);
+}
+
 // Add loading states to buttons
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', function() {
