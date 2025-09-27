@@ -257,38 +257,83 @@ if (roiSection) {
     roiObserver.observe(roiSection);
 }
 
-// Industry Solutions Tab Functionality
+// iOS App Demo Slideshow Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const solutionTabs = document.querySelectorAll('.solution-tab-button');
-    const solutionContents = document.querySelectorAll('.solution-content');
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+    const navDots = document.querySelectorAll('.nav-dot');
+    let currentSlide = 0;
+    let slideInterval;
 
-    solutionTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const targetSolution = this.getAttribute('data-solution');
-
-            // Remove active class from all tabs and contents
-            solutionTabs.forEach(btn => btn.classList.remove('active'));
-            solutionContents.forEach(content => content.classList.remove('active'));
-
-            // Add active class to clicked tab and corresponding content
-            this.classList.add('active');
-            const targetContent = document.getElementById(targetSolution);
-            if (targetContent) {
-                targetContent.classList.add('active');
+    function showSlide(index) {
+        // Remove active and prev classes from all items
+        screenshotItems.forEach((item, i) => {
+            item.classList.remove('active', 'prev');
+            if (i < index) {
+                item.classList.add('prev');
             }
         });
+
+        // Remove active class from all nav dots
+        navDots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and nav dot
+        if (screenshotItems[index]) {
+            screenshotItems[index].classList.add('active');
+        }
+        if (navDots[index]) {
+            navDots[index].classList.add('active');
+        }
+
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const next = (currentSlide + 1) % screenshotItems.length;
+        showSlide(next);
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5500); // Change slide every 5.5 seconds
+    }
+
+    function stopAutoSlide() {
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
+    }
+
+    // Add click functionality to nav dots
+    navDots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            stopAutoSlide();
+            showSlide(index);
+            startAutoSlide(); // Restart auto-slide after manual navigation
+        });
     });
+
+    // Initialize first slide
+    showSlide(0);
+
+    // Start auto-slideshow
+    startAutoSlide();
+
+    // Pause auto-slide when user hovers over the container
+    const container = document.querySelector('.app-screenshots-container');
+    if (container) {
+        container.addEventListener('mouseenter', stopAutoSlide);
+        container.addEventListener('mouseleave', startAutoSlide);
+    }
 });
 
-// Add loading states to buttons
-document.querySelectorAll('button').forEach(button => {
+// Add loading states to buttons (exclude solution tab buttons and nav dots)
+document.querySelectorAll('button:not(.solution-tab-button):not(.tab-button):not(.nav-dot)').forEach(button => {
     button.addEventListener('click', function() {
-        if (this.type !== 'submit') return;
-        
+        if (this.type !== 'submit' && !this.classList.contains('btn-primary')) return;
+
         const originalText = this.textContent;
         this.textContent = 'Loading...';
         this.disabled = true;
-        
+
         setTimeout(() => {
             this.textContent = originalText;
             this.disabled = false;
