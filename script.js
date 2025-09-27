@@ -205,15 +205,135 @@ document.querySelectorAll('.feature-card, .problem-item, .pricing-card').forEach
     observer.observe(el);
 });
 
-// Add loading states to buttons
-document.querySelectorAll('button').forEach(button => {
+// Number Counter Animation for ROI Benefits
+function animateNumbers() {
+    const numbers = document.querySelectorAll('.benefit-number');
+
+    numbers.forEach(number => {
+        const target = parseInt(number.getAttribute('data-value'));
+        const increment = target / 100;
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+
+            // Format the number based on its value
+            if (target >= 1000) {
+                // For large numbers like 75000, add dollar sign and commas
+                if (number.textContent.includes('$')) {
+                    number.textContent = '$' + Math.floor(current).toLocaleString();
+                } else {
+                    number.textContent = Math.floor(current).toLocaleString();
+                }
+            } else if (number.textContent.includes('%')) {
+                // For percentages
+                number.textContent = Math.floor(current) + '%';
+            } else {
+                // For regular numbers
+                number.textContent = Math.floor(current);
+            }
+        }, 20);
+    });
+}
+
+// Observe ROI section for animation trigger
+const roiObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateNumbers();
+            roiObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+// Start observing the ROI section
+const roiSection = document.querySelector('.roi-benefits');
+if (roiSection) {
+    roiObserver.observe(roiSection);
+}
+
+// iOS App Demo Slideshow Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+    const navDots = document.querySelectorAll('.nav-dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        // Remove active and prev classes from all items
+        screenshotItems.forEach((item, i) => {
+            item.classList.remove('active', 'prev');
+            if (i < index) {
+                item.classList.add('prev');
+            }
+        });
+
+        // Remove active class from all nav dots
+        navDots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and nav dot
+        if (screenshotItems[index]) {
+            screenshotItems[index].classList.add('active');
+        }
+        if (navDots[index]) {
+            navDots[index].classList.add('active');
+        }
+
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const next = (currentSlide + 1) % screenshotItems.length;
+        showSlide(next);
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5500); // Change slide every 5.5 seconds
+    }
+
+    function stopAutoSlide() {
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
+    }
+
+    // Add click functionality to nav dots
+    navDots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            stopAutoSlide();
+            showSlide(index);
+            startAutoSlide(); // Restart auto-slide after manual navigation
+        });
+    });
+
+    // Initialize first slide
+    showSlide(0);
+
+    // Start auto-slideshow
+    startAutoSlide();
+
+    // Pause auto-slide when user hovers over the container
+    const container = document.querySelector('.app-screenshots-container');
+    if (container) {
+        container.addEventListener('mouseenter', stopAutoSlide);
+        container.addEventListener('mouseleave', startAutoSlide);
+    }
+});
+
+// Add loading states to buttons (exclude solution tab buttons and nav dots)
+document.querySelectorAll('button:not(.solution-tab-button):not(.tab-button):not(.nav-dot)').forEach(button => {
     button.addEventListener('click', function() {
-        if (this.type !== 'submit') return;
-        
+        if (this.type !== 'submit' && !this.classList.contains('btn-primary')) return;
+
         const originalText = this.textContent;
         this.textContent = 'Loading...';
         this.disabled = true;
-        
+
         setTimeout(() => {
             this.textContent = originalText;
             this.disabled = false;
