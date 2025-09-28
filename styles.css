@@ -4326,7 +4326,7 @@ p {
         grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
         margin: 1rem 0;
-        order: 2;
+        order: 3;
     }
 
     .stat {
@@ -4344,8 +4344,8 @@ p {
 
     /* Move phone mockup and reorder elements */
     .hero-phone-mockup {
-        order: 1;
-        margin: 0 auto 0.5rem;
+        order: 2;
+        margin: 0 auto 1rem;
     }
 
     .hero-buttons {
@@ -4669,8 +4669,8 @@ p {
 
     /* iOS demo navigation dots - smaller for mobile */
     .nav-dot {
-        width: 6px;
-        height: 6px;
+        width: 3px;
+        height: 3px;
     }
 
     .nav-dot.active {
