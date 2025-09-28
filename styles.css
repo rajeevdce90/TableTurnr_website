@@ -4351,29 +4351,9 @@ p {
         display: none;
     }
 
-    /* Adjust floating badges positioning for better screenshot visibility */
-    .revenue-badge {
-        right: -15px;
-        top: 15%;
-        padding: 6px 8px;
-    }
-
-    .time-badge {
-        left: -15px;
-        bottom: 30%;
-        padding: 6px 8px;
-    }
-
+    /* Hide floating badges completely for mobile */
     .floating-badge {
-        font-size: 0.8rem;
-    }
-
-    .badge-value {
-        font-size: 0.8rem;
-    }
-
-    .badge-label {
-        font-size: 0.7rem;
+        display: none;
     }
 
     /* Improve phone mockup for modern mobile screens */
