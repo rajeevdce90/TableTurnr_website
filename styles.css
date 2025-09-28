@@ -4353,14 +4353,14 @@ p {
 
     /* Adjust floating badges positioning for better screenshot visibility */
     .revenue-badge {
-        right: 5px;
-        top: 12%;
+        right: -15px;
+        top: 15%;
         padding: 6px 8px;
     }
 
     .time-badge {
-        left: 5px;
-        bottom: 25%;
+        left: -15px;
+        bottom: 30%;
         padding: 6px 8px;
     }
 
