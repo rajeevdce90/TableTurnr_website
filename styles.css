@@ -710,13 +710,90 @@ p {
     h2 {
         font-size: 2rem;
     }
+
+    /* Mobile Typography Improvements */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    small, .small-text {
+        font-size: 14px;
+    }
+
+    /* Ensure minimum touch targets */
+    button, .btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    input, select, textarea {
+        min-height: 44px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
     
     .nav-links {
         display: none;
     }
-    
+
     .mobile-menu-toggle {
         display: block;
+        padding: 12px;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-toggle i {
+        font-size: 1.5rem;
+    }
+
+    .nav-links.mobile-menu-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        gap: 1rem;
+        z-index: 1000;
+    }
+
+    .nav-links.mobile-menu-open a {
+        color: #2d3748;
+        padding: 12px 16px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-links.mobile-menu-open a:hover {
+        background: rgba(102, 126, 234, 0.1);
+    }
+
+    .nav-links.mobile-menu-open .btn {
+        margin-top: 8px;
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
     }
     
     .hero-content {
@@ -724,10 +801,75 @@ p {
         gap: 2rem;
         text-align: center;
     }
-    
+
     .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .stat {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .stat strong {
+        font-size: 1.1rem;
+    }
+
+    .stat span {
+        font-size: 0.8rem;
+    }
+
+    /* Mobile Content Hierarchy Optimizations */
+    .hero {
+        padding: 80px 0 60px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Reduce section padding on mobile */
+    section {
+        padding: 60px 0 !important;
+    }
+
+    .integrations-section,
+    .roi-benefits,
+    .industry-solutions,
+    .ios-demo-section,
+    .features,
+    .asktt-section {
+        padding: 50px 0 !important;
+    }
+
+    /* Improve mobile phone mockup */
+    .hero-phone-mockup {
+        max-width: 280px;
+        height: auto;
+        margin: 2rem auto 0;
+    }
+
+    /* Make iOS demo more compact */
+    .app-screenshots-container {
+        height: 500px;
+    }
+
+    .screenshot-mockup {
+        max-width: 300px;
+    }
+
+    .screenshot-frame {
+        width: 220px;
+        height: 440px;
     }
     
     .hero-buttons {
@@ -1022,22 +1164,32 @@ p {
     .problem-cell {
         border-bottom: 1px solid #e5e7eb;
         background: #fef2f2;
+        color: #991b1b;
     }
-    
+
     .solution-cell {
         background: #f0fdf4;
+        color: #166534;
     }
-    
+
     .problem-cell::before {
         content: "Problem: ";
         font-weight: 600;
-        color: white;
+        color: #991b1b;
     }
-    
+
     .solution-cell::before {
         content: "Solution: ";
         font-weight: 600;
-        color: white;
+        color: #166534;
+    }
+
+    .problem-cell i {
+        color: #991b1b;
+    }
+
+    .solution-cell i {
+        color: #166534;
     }
 }
 
@@ -2652,7 +2804,7 @@ p {
 
 .lv-text {
     text-align: center;
-    color: white;
+    color: #2d3748;
 }
 
 .made-in-text {
@@ -2661,6 +2813,7 @@ p {
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: -1px;
+    color: #2d3748;
 }
 
 .location-text {
@@ -2669,6 +2822,7 @@ p {
     font-weight: 700;
     letter-spacing: 0.3px;
     line-height: 1;
+    color: #2d3748;
 }
 
 /* Responsive CTA Badges */
@@ -4144,18 +4298,114 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+/* Modern Mobile Devices (iPhone 13+: 390px, Samsung: 384-428px) */
+@media (max-width: 430px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Hero optimizations for modern mobile screens */
+    .hero {
+        padding: 110px 0 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+        margin: 1.8rem 0;
+    }
+
+    .stat {
+        padding: 0.8rem 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .stat strong {
+        font-size: 1.1rem;
+    }
+
+    .stat span {
+        font-size: 0.8rem;
+    }
+
+    /* Improve phone mockup for modern mobile screens */
+    .hero-phone-mockup {
+        max-width: 300px;
+        margin: 2rem auto 0;
+    }
+
+    .phone-frame {
+        width: 240px;
+        height: 480px;
+    }
+
+    /* Navigation improvements */
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .nav-brand {
+        font-size: 0.9rem;
+    }
+
+    .mobile-menu-toggle {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 8px;
+    }
+
+    /* Content sections */
+    section {
+        padding: 40px 0 !important;
+    }
+
+    .integrations-section,
+    .roi-benefits,
+    .industry-solutions,
+    .ios-demo-section,
+    .features,
+    .asktt-section {
+        padding: 35px 0 !important;
+    }
+
+    /* TurnrAgent phones for modern mobile screens */
+    .asktt-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .asktt-phones {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .asktt-phones .phone-frame {
+        width: 240px;
+        height: 480px;
+    }
+
+    /* iOS demo section for modern mobile screens */
     .app-screenshots-container {
         height: 600px;
     }
 
     .screenshot-mockup {
-        max-width: 400px;
-        height: 500px;
+        max-width: 300px;
     }
 
     .screenshot-frame {
-        width: 240px;
+        width: 220px;
         height: 480px;
     }
 
@@ -4166,6 +4416,344 @@ p {
     .screenshot-description p {
         font-size: 1rem;
     }
+
+    /* Improve button spacing */
+    .hero-buttons {
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        min-height: 42px;
+    }
+
+    /* Restaurant type cards for small screens - 2x2 grid */
+    .restaurant-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .restaurant-type-card {
+        padding: 1rem;
+    }
+
+    .restaurant-image img {
+        height: 140px;
+    }
+
+    .restaurant-info h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .restaurant-info p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    /* ROI benefits grid */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .benefit-number {
+        font-size: 2.5rem;
+    }
+
+    .benefit-label {
+        font-size: 1rem;
+    }
+
+    .benefit-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    /* Comparison table optimizations for modern mobile */
+    .day-comparison-table {
+        margin: 2rem 0;
+    }
+
+    .table-row {
+        margin-bottom: 0.75rem;
+        border-radius: 12px;
+    }
+
+    .time-cell {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .problem-cell,
+    .solution-cell {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .problem-cell i,
+    .solution-cell i {
+        font-size: 0.9rem;
+    }
+
+    /* Hide table header for mobile - simplified table format */
+    .table-header {
+        display: none;
+    }
+
+    /* CTA section - compact layout for mobile */
+    .cta {
+        padding: 40px 0;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-badges {
+        display: none;
+    }
+
+    /* Reduce large margins to save vertical space */
+    .problem h2,
+    .features h2,
+    .trust-section h3,
+    .integrations-title {
+        margin-bottom: 2rem;
+    }
+
+    .benefits-grid,
+    .features-grid {
+        margin-bottom: 2.5rem;
+    }
+
+    .solutions-tabs {
+        margin-bottom: 2rem;
+    }
+
+    .app-screenshots-nav {
+        margin-top: 2rem;
+    }
+
+    .solutions-cta {
+        margin-top: 2.5rem;
+    }
+
+    /* Compact footer layout - 3x2 grid to reduce vertical space */
+    .footer {
+        padding: 25px 0 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-tagline {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-item {
+        font-size: 0.8rem;
+        gap: 0.3rem;
+    }
+
+    .contact-item i {
+        font-size: 0.8rem;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .footer-column h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-copyright p {
+        font-size: 0.75rem;
+    }
+
+    .footer-legal a {
+        font-size: 0.75rem;
+    }
+
+    /* Features grid - 2x3 compact layout for mobile */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-icon {
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-icon i {
+        font-size: 1.2rem;
+    }
+
+    /* Problem section - compact grid layout for mobile */
+    .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .problem-item {
+        padding: 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .problem-item:last-child {
+        grid-column: 1 / -1;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .problem-item i {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .problem-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .problem-item p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
+    .problem-impact {
+        padding: 0.5rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .impact-label,
+    .impact-value {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablet and Large Mobile Devices (iPad: 768px+, Samsung Tablets) */
+@media (min-width: 431px) and (max-width: 1024px) {
+    /* Optimize for tablet/large mobile in portrait and landscape */
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .hero-phone-mockup {
+        max-width: 350px;
+    }
+
+    .phone-frame {
+        width: 280px;
+        height: 560px;
+    }
+
+    /* iOS demo optimized for tablets */
+    .app-screenshots-container {
+        height: 600px;
+    }
+
+    .screenshot-frame {
+        width: 260px;
+        height: 520px;
+    }
+
+    .screenshot-description h4 {
+        font-size: 1.6rem;
+    }
+
+    .screenshot-description p {
+        font-size: 1.1rem;
+    }
+
+    /* Restaurant cards - 2 columns on tablets */
+    .restaurant-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* ROI benefits - 2 columns on tablets */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Better spacing for tablet experience */
+    .integrations-section,
+    .roi-benefits,
+    .industry-solutions,
+    .ios-demo-section,
+    .features,
+    .asktt-section {
+        padding: 60px 0 !important;
+    }
+}
 
     .solutions-tabs {
         gap: 0.75rem;
