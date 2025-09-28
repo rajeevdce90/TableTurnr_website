@@ -4315,7 +4315,7 @@ p {
     }
 
     .hero-subtitle {
-        display: none;
+        display: none !important;
     }
 
     .hero-stats {
