@@ -4306,7 +4306,12 @@ p {
 
     /* Hero optimizations for modern mobile screens */
     .hero {
-        padding: 100px 0 40px;
+        padding: 90px 0 30px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
     }
 
     .hero h1 {
@@ -4319,21 +4324,33 @@ p {
 
     .hero-stats {
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.6rem;
-        margin: 1.8rem 0;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        order: 2;
     }
 
     .stat {
-        padding: 0.8rem 0.4rem;
-        font-size: 0.9rem;
+        padding: 0.6rem 0.3rem;
+        font-size: 0.8rem;
     }
 
     .stat strong {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .stat span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    /* Move phone mockup and reorder elements */
+    .hero-phone-mockup {
+        order: 1;
+        margin: 0 auto 1rem;
+    }
+
+    .hero-buttons {
+        order: 3;
+        margin-top: 1rem;
     }
 
     /* Improve phone mockup for modern mobile screens */
