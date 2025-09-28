@@ -4306,7 +4306,7 @@ p {
 
     /* Hero optimizations for modern mobile screens */
     .hero {
-        padding: 90px 0 30px;
+        padding: 150px 0 30px;
     }
 
     .hero-content {
@@ -4345,12 +4345,11 @@ p {
     /* Move phone mockup and reorder elements */
     .hero-phone-mockup {
         order: 1;
-        margin: 0 auto 1rem;
+        margin: 0 auto 0.5rem;
     }
 
     .hero-buttons {
-        order: 3;
-        margin-top: 1rem;
+        display: none;
     }
 
     /* Improve phone mockup for modern mobile screens */
@@ -4670,12 +4669,12 @@ p {
 
     /* iOS demo navigation dots - smaller for mobile */
     .nav-dot {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
     }
 
     .nav-dot.active {
-        transform: scale(1.1);
+        transform: scale(1.0);
     }
 
     /* Problem section - compact grid layout for mobile */
