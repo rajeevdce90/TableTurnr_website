@@ -4323,10 +4323,7 @@ p {
     }
 
     .hero-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-        margin: 1rem 0;
-        order: 3;
+        display: none;
     }
 
     .stat {
@@ -4345,11 +4342,48 @@ p {
     /* Move phone mockup and reorder elements */
     .hero-phone-mockup {
         order: 2;
-        margin: 0 auto 1rem;
+        margin: 0 auto 0.5rem;
+        position: relative;
+    }
+
+    /* Add AI Board text below screenshot for mobile */
+    .hero-phone-mockup::after {
+        content: "AI Board";
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+        font-size: 1rem;
+        margin-top: 0.75rem;
     }
 
     .hero-buttons {
         display: none;
+    }
+
+    /* Adjust floating badges positioning for better screenshot visibility */
+    .revenue-badge {
+        right: 5px;
+        top: 12%;
+        padding: 6px 8px;
+    }
+
+    .time-badge {
+        left: 5px;
+        bottom: 25%;
+        padding: 6px 8px;
+    }
+
+    .floating-badge {
+        font-size: 0.8rem;
+    }
+
+    .badge-value {
+        font-size: 0.8rem;
+    }
+
+    .badge-label {
+        font-size: 0.7rem;
     }
 
     /* Improve phone mockup for modern mobile screens */
