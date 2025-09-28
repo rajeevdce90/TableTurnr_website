@@ -4310,8 +4310,8 @@ p {
     }
 
     .hero h1 {
-        font-size: 2.1rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.1;
     }
 
     .hero-subtitle {
@@ -4650,6 +4650,16 @@ p {
 
     .feature-icon i {
         font-size: 1.2rem;
+    }
+
+    /* iOS demo navigation dots - smaller for mobile */
+    .nav-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .nav-dot.active {
+        transform: scale(1.1);
     }
 
     /* Problem section - compact grid layout for mobile */
