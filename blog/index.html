@@ -19,6 +19,7 @@
     <meta name="twitter:description" content="Restaurant management tips, AI forecasting strategies, and franchise operations insights from TableTurnr." />
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,15 +52,24 @@
         <div class="container">
             <a href="../" class="nav-brand">
                 <div class="logo-container">
-                    <img src="../TableTurnr_Logo.png" alt="TableTurnr logo" class="main-logo" width="50" height="50">
-                    <span class="brand-text">TableTurnr</span>
+                    <img src="../TableTurnr_Logo.png" alt="TableTurnr restaurant management software logo" class="main-logo" width="50" height="50" decoding="async" />
+                    <div class="brand-content">
+                        <span class="brand-text">TableTurnr</span>
+                        <p class="brand-tagline">AI Powered Restaurant Management</p>
+                    </div>
                 </div>
             </a>
             <div class="nav-links">
-                <a href="../#features">Features</a>
-                <a href="../#pricing">Pricing</a>
                 <a href="../">Home</a>
+                <a href="../#features">Features</a>
+                <a href="../#case-studies">Case Studies</a>
+                <a href="../#pricing">Get Started</a>
+                <a href="./">Blog</a>
+                <a href="../#pricing" class="btn btn-primary">Start Free Trial</a>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </nav>
     <main id="main-content" class="container" style="padding: 120px 20px 80px; max-width: 800px;">
@@ -91,6 +101,25 @@
             <p style="text-align: center; color: var(--tt-dark-text);">&copy; <span id="copyright-year">2025</span> TableTurnr. <a href="../" style="color: var(--tt-dark-cta);">Home</a></p>
         </div>
     </footer>
-    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+    <script>
+        document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());
+        (function(){
+            var toggle = document.querySelector('.mobile-menu-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('mobile-menu-open');
+                    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !expanded);
+                });
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.navbar')) {
+                        navLinks.classList.remove('mobile-menu-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
