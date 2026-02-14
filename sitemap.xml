@@ -25,10 +25,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tableturnr.com/blog/from-prototype-to-production/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://tableturnr.com/case-studies/ihop-franchise/</loc>
     <lastmod>2025-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/team/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://tableturnr.com/privacy/</loc>

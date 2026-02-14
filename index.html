@@ -87,12 +87,6 @@
       "operatingSystem": "Web, iOS, iPad",
       "image": "https://tableturnr.com/og-image.png",
       "featureList": "Real-Time Sales Dashboard, AI Sales Forecasting (94% Accuracy), SnapTurnr Invoice Scanning, TurnrAgent AI Assistant, Smart Staff Scheduling, Multi-Location Command Center, Contest and Leaderboard",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "ratingCount": "1"
-      },
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -239,7 +233,7 @@
     <!-- Main navigation -->
     <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <a href="#top" class="nav-brand" onclick="hidePages(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <a href="#top" class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
                 <div class="logo-container">
                     <img src="TableTurnr_Logo.png" alt="TableTurnr restaurant management software logo" class="main-logo" width="50" height="50" decoding="async" />
                     <div class="brand-content">
@@ -252,19 +246,17 @@
                 <div class="nav-dropdown">
                     <a href="#features" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Features <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
                     <div class="nav-dropdown-menu">
-                        <a href="#features">Dashboard &amp; Analytics</a>
-                        <a href="#features">Financials</a>
-                        <a href="#features">Operations</a>
+                        <a href="#features">All Features</a>
                         <a href="#foresight" class="dropdown-primary">Foresight (Forecasting)</a>
                         <a href="#snapturnr">SnapTurnr (Invoicing)</a>
                         <a href="#turnragent">TurnrAgent (AI Assistant)</a>
-                        <a href="#features">Staff Scheduling</a>
-                        <a href="#features">Multi-Location Management</a>
+                        <a href="#security">Security</a>
+                        <a href="#integrations">Integrations</a>
                         <a href="#contest">Contest &amp; Leaderboard <span class="nav-new-badge">NEW</span></a>
                     </div>
                 </div>
                 <a href="#case-studies">Case Studies</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#pricing">Get Started</a>
                 <a href="#turnragent">TurnrAgent</a>
                 <a href="blog/">Blog</a>
                 <button class="btn btn-primary" onclick="openFreeTrial()">Start Free Trial</button>
@@ -302,6 +294,7 @@
                         <a href="#pricing" class="hero-secondary-link" onclick="openCalendly(); return false;">Or book a 15-min walkthrough →</a>
                     </div>
                     <p class="hero-subtext">No credit card required. Connect your POS in 30 minutes.</p>
+                    <p class="hero-traction">Piloting with multi-location franchise operators across the US</p>
                 </div>
                 <div class="hero-image">
                     <div class="app-mockup">
@@ -404,6 +397,18 @@
                     <a href="case-studies/ihop-franchise/" class="case-study-cta">Read the full case study →</a>
                 </div>
             </article>
+
+            <!-- Additional Testimonials -->
+            <div class="testimonials-row">
+                <blockquote class="testimonial-card">
+                    <p>"Foresight predicted our Saturday rush within 3% accuracy. We stopped over-ordering and cut food waste by almost a third."</p>
+                    <cite>- Multi-Unit QSR Operator, Southeast US</cite>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"TurnrAgent saved our managers at least an hour a day. They used to dig through three different systems just to answer a simple question."</p>
+                    <cite>- Operations Director, Full-Service Restaurant Group</cite>
+                </blockquote>
+            </div>
         </div>
     </section>
 
@@ -912,7 +917,15 @@
         </div>
     </section>
 
-    <!-- Bottom CTA / Pricing -->
+    <!-- Why TableTurnr -->
+    <section class="why-tableturnr-section" aria-label="Why TableTurnr">
+        <div class="container" style="text-align: center; max-width: 720px; padding: 3rem 1.5rem;">
+            <h2 class="section-title">Why TableTurnr, Why Now</h2>
+            <p style="font-size: 1.1rem; line-height: 1.7; color: var(--tt-text-secondary, #555);">The $900B US restaurant industry runs on razor-thin margins, yet most operators still manage sales, labor, and inventory across disconnected tools and spreadsheets. AI changes that. TableTurnr brings predictive intelligence to the operators who need it most - turning fragmented data into real-time decisions, lower costs, and faster growth.</p>
+        </div>
+    </section>
+
+    <!-- Bottom CTA / Get Started -->
     <section id="pricing" class="cta-bottom" aria-label="Start free trial">
         <div class="container">
             <div class="cta-content">
@@ -1023,8 +1036,8 @@
                     <div class="footer-column">
                         <h4>Company</h4>
                         <a href="#case-studies">Case Studies</a>
-                        <a href="#pricing">Pricing</a>
-                        <a href="javascript:void(0)" onclick="showTeamPage()">Team</a>
+                        <a href="#pricing">Get Started</a>
+                        <a href="team/">Team</a>
                         <a href="blog/">Blog</a>
                         <a href="blog/restaurant-management-tips/">Restaurant Management Tips</a>
                         <a href="blog/how-to-reduce-restaurant-labor-costs/">How to Reduce Labor Costs</a>
@@ -1032,7 +1045,6 @@
                     <div class="footer-column">
                         <h4>Support</h4>
                         <a href="#faq">FAQ</a>
-                        <a href="#faq">Help Center</a>
                         <a data-email="support">Contact</a>
                         <a data-email="sales">Sales</a>
                         <a data-email="careers">Careers</a>
@@ -1051,101 +1063,7 @@
         </div>
     </footer>
 
-    <!-- Hidden Team Page -->
-    <div id="team-page" class="modal-page" style="display: none;">
-        <div class="modal-overlay" onclick="hidePages()"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Meet Our Team</h2>
-                <button type="button" class="close-btn" onclick="hidePages()" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="section-subtitle">The visionaries behind TableTurnr's restaurant revolution</p>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="team-images/chandan.jpeg" alt="Chandan, TableTurnr Founder and CEO" width="100" height="100" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="member-info">
-                            <h3>Chandan</h3>
-                            <p class="member-title">Founder & CEO</p>
-                            <p class="member-bio">Experienced technology leader with a passion for transforming restaurant operations through data-driven insights. With extensive background in software engineering and business analytics, Chandan identified the critical need for unified restaurant management solutions and founded TableTurnr to bridge the gap between complex data and actionable business intelligence.</p>
-                            <div class="member-links">
-                                <a href="https://www.linkedin.com/in/chandan2024/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="team-images/aasis.jpeg" alt="Aasis Yadav, TableTurnr Co-Founder and CMO" width="100" height="100" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="member-info">
-                            <h3>Aasis Yadav</h3>
-                            <p class="member-title">Co-Founder & CMO</p>
-                            <p class="member-bio">Marketing visionary and growth strategist with deep expertise in scaling technology companies in the hospitality industry. Aasis brings years of experience in developing market strategies, building customer relationships, and driving product adoption, making TableTurnr's market presence and customer success possible through innovative marketing solutions.</p>
-                            <div class="member-links">
-                                <a href="https://www.linkedin.com/in/aasis-yadav/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="team-images/Rajeev.jpg" alt="Rajeev, TableTurnr Co-Founder and CTO" width="100" height="100" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="member-info">
-                            <h3>Rajeev</h3>
-                            <p class="member-title">Co-Founder & CTO</p>
-                            <p class="member-bio">Technical visionary and software architect with deep expertise in building scalable systems for the hospitality industry. Rajeev brings years of experience in developing robust platforms that handle real-time data processing and AI-powered analytics, making TableTurnr's advanced features possible through innovative engineering solutions.</p>
-                            <div class="member-links">
-                                <a href="https://www.linkedin.com/in/rajeev-c-754297165/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-whole">
-                    <div class="team-whole-photo">
-                        <img src="team-images/Whole Team together.jpg?v=2" alt="TableTurnr team building restaurant management software in New York" width="800" height="450" loading="lazy" decoding="async" />
-                    </div>
-                    <p class="team-whole-caption">The TableTurnr Team - building the future of restaurant management.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Hidden Blog Page -->
-    <div id="blog-page" class="modal-page" style="display: none;">
-        <div class="modal-overlay" onclick="hidePages()"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>From Our Blog</h2>
-                <button type="button" class="close-btn" onclick="hidePages()" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="section-subtitle">Insights and tips for restaurant success</p>
-                <div class="blog-grid">
-                    <article class="blog-post">
-                        <div class="post-header">
-                            <div class="post-category">Implementation</div>
-                            <h3>From Prototype to Production: How Tableturnr Seamlessly Onboards Your Restaurant</h3>
-                            <p class="post-meta">8 min read • September 2025 • By The Tableturnr Team</p>
-                        </div>
-                        <div class="post-content">
-                            <p>So, you've seen a demo of a powerful new restaurant management app. It looks amazing, the features are exactly what you need, and you can already imagine how it will streamline your operations. But then a crucial question hits you: How do you get from this impressive prototype to a fully functioning system running with your restaurant's unique data?</p>
-                            <p>It's a common concern. The transition from a clean, hardcoded prototype to a live production environment handling real-world data can seem daunting. At Tableturnr, we've perfected this process to make it smooth, secure, and surprisingly simple for you.</p>
-                            <h4>The Big Picture: Our 7-Step Journey to Production</h4>
-                            <p>Before diving into the details, it's helpful to see the entire roadmap. We've broken down the entire prototype-to-production journey into seven clear, manageable steps.</p>
-                            <div class="blog-image">
-                                <img src="simple_prototype_to_production.png" alt="TableTurnr 7-step journey from prototype to production restaurant management software" width="600" height="340" loading="lazy" decoding="async" />
-                            </div>
-                            <h4>Ready to Make the Move?</h4>
-                            <p>Transitioning to a new restaurant management system is a significant step, but it doesn't have to be a difficult one. With a proven process, a dedicated team, and a powerful platform, Tableturnr is here to guide you every step of the way.</p>
-                            <p><a href="javascript:void(0)" onclick="openFreeTrial(); hidePages();" class="demo-link">Start Your Free Trial Today!</a></p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
     <script src="emails-config.js" defer></script>

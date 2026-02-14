@@ -95,28 +95,6 @@ function openFreeTrial() {
 }
 
 // Modal page functions for Team and Blog
-function showTeamPage() {
-    document.getElementById('team-page').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function showBlogPage() {
-    document.getElementById('blog-page').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function hidePages() {
-    document.getElementById('team-page').style.display = 'none';
-    document.getElementById('blog-page').style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-// Close modal on Escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        hidePages();
-    }
-});
 
 // Scroll animations - observe elements for reveal
 const observerOptions = {
