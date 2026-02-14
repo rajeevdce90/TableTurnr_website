@@ -24,7 +24,9 @@ const navLinks = document.querySelector('.nav-links');
 
 if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('mobile-menu-open');
+        const open = navLinks.classList.toggle('mobile-menu-open');
+        mobileMenuToggle.setAttribute('aria-expanded', open);
+        mobileMenuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
 }
 
@@ -55,7 +57,7 @@ function openCalendlyWidget() {
     }
 }
 
-// Free Trial CTA — opens Calendly as placeholder (swap with real signup URL later)
+// Free Trial CTA - opens Calendly as placeholder (swap with real signup URL later)
 function openFreeTrial() {
     // TODO: Replace with actual free trial signup URL when ready
     openCalendly();
@@ -85,7 +87,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Scroll animations — observe elements for reveal
+// Scroll animations - observe elements for reveal
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Navbar scroll effect — add shadow when scrolling
+// Navbar scroll effect - add shadow when scrolling
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {

@@ -33,9 +33,9 @@ const TABLETURNR_EMAILS = {
  * Elements use data-email="key" to reference an email from the config above.
  * 
  * Usage in HTML:
- *   <a data-email="support"></a>          — sets href and text to support email
- *   <a data-email="sales">Contact Sales</a> — sets href only, keeps custom text
- *   <span data-email="legal"></span>      — sets text content to legal email
+ *   <a data-email="support"></a>          - sets href and text to support email
+ *   <a data-email="sales">Contact Sales</a> - sets href only, keeps custom text
+ *   <span data-email="legal"></span>      - sets text content to legal email
  */
 function applyEmails() {
     document.querySelectorAll('[data-email]').forEach(el => {
