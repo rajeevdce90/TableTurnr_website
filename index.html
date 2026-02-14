@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Fix asset paths on GitHub Pages (repo subpath); no effect when opening file locally -->
+    <script>
+      (function() {
+        if (location.protocol !== 'file:' && location.hostname === 'rajeevdce90.github.io') {
+          document.write('<base href="https://rajeevdce90.github.io/TableTurnr_website/">');
+        }
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TableTurnr - AI Powered Restaurant Management</title>
@@ -31,11 +39,11 @@
     <meta name="twitter:image:alt" content="TableTurnr dashboard showing restaurant analytics" />
     <!-- <meta name="twitter:site" content="@tableturnr" />  Uncomment when Twitter/X account is live -->
 
-    <!-- Favicon & Apple Touch Icon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Favicon & Apple Touch Icon (relative paths work locally and on GitHub Pages) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -73,8 +81,8 @@
         "url": "https://tableturnr.com",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Lehigh Valley",
-          "addressRegion": "PA",
+"addressLocality": "New York",
+      "addressRegion": "NY",
           "addressCountry": "US"
         }
       }
@@ -154,7 +162,7 @@
                         <div class="app-topbar">
                             <div class="app-dropdown location-dropdown">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Sandy Springs</span>
+                                <span>New York</span>
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="app-logo-center">
@@ -166,35 +174,31 @@
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                         </div>
-                        <!-- Module tiles grid -->
-                        <div class="app-modules-grid">
-                            <div class="app-module-tile tile-sense">
-                                <div class="tile-icon"><i class="fas fa-bolt"></i></div>
-                                <span class="tile-label">TurnrSense</span>
-                            </div>
-                            <div class="app-module-tile tile-tally">
-                                <div class="tile-icon"><i class="fas fa-dollar-sign"></i></div>
-                                <span class="tile-label">TurnrTally</span>
-                            </div>
-                            <div class="app-module-tile tile-ops">
-                                <div class="tile-icon"><i class="fas fa-cogs"></i></div>
-                                <span class="tile-label">TurnrOps</span>
-                            </div>
-                            <div class="app-module-tile tile-foresight">
-                                <div class="tile-icon"><i class="fas fa-chart-line"></i></div>
-                                <span class="tile-label">Foresight</span>
-                            </div>
-                            <div class="app-module-tile tile-agent">
-                                <div class="tile-icon"><i class="fas fa-user-circle"></i></div>
-                                <span class="tile-label">TurnrAgent</span>
-                            </div>
-                            <div class="app-module-tile tile-settings">
-                                <div class="tile-icon"><i class="fas fa-cog"></i></div>
-                                <span class="tile-label">Settings</span>
-                            </div>
+                        <!-- Main app screenshot (New York) -->
+                        <div class="app-mockup-screenshot">
+                            <img src="app-screenshots/Sales%20view.png" alt="TableTurnr app - Sales view, New York" />
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App screenshots gallery -->
+    <section class="app-gallery-section">
+        <div class="container">
+            <h2 class="section-title">See the App in Action</h2>
+            <p class="section-subtitle">Real TableTurnr screens from New York locations</p>
+            <div class="app-gallery-grid">
+                <div class="app-gallery-item"><img src="app-screenshots/Sales%20view.png" alt="Sales view - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/ai%20insights.png" alt="AI insights - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/inventory%20view.png" alt="Inventory view - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/schedule%20view.png" alt="Schedule view - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/Ask%20TT%20Main%20Screen.png" alt="Ask TT - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/Ask%20TT%20Response.png" alt="TurnrAgent response - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/asktt.png" alt="Ask TT - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/ttcart.png" alt="Cart - New York" /></div>
+                <div class="app-gallery-item"><img src="app-screenshots/IMG_3566.png" alt="TableTurnr app - New York" /></div>
             </div>
         </div>
     </section>
@@ -267,19 +271,31 @@
                     <h4>POS Systems</h4>
                     <div class="integration-logos">
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/squareup.com" alt="Square" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=squareup.com&amp;sz=128" alt="Square" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">S</span>
+                            </div>
                             <span>Square</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/toasttab.com" alt="Toast" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=toasttab.com&amp;sz=128" alt="Toast" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">T</span>
+                            </div>
                             <span>Toast</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/clover.com" alt="Clover" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=clover.com&amp;sz=128" alt="Clover" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">C</span>
+                            </div>
                             <span>Clover</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/lightspeedhq.com" alt="Lightspeed" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=lightspeedhq.com&amp;sz=128" alt="Lightspeed" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">L</span>
+                            </div>
                             <span>Lightspeed</span>
                         </div>
                     </div>
@@ -288,31 +304,52 @@
                     <h4>Suppliers &amp; Procurement</h4>
                     <div class="integration-logos">
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/usfoods.com" alt="US Foods" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=usfoods.com&amp;sz=128" alt="US Foods" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">U</span>
+                            </div>
                             <span>US Foods</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/sysco.com" alt="Sysco" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=sysco.com&amp;sz=128" alt="Sysco" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">S</span>
+                            </div>
                             <span>Sysco</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/walmart.com" alt="Walmart" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=walmart.com&amp;sz=128" alt="Walmart" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">W</span>
+                            </div>
                             <span>Walmart</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/costco.com" alt="Costco" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=costco.com&amp;sz=128" alt="Costco" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">C</span>
+                            </div>
                             <span>Costco</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/instacart.com" alt="Instacart" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=instacart.com&amp;sz=128" alt="Instacart" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">I</span>
+                            </div>
                             <span>Instacart</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/gfs.com" alt="Gordon Food Service" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=gfs.com&amp;sz=128" alt="Gordon Food Service" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">G</span>
+                            </div>
                             <span>GFS</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/pfgc.com" alt="Performance Food Group" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=pfgc.com&amp;sz=128" alt="Performance Food Group" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">P</span>
+                            </div>
                             <span>PFG</span>
                         </div>
                     </div>
@@ -321,15 +358,24 @@
                     <h4>Delivery Platforms</h4>
                     <div class="integration-logos">
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/doordash.com" alt="DoorDash" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=doordash.com&amp;sz=128" alt="DoorDash" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">D</span>
+                            </div>
                             <span>DoorDash</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/uber.com" alt="Uber Eats" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=ubereats.com&amp;sz=128" alt="Uber Eats" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">U</span>
+                            </div>
                             <span>Uber Eats</span>
                         </div>
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/grubhub.com" alt="Grubhub" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=grubhub.com&amp;sz=128" alt="Grubhub" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">G</span>
+                            </div>
                             <span>Grubhub</span>
                         </div>
                     </div>
@@ -338,7 +384,10 @@
                     <h4>Reservations</h4>
                     <div class="integration-logos">
                         <div class="integration-logo-item">
-                            <img src="https://logo.clearbit.com/opentable.com" alt="OpenTable" class="integration-logo">
+                            <div class="integration-logo-wrap">
+                                <img src="https://www.google.com/s2/favicons?domain=opentable.com&amp;sz=128" alt="OpenTable" class="integration-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
+                                <span class="integration-logo-fallback" aria-hidden="true">O</span>
+                            </div>
                             <span>OpenTable</span>
                         </div>
                     </div>
@@ -398,10 +447,10 @@
                 <div class="feature-card-v2">
                     <div class="feature-icon-v2"><i class="fas fa-robot"></i></div>
                     <h3>TurnrAgent - Ask Your Data Anything</h3>
-                    <p>Type a question like "What were my sales last Tuesday at Sandy Springs?" and get an instant answer pulled from your real data. No dashboards to click through.</p>
+                    <p>Type a question like "What were my sales last Tuesday in New York?" and get an instant answer pulled from your real data. No dashboards to click through.</p>
                     <div class="feature-chat-preview">
                         <div class="chat-msg user-msg"><span class="chat-label">You:</span> How did our labor cost compare across locations this week?</div>
-                        <div class="chat-msg agent-msg"><span class="chat-label">TurnrAgent:</span> Sandy Springs ran 28.3% labor cost vs Alpharetta at 24.1%. Sandy Springs was 2.1% above your target - primarily driven by overtime on Thursday evening shift.</div>
+                        <div class="chat-msg agent-msg"><span class="chat-label">TurnrAgent:</span> Manhattan ran 28.3% labor cost vs Brooklyn at 24.1%. Manhattan was 2.1% above your target - primarily driven by overtime on Thursday evening shift.</div>
                     </div>
                     <div class="feature-result">
                         <strong>Result:</strong> Get answers in seconds that used to take 30 minutes of digging.
@@ -742,7 +791,7 @@
                                 </div>
                                 <div class="lv-text">
                                     <span class="made-in-text">MADE IN</span>
-                                    <span class="location-text">LEHIGH VALLEY, PA</span>
+                                    <span class="location-text">NEW YORK, NY</span>
                                 </div>
                             </div>
                         </div>
@@ -762,11 +811,11 @@
                         <h3 class="brand-text">TableTurnr</h3>
                     </div>
                     <p class="footer-tagline">AI Powered Restaurant Management</p>
-                    <p class="footer-tagline-sub">Made in Lehigh Valley, PA • Backed by 15+ real platform integrations</p>
+                    <p class="footer-tagline-sub">Made in New York, NY • Backed by 15+ real platform integrations</p>
                     <div class="footer-contact">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Lehigh Valley, PA</span>
+                            <span>New York, NY</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
