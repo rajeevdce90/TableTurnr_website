@@ -6877,7 +6877,19 @@ html {
     }
 }
 
+/* What is TableTurnr section */
+.what-is-section {
+    padding: 2rem 0 0;
+    background: var(--tt-bg);
+}
+
+/* Why Choose section */
+.why-choose-section {
+    padding: 2rem 0;
+    background: var(--tt-bg);
+}
+
 /* Scroll targets */
-#pricing, #contest {
+#pricing, #contest, #why-choose, #what-is-tableturnr {
     scroll-margin-top: 80px;
 }
