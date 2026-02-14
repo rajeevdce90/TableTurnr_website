@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | TableTurnr</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--tt-primary, #007AFF);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .error-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--tt-text, #1a1a2e);
+            margin-bottom: 1rem;
+        }
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--tt-text-secondary, #555);
+            max-width: 480px;
+            margin: 0 auto 2rem;
+        }
+        .error-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .error-links a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .error-links a:hover { opacity: 0.85; }
+        .error-link-primary {
+            background: var(--tt-primary, #007AFF);
+            color: #fff;
+        }
+        .error-link-secondary {
+            background: var(--tt-surface, #f0f0f0);
+            color: var(--tt-text, #1a1a2e);
+            border: 1px solid var(--tt-border, #ddd);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <div class="logo-container">
+                    <img src="/TableTurnr_Logo.png" alt="TableTurnr logo" class="main-logo" width="50" height="50">
+                    <span class="brand-text">TableTurnr</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <main class="error-page">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-description">Sorry, the page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+        <div class="error-links">
+            <a href="/" class="error-link-primary">Go to Homepage</a>
+            <a href="/blog/" class="error-link-secondary">Visit Blog</a>
+        </div>
+    </main>
+    <footer class="footer" style="margin-top: 3rem;">
+        <div class="container">
+            <p style="text-align: center; color: var(--tt-dark-text);">&copy; <span id="copyright-year">2025</span> TableTurnr.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+</body>
+</html>

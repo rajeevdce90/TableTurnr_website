@@ -218,6 +218,7 @@ p {
 }
 
 .brand-text {
+    display: block;
     color: var(--tt-dark-text);
     margin: 0;
     font-size: 1.8rem;
@@ -241,7 +242,7 @@ a.nav-brand {
     cursor: pointer;
 }
 
-.nav-brand h2 {
+.nav-brand .brand-text {
     color: var(--tt-dark-text);
     margin: 0;
     font-size: 1.8rem;
