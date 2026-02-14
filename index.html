@@ -247,7 +247,7 @@
             </a>
             <div class="nav-links">
                 <div class="nav-dropdown">
-                    <a href="#features" class="nav-dropdown-trigger">Features <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                    <a href="#features" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Features <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
                     <div class="nav-dropdown-menu">
                         <a href="#features">Dashboard &amp; Analytics</a>
                         <a href="#features">Financials</a>
@@ -263,7 +263,7 @@
                 <a href="#case-studies">Case Studies</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#turnragent">TurnrAgent</a>
-                <a href="blog/restaurant-management-tips.html" onclick="event.preventDefault(); showBlogPage(); return false;">Blog</a>
+                <a href="blog/restaurant-management-tips/" onclick="event.preventDefault(); showBlogPage(); return false;">Blog</a>
                 <button class="btn btn-primary" onclick="openFreeTrial()">Start Free Trial</button>
             </div>
             <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -740,49 +740,7 @@
             <p class="section-subtitle">94% accurate sales and staffing forecasts powered by your historical data.</p>
 
             <div class="foresight-content">
-                <div class="foresight-capabilities">
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-chart-line"></i></div>
-                        <div>
-                            <h4>Sales Forecast</h4>
-                            <p>Predict daily/weekly revenue with 94% accuracy</p>
-                        </div>
-                    </div>
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-users"></i></div>
-                        <div>
-                            <h4>Staffing Forecast</h4>
-                            <p>Know exactly how many staff you need per shift</p>
-                        </div>
-                    </div>
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-fire"></i></div>
-                        <div>
-                            <h4>Demand Planning</h4>
-                            <p>Anticipate busy periods and prep accordingly</p>
-                        </div>
-                    </div>
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-boxes"></i></div>
-                        <div>
-                            <h4>Inventory Forecast</h4>
-                            <p>Order the right amount, reduce waste</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Staffing forecast callout -->
-                <div class="foresight-staffing-callout">
-                    <div class="callout-icon"><i class="fas fa-user-clock"></i></div>
-                    <div class="callout-content">
-                        <h4>Staff to Demand, Not to Habit</h4>
-                        <p>Foresight doesn't just predict sales - it tells you exactly how many staff you need per shift. Match labor to predicted demand patterns so you're never overstaffed on a slow Tuesday or short-handed on a busy Friday.</p>
-                        <div class="callout-stat">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Staffing forecast synced with sales forecast - both at 94% accuracy</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Chart first: proof/visual anchor -->
                 <div class="foresight-chart">
                     <div class="chart-card-white">
                         <div class="chart-header-row">
@@ -792,45 +750,28 @@
                                 <span>94.2% Accuracy</span>
                             </div>
                         </div>
-                        <svg viewBox="0 0 420 220" class="forecast-chart-v2">
-                            <!-- Y-axis labels -->
+                        <svg viewBox="0 0 420 220" class="forecast-chart-v2" aria-hidden="true">
                             <text x="30" y="42" fill="#999" font-size="9" text-anchor="end">$12k</text>
                             <text x="30" y="82" fill="#999" font-size="9" text-anchor="end">$9k</text>
                             <text x="30" y="122" fill="#999" font-size="9" text-anchor="end">$6k</text>
                             <text x="30" y="162" fill="#999" font-size="9" text-anchor="end">$3k</text>
-                            <!-- Horizontal grid lines -->
                             <line x1="38" y1="38" x2="405" y2="38" stroke="#eee" stroke-width="1"/>
                             <line x1="38" y1="78" x2="405" y2="78" stroke="#eee" stroke-width="1"/>
                             <line x1="38" y1="118" x2="405" y2="118" stroke="#eee" stroke-width="1"/>
                             <line x1="38" y1="158" x2="405" y2="158" stroke="#eee" stroke-width="1"/>
-                            <!-- Baseline -->
                             <line x1="38" y1="178" x2="405" y2="178" stroke="#ccc" stroke-width="1"/>
-
-                            <!-- Week 1: Forecasted (blue) = $8.2k, Actual (orange) = $7.9k -->
                             <rect x="52" y="68" width="18" height="110" rx="3" fill="#0066CC"/>
                             <rect x="72" y="72" width="18" height="106" rx="3" fill="#FFB300"/>
-
-                            <!-- Week 2: Forecasted = $9.5k, Actual = $9.8k -->
                             <rect x="112" y="48" width="18" height="130" rx="3" fill="#0066CC"/>
                             <rect x="132" y="44" width="18" height="134" rx="3" fill="#FFB300"/>
-
-                            <!-- Week 3: Forecasted = $7.8k, Actual = $7.5k -->
                             <rect x="172" y="74" width="18" height="104" rx="3" fill="#0066CC"/>
                             <rect x="192" y="78" width="18" height="100" rx="3" fill="#FFB300"/>
-
-                            <!-- Week 4: Forecasted = $10.2k, Actual = $10.5k -->
                             <rect x="232" y="38" width="18" height="140" rx="3" fill="#0066CC"/>
                             <rect x="252" y="34" width="18" height="144" rx="3" fill="#FFB300"/>
-
-                            <!-- Week 5: Forecasted = $11.0k, Actual = $10.8k -->
                             <rect x="292" y="30" width="18" height="148" rx="3" fill="#0066CC"/>
                             <rect x="312" y="34" width="18" height="144" rx="3" fill="#FFB300"/>
-
-                            <!-- Week 6: Forecasted = $9.0k, Actual = $9.2k -->
                             <rect x="352" y="54" width="18" height="124" rx="3" fill="#0066CC"/>
                             <rect x="372" y="50" width="18" height="128" rx="3" fill="#FFB300"/>
-
-                            <!-- Week labels -->
                             <text x="71" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 1</text>
                             <text x="131" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 2</text>
                             <text x="191" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 3</text>
@@ -843,8 +784,54 @@
                             <span class="legend-item-dark"><span class="legend-swatch" style="background:#FFB300;"></span> Actual</span>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="foresight-cta" onclick="openCalendly(); return false;">See Foresight in Action →</a>
                 </div>
+
+                <!-- Four capabilities in a 2x2 grid -->
+                <div class="foresight-capabilities">
+                    <div class="foresight-item">
+                        <div class="foresight-item-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Sales Forecast</h4>
+                            <p>Predict daily and weekly revenue with 94% accuracy</p>
+                        </div>
+                    </div>
+                    <div class="foresight-item">
+                        <div class="foresight-item-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Staffing Forecast</h4>
+                            <p>Know exactly how many staff you need per shift</p>
+                        </div>
+                    </div>
+                    <div class="foresight-item">
+                        <div class="foresight-item-icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Demand Planning</h4>
+                            <p>Anticipate busy periods and prep accordingly</p>
+                        </div>
+                    </div>
+                    <div class="foresight-item">
+                        <div class="foresight-item-icon"><i class="fas fa-boxes" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Inventory Forecast</h4>
+                            <p>Order the right amount, reduce waste</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff to Demand callout -->
+                <div class="foresight-staffing-callout">
+                    <div class="callout-icon"><i class="fas fa-user-clock" aria-hidden="true"></i></div>
+                    <div class="callout-content">
+                        <h4>Staff to Demand, Not to Habit</h4>
+                        <p>Foresight doesn't just predict sales; it tells you exactly how many staff you need per shift. Match labor to predicted demand so you're never overstaffed on a slow Tuesday or short-handed on a busy Friday.</p>
+                        <div class="callout-stat">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            <span>Staffing forecast synced with sales forecast, both at 94% accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0)" class="foresight-cta" onclick="openCalendly(); return false;">See Foresight in Action →</a>
             </div>
         </div>
     </section>
@@ -1035,9 +1022,9 @@
                         <a href="#case-studies">Case Studies</a>
                         <a href="#pricing">Pricing</a>
                         <a href="javascript:void(0)" onclick="showTeamPage()">Team</a>
-                        <a href="blog/restaurant-management-tips.html">Blog</a>
-                        <a href="blog/restaurant-management-tips.html">Restaurant Management Tips</a>
-                        <a href="blog/how-to-reduce-restaurant-labor-costs.html">How to Reduce Labor Costs</a>
+                        <a href="blog/restaurant-management-tips/">Blog</a>
+                        <a href="blog/restaurant-management-tips/">Restaurant Management Tips</a>
+                        <a href="blog/how-to-reduce-restaurant-labor-costs/">How to Reduce Labor Costs</a>
                     </div>
                     <div class="footer-column">
                         <h4>Support</h4>

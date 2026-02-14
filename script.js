@@ -1,6 +1,7 @@
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        if (this.classList.contains('nav-dropdown-trigger')) return; // Dropdown has its own handler
         const href = this.getAttribute('href');
         if (href === '#') return; // Skip empty hash links
         
@@ -29,6 +30,36 @@ if (mobileMenuToggle) {
         mobileMenuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
 }
+
+// Features dropdown: click to open, stay open until click outside
+(function() {
+    const trigger = document.querySelector('.nav-dropdown-trigger');
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (!trigger || !dropdown) return;
+
+    trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('dropdown-open');
+        const isOpen = dropdown.classList.contains('dropdown-open');
+        trigger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('dropdown-open');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close dropdown when a menu link is clicked (so it doesn't stay open after scroll)
+    dropdown.querySelectorAll('.nav-dropdown-menu a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            dropdown.classList.remove('dropdown-open');
+            trigger.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
 
 // Calendly Integration Function
 function openCalendly() {

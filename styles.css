@@ -5182,7 +5182,7 @@ html {
     margin-top: 0.5rem;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu {
+.nav-dropdown.dropdown-open .nav-dropdown-menu {
     display: block;
 }
 
@@ -5853,16 +5853,21 @@ html {
 }
 
 .foresight-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
     margin-top: 3rem;
-    align-items: start;
+    align-items: stretch;
+}
+
+.foresight-chart {
+    max-width: 520px;
+    margin: 0 auto;
 }
 
 .foresight-capabilities {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -5983,7 +5988,9 @@ html {
 
 .foresight-cta {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    align-self: center;
     color: var(--tt-success);
     text-decoration: none;
     font-weight: 600;
@@ -6052,8 +6059,15 @@ html {
     }
 
     .foresight-content {
-        grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .foresight-capabilities {
+        grid-template-columns: 1fr;
+    }
+
+    .foresight-chart {
+        max-width: 100%;
     }
 }
 
@@ -6116,7 +6130,7 @@ html {
     }
 
     /* Foresight */
-    .foresight-content {
+    .foresight-capabilities {
         grid-template-columns: 1fr;
     }
 
@@ -6151,7 +6165,7 @@ html {
         background: rgba(0, 122, 255, 0.08);
     }
 
-    .nav-dropdown:hover .nav-dropdown-menu {
+    .nav-dropdown.dropdown-open .nav-dropdown-menu {
         display: block;
     }
 
@@ -6576,7 +6590,6 @@ html {
 
 /* Foresight staffing callout */
 .foresight-staffing-callout {
-    grid-column: 1 / -1;
     display: flex;
     gap: 1.25rem;
     background: rgba(16, 185, 129, 0.08);
