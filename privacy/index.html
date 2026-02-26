@@ -7,8 +7,10 @@
     <meta name="description" content="TableTurnr Privacy Policy. Learn how we collect, use, and protect your restaurant data." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tableturnr.com/privacy/" />
+    <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,24 +24,35 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <nav class="navbar" aria-label="Main navigation">
+
+    <div class="announcement-bar">
+        <div class="container">
+            <p>Go live in 2 days. Full admin support included. <a href="../demo/">Book a demo &rarr;</a></p>
+        </div>
+    </div>
+
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <a href="../" class="nav-brand">
-                <div class="logo-container">
-                    <img src="../TableTurnr_Logo.png" alt="TableTurnr logo" class="main-logo" width="50" height="50">
-                    <span class="brand-text">TableTurnr</span>
-                </div>
+                <img src="../logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
+                <span class="brand-text">TableTurnr</span>
             </a>
-            <div class="nav-links">
-                <a href="../#features">Features</a>
-                <a href="../#pricing">Pricing</a>
-                <a href="../">Home</a>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+
+            <div class="nav-links" id="site-nav">
+                <a href="../platform/">Platform</a>
+                <a href="../customers/">Customers</a>
+                <a href="../blog/">Blog</a>
+                <a href="../demo/" class="nav-cta">Book a Demo</a>
             </div>
         </div>
     </nav>
     <main id="main-content" class="container" style="padding: 120px 20px 80px; max-width: 780px;">
         <h1>Privacy Policy</h1>
-        <p style="color: var(--tt-text-secondary, #555); margin-bottom: 2rem;"><em>Last updated: February 14, 2025</em></p>
+        <p style="color: var(--tt-text-secondary, #555); margin-bottom: 2rem;"><em>Last updated: February 12, 2026</em></p>
 
         <h2>1. Information We Collect</h2>
         <p>When you use TableTurnr, we may collect information you provide directly, such as your name, email address, restaurant name, and POS system credentials for integration purposes. We also collect usage data, including how you interact with the platform, to improve our services.</p>
@@ -59,13 +72,46 @@
         <h2>6. Contact Us</h2>
         <p>If you have questions about this Privacy Policy, please contact us at <strong>support@tableturnr.com</strong>.</p>
 
+        <h2>7. Data Retention</h2>
+        <p>We retain account and restaurant operations data for as long as your account remains active and as needed to provide the TableTurnr service. If you request account deletion, we delete or de-identify your personal data within 30 days, except where longer retention is required for legal, tax, fraud prevention, or security obligations.</p>
+
+        <h2>8. Children's Privacy</h2>
+        <p>TableTurnr is a business application and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If we learn that such information has been collected, we will delete it promptly.</p>
+
+        <h2>9. California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you may have the right to know what personal information we collect, request deletion of personal information, and request information about disclosures to third parties. You can submit a request by emailing <strong>support@tableturnr.com</strong>. We do not sell personal information.</p>
+
+        <h2>10. App Tracking and Analytics</h2>
+        <p>To improve reliability and performance, we use analytics and monitoring tools, including Google Analytics (property ID: G-3MS0DYYYXY), cloud infrastructure logs, and application performance diagnostics. These tools help us understand feature usage, troubleshoot issues, and improve product quality.</p>
+
+        <h2>11. Camera and Device Permissions</h2>
+        <p>TableTurnr may request camera access for SnapTurnr invoice scanning. Camera input is used to capture invoice images for data extraction and workflow processing. We only use these permissions for the features you invoke and do not access your camera in the background.</p>
+
+        <h2>12. Third-Party Services</h2>
+        <p>TableTurnr integrates with third-party providers to deliver core functionality, including AWS Cognito (authentication), Microsoft Azure Active Directory (MSAL sign-in), Google Analytics, Calendly scheduling, and Font Awesome CDN assets. These providers may process limited technical information needed to provide their services.</p>
+
+        <h2>13. International Users</h2>
+        <p>TableTurnr is operated from the United States. If you access the service from outside the US, you understand that your information may be transferred to and processed in the United States and other jurisdictions where our service providers operate.</p>
+
+        <h2>14. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically to reflect product, legal, or regulatory changes. When material changes are made, we will update the \"Last updated\" date and provide notice through the app, website, or email where appropriate.</p>
+
         <p style="margin-top: 2rem;"><a href="../" style="color: var(--tt-primary, #007AFF);">&larr; Back to TableTurnr</a></p>
     </main>
     <footer class="footer" style="margin-top: 3rem;">
         <div class="container">
-            <p style="text-align: center; color: var(--tt-dark-text);">&copy; <span id="copyright-year">2025</span> TableTurnr. <a href="../" style="color: var(--tt-dark-cta);">Home</a> · <a href="../terms/" style="color: var(--tt-dark-cta);">Terms of Service</a></p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> TableTurnr. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy/">Privacy</a>
+                    <a href="../terms/">Terms</a>
+                    <a href="../cookies/">Cookies</a>
+                    <a href="../account-deletion/">Account Deletion</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+    <script src="../script.js"></script>
 </body>
 </html>
+

@@ -1,5 +1,6 @@
-# TableTurnr - robots.txt
+# TableTurnr robots rules
 User-agent: *
 Allow: /
 
+Host: tableturnr.com
 Sitemap: https://tableturnr.com/sitemap.xml

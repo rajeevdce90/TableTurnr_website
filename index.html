@@ -1,1072 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Fix asset paths on GitHub Pages (repo subpath); no effect when opening file locally -->
-    <script>
-      (function() {
-        if (location.protocol !== 'file:' && location.hostname === 'rajeevdce90.github.io') {
-          document.write('<base href="https://rajeevdce90.github.io/TableTurnr_website/">');
-        }
-      })();
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TableTurnr | AI-Powered Restaurant Management Platform</title>
-
-    <!-- Standard SEO -->
-    <meta name="description" content="TableTurnr is an AI restaurant management platform that connects your POS, suppliers, and staff data. Save $75K+ per location with 94% accurate forecasting." />
-    <meta name="keywords" content="restaurant management software, AI restaurant analytics, POS integration, sales forecasting restaurants, restaurant inventory management, IHOP franchise management, SnapTurnr, TurnrAgent, restaurant labor optimization" />
-    <meta name="author" content="TableTurnr" />
+    <title>TableTurnr | AI Operations Command Center for Restaurants</title>
+    <meta name="description" content="TableTurnr gives restaurant teams a full 360-degree business view with sales tracking, staffing forecasts, inventory intelligence, turn-time optimization, and role-based access." />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#1E202A" />
+    <meta name="author" content="TableTurnr" />
     <link rel="canonical" href="https://tableturnr.com/" />
-    <link rel="alternate" hreflang="en" href="https://tableturnr.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://tableturnr.com/" />
 
-    <!-- Performance: preload critical assets -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
-    <link rel="preload" href="TableTurnr_Logo.png" as="image" />
-    <link rel="preconnect" href="https://www.google.com" />
-    <link rel="dns-prefetch" href="https://www.google.com" />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="dns-prefetch" href="https://assets.calendly.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="TableTurnr" />
-    <meta property="og:title" content="TableTurnr | AI-Powered Restaurant Management Platform" />
-    <meta property="og:description" content="TableTurnr is an AI restaurant management platform that connects your POS, suppliers, and staff data. Save $75K+ per location with 94% accurate forecasting." />
+    <meta property="og:title" content="TableTurnr | AI Operations Command Center for Restaurants" />
+    <meta property="og:description" content="Track sales, labor, inventory, and table turn-time in one command center. Guide staff with TurnrAgent and run your operation with confidence." />
     <meta property="og:url" content="https://tableturnr.com/" />
     <meta property="og:image" content="https://tableturnr.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="TableTurnr - AI Powered Restaurant Management Platform - Start Free Trial" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter Card -->
+    <meta property="og:site_name" content="TableTurnr" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TableTurnr | AI-Powered Restaurant Management Platform" />
-    <meta name="twitter:description" content="TableTurnr is an AI restaurant management platform that connects your POS, suppliers, and staff data. Save $75K+ per location with 94% accurate forecasting." />
+    <meta name="twitter:title" content="TableTurnr | Restaurant Operations Intelligence" />
+    <meta name="twitter:description" content="Forecast demand, improve table turn-time, and control costs with role-based visibility for managers, shift leads, and staff." />
     <meta name="twitter:image" content="https://tableturnr.com/og-image.png" />
-    <meta name="twitter:image:alt" content="TableTurnr - AI Powered Restaurant Management Platform" />
-    <!-- <meta name="twitter:site" content="@tableturnr" />  Uncomment when Twitter/X account is live -->
+    <meta name="theme-color" content="#0d1b33" />
 
-    <!-- Favicon & Apple Touch Icon (relative paths work locally and on GitHub Pages) -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
 
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'" />
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MS0DYYYXY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3MS0DYYYXY');
+        gtag("js", new Date());
+        gtag("config", "G-3MS0DYYYXY");
     </script>
 
-    <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "TableTurnr",
-      "description": "AI-powered restaurant management platform with real-time dashboards, 94% accurate sales forecasting, invoice scanning, and smart staffing for single and multi-location operators.",
+      "description": "Restaurant operations platform with sales tracking, staffing forecasts, inventory intelligence, turn-time optimization, and role-based workflows.",
       "url": "https://tableturnr.com/",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, iOS, iPad",
-      "image": "https://tableturnr.com/og-image.png",
-      "featureList": "Real-Time Sales Dashboard, AI Sales Forecasting (94% Accuracy), SnapTurnr Invoice Scanning, TurnrAgent AI Assistant, Smart Staff Scheduling, Multi-Location Command Center, Contest and Leaderboard",
+      "applicationSubCategory": "Restaurant Management Software",
+      "operatingSystem": "Web, iOS, Android",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "description": "Free trial - no credit card required. Connect your POS in 30 minutes.",
-        "url": "https://tableturnr.com/",
-        "availability": "https://schema.org/InStock"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "TableTurnr",
-        "url": "https://tableturnr.com/"
+        "description": "Book a demo"
       }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "TableTurnr",
-      "url": "https://tableturnr.com/",
-      "logo": "https://tableturnr.com/TableTurnr_Logo.png",
-      "foundingLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "addressCountry": "US"
-        }
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/tableturnr",
-        "https://twitter.com/tableturnr",
-        "https://www.facebook.com/tableturnr"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "url": "https://tableturnr.com/",
-        "areaServed": "US"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the best restaurant management software for franchises?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TableTurnr is built for franchise operators. It connects POS, suppliers, and staff data into one AI-powered platform with real-time multi-location dashboards, 94% accurate sales forecasting, automated invoicing (SnapTurnr), and AI assistant (TurnrAgent). Operators report $75K+ average annual savings per location and 80% reduction in daily reporting time."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does AI help restaurant operations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TableTurnr uses AI for sales and labor forecasting (Foresight) with 94% accuracy, so you can staff and order based on predicted demand. TurnrAgent lets you ask questions in plain English and get answers from your real POS and operational data in seconds. AI also powers invoice extraction (SnapTurnr) and schedule optimization."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to reduce restaurant labor costs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TableTurnr's Foresight module forecasts demand so you can match labor to actual need instead of habit. Smart Staff Scheduling uses predicted demand and utilization data to reduce overstaffing. Customers report up to 15% labor cost reduction while maintaining service quality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What POS systems does TableTurnr integrate with?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TableTurnr integrates with Square, Toast, Clover, Lightspeed, and 15+ other platforms including US Foods, Sysco, DoorDash, Uber Eats, Grubhub, and OpenTable. Real-time data sync; set up in minutes. If you use a system we don't list, we likely support it. Contact us to confirm."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How accurate is AI sales forecasting for restaurants?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TableTurnr's Foresight module delivers 94% accurate sales and staffing forecasts using your historical data and demand patterns. It predicts daily and weekly revenue, labor needs per shift, and inventory requirements so you can stop overstaffing slow nights and understocking busy periods."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to manage multiple restaurant locations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "TableTurnr's Multi-Location Command Center gives you one dashboard to compare performance across every location in real time. Spot underperformers, share best practices, and standardize operations. Franchise operators get real-time visibility without visiting every store, replacing spreadsheets and multiple POS logins."
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "itemReviewed": {
-        "@type": "SoftwareApplication",
-        "name": "TableTurnr",
-        "url": "https://tableturnr.com/"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "IHOP Franchise Operator"
-      },
-      "reviewBody": "We went from spending half our morning in spreadsheets to having everything we need before the first guest walks in.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tableturnr.com/" }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "TableTurnr",
-      "url": "https://tableturnr.com/",
-      "description": "AI-powered restaurant management software for franchises. Real-time dashboards, 94% accurate forecasting, and multi-location management.",
-      "publisher": { "@type": "Organization", "name": "TableTurnr", "url": "https://tableturnr.com/" }
     }
     </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Main navigation -->
-    <nav class="navbar" aria-label="Main navigation">
+
+    <div class="announcement-bar">
         <div class="container">
-            <a href="#top" class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-                <div class="logo-container">
-                    <img src="TableTurnr_Logo.png" alt="TableTurnr restaurant management software logo" class="main-logo" width="50" height="50" decoding="async" />
-                    <div class="brand-content">
-                        <span class="brand-text">TableTurnr</span>
-                        <p class="brand-tagline">AI Powered Restaurant Management</p>
+            <p>Go live in 2 days. Full admin support included. <a href="demo/">Book a demo &rarr;</a></p>
                     </div>
                 </div>
+
+    <nav class="navbar" aria-label="Primary">
+        <div class="container">
+            <a href="./" class="nav-brand">
+                <img src="logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
+                <span class="brand-text">TableTurnr</span>
             </a>
-            <div class="nav-links">
-                <div class="nav-dropdown">
-                    <a href="#features" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Features <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
-                    <div class="nav-dropdown-menu">
-                        <a href="#features">All Features</a>
-                        <a href="#foresight" class="dropdown-primary">Foresight (Forecasting)</a>
-                        <a href="#snapturnr">SnapTurnr (Invoicing)</a>
-                        <a href="#turnragent">TurnrAgent (AI Assistant)</a>
-                        <a href="#security">Security</a>
-                        <a href="#integrations">Integrations</a>
-                        <a href="#contest">Contest &amp; Leaderboard <span class="nav-new-badge">NEW</span></a>
-                    </div>
-                </div>
-                <a href="#case-studies">Case Studies</a>
-                <a href="#pricing">Get Started</a>
-                <a href="#turnragent">TurnrAgent</a>
-                <a href="blog/">Blog</a>
-                <button class="btn btn-primary" onclick="openFreeTrial()">Start Free Trial</button>
-            </div>
+
             <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
-                <i class="fas fa-bars" aria-hidden="true"></i>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
+
+            <div class="nav-links" id="site-nav">
+                <a href="platform/">Platform</a>
+                <a href="customers/">Customers</a>
+                <a href="blog/">Blog</a>
+                <a href="demo/" class="nav-cta">Book a Demo</a>
+            </div>
         </div>
     </nav>
 
     <main id="main-content">
-    <!-- Hero -->
-    <header id="top" class="hero" aria-label="Hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Your Restaurant's Data is Costing You Money</h1>
-                    <p class="hero-subtitle">TableTurnr connects your POS, suppliers, and staff data into one AI-powered platform so you stop guessing and start profiting.</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <strong>$75K+</strong>
-                            <span>Average annual savings per location</span>
+
+        <!-- S1: Hero -->
+        <section class="hero" style="background:var(--tt-bg) url('images/hero-hands-bg.jpg') center/cover no-repeat;background-blend-mode:soft-light;">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow reveal">Stop finding out too late.</p>
+                    <h1 class="reveal">Turn Every Table<br>Into Profit.</h1>
+                    <p class="hero-sub reveal">Live sales, labor, inventory, and forecasts. One screen. AI that acts before you ask.</p>
+                    <div class="hero-actions reveal">
+                        <a href="demo/" class="btn btn-primary">Book a Demo</a>
+                        <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
                         </div>
-                        <div class="stat">
-                            <strong>3+ Hours</strong>
-                            <span>Saved daily on manual tracking</span>
+                    <div class="hero-stats reveal">
+                        <div class="hero-stat">
+                            <span class="hero-stat-val">15–25%</span>
+                            <span class="hero-stat-lbl">More revenue per location</span>
                         </div>
-                        <div class="stat">
-                            <strong>94%</strong>
-                            <span>Sales forecast accuracy</span>
+                        <div class="hero-stat-sep"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-val">3+ hrs</span>
+                            <span class="hero-stat-lbl">Off your plate, daily</span>
                         </div>
+                        <div class="hero-stat-sep"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-val">5‑in‑1</span>
+                            <span class="hero-stat-lbl">Replaces your tool stack</span>
                     </div>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary btn-large" onclick="openFreeTrial()">Start Your Free Trial</button>
-                        <a href="#pricing" class="hero-secondary-link" onclick="openCalendly(); return false;">Or book a 15-min walkthrough →</a>
-                    </div>
-                    <p class="hero-subtext">No credit card required. Connect your POS in 30 minutes.</p>
-                    <p class="hero-traction">Piloting with multi-location franchise operators across the US</p>
-                </div>
-                <div class="hero-image">
-                    <div class="app-mockup">
-                        <!-- Top bar with dropdowns -->
-                        <div class="app-topbar">
-                            <div class="app-dropdown location-dropdown">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>New York</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="app-logo-center">
-                                <img src="TableTurnr_Logo.png" alt="TableTurnr app logo in restaurant dashboard header" class="app-logo-icon" width="32" height="32" decoding="async" />
-                            </div>
-                            <div class="app-dropdown time-dropdown">
-                                <i class="fas fa-calendar"></i>
-                                <span>This Week</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        <!-- Main app screenshot (New York) -->
-                        <div class="app-mockup-screenshot">
-                            <img src="app-screenshots/Sales%20view.png" alt="TableTurnr real-time restaurant sales dashboard showing revenue and analytics" width="600" height="400" decoding="async" />
-                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="hero-visual reveal" aria-hidden="true">
+                    <div class="hero-showcase" data-showcase>
+                        <div class="showcase-glow"></div>
+                        <div class="showcase-frame">
+                            <div class="showcase-chrome">
+                                <div class="showcase-dots"><span></span><span></span><span></span></div>
+                                <span class="showcase-title"><img src="logo.jpeg" alt="" width="18" height="18" style="border-radius:4px;vertical-align:middle;margin-right:5px"/>TableTurnr - TurnrPulse</span>
+                                <span class="showcase-live"><span class="showcase-live-dot"></span>Live</span>
+                            </div>
+                            <div class="showcase-slides">
+                                <img src="images/product-2.jpg" alt="TableTurnr Dashboard - Revenue, staffing, and menu engineering" class="active" loading="eager"/>
+                            </div>
+                            </div>
+
+                        <div class="showcase-float float-revenue">
+                            <span class="float-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                            </span>
+                            <div class="float-text">
+                                <strong>$5.7K</strong>
+                                <span>Today's Revenue</span>
+                        </div>
+                            <span class="float-badge up">+3.1%</span>
+                        </div>
+
+                        <div class="showcase-float float-staff">
+                            <span class="float-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                            </span>
+                            <div class="float-text">
+                                <strong>84%</strong>
+                                <span>FOH Staffed</span>
         </div>
-    </header>
-
-    <!-- App screenshots gallery -->
-    <section id="app-gallery" class="app-gallery-section" aria-label="App screenshots gallery">
-        <div class="container">
-            <h2 class="section-title">See the App in Action</h2>
-            <p class="section-subtitle">Real TableTurnr screens from New York locations</p>
-            <div class="app-gallery-grid">
-                <div class="app-gallery-item"><img src="app-screenshots/Sales%20view.png" alt="TableTurnr real-time restaurant sales dashboard with revenue and guest metrics" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/ai%20insights.png" alt="TableTurnr AI restaurant analytics and insights view" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/inventory%20view.png" alt="TableTurnr restaurant inventory management view" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/schedule%20view.png" alt="TableTurnr staff scheduling and labor management screen" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/Ask%20TT%20Main%20Screen.png" alt="TableTurnr AI assistant TurnrAgent screen for restaurant data queries" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/Ask%20TT%20Response.png" alt="TableTurnr AI assistant TurnrAgent answering restaurant sales query with menu item revenue" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/asktt.png" alt="TableTurnr TurnrAgent AI assistant interface for franchise management" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/ttcart.png" alt="TableTurnr cart and order view in restaurant management app" width="400" height="300" loading="lazy" decoding="async" /></div>
-                <div class="app-gallery-item"><img src="app-screenshots/IMG_3566.png" alt="TableTurnr multi-location restaurant management app dashboard" width="400" height="300" loading="lazy" decoding="async" /></div>
             </div>
-        </div>
-    </section>
 
-    <!-- Case Study / Social Proof -->
-    <section id="case-studies" class="case-study-section" aria-label="Case studies">
-        <div class="container">
-            <h2 class="section-title">Trusted by Restaurant Operators Nationwide</h2>
-            <article class="case-study-card">
-                <div class="case-study-header">
-                    <div class="case-study-badge">CASE STUDY</div>
-                    <h3>IHOP Franchise Network</h3>
+                        <div class="showcase-float float-alert">
+                            <span class="float-dot"></span>
+                            <div class="float-text">
+                                <strong>TurnrAgent</strong>
+                                <span>Reorder cart ready - US Foods</span>
                 </div>
-                <div class="case-study-body">
-                    <div class="case-study-grid">
-                        <div class="case-study-detail">
-                            <h4><i class="fas fa-exclamation-circle"></i> The Challenge</h4>
-                            <p>A multi-location IHOP franchise was managing sales reporting, labor scheduling, and inventory tracking across disconnected systems - spreadsheets, multiple POS logins, and manual supplier calls. Managers spent 3+ hours daily reconciling data, and ownership had limited visibility into real-time performance across locations.</p>
                         </div>
-                        <div class="case-study-detail">
-                            <h4><i class="fas fa-lightbulb"></i> The Solution</h4>
-                            <p>TableTurnr was deployed across the franchise locations, connecting directly to their existing POS and supplier systems. Key modules activated:</p>
-                            <ul class="case-study-list">
-                                <li>Real-time sales dashboards replacing manual Excel tracking</li>
-                                <li>Staff utilization &amp; coverage analytics replacing guesswork scheduling</li>
-                                <li>Multi-location comparison giving ownership a single pane of glass across all stores</li>
-                                <li>RevPath heatmaps identifying peak revenue hours and underperforming dayparts</li>
-                            </ul>
                         </div>
                     </div>
-                    <div class="case-study-results">
-                        <h4>The Results</h4>
-                        <div class="results-grid">
-                            <div class="result-item">
-                                <strong>80%</strong>
-                                <span>Reduction in daily reporting time</span>
                             </div>
-                            <div class="result-item">
-                                <strong>Real-time</strong>
-                                <span>Visibility across all franchise locations from one dashboard</span>
+            <div class="credibility-bar reveal">
+                <div class="container">
+                    <div class="credibility-items">
+                        <div class="credibility-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            <span>Proactive AI</span>
                             </div>
-                            <div class="result-item">
-                                <strong>AI-optimized</strong>
-                                <span>Staffing aligned to actual demand patterns</span>
+                        <div class="credibility-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <span>Live in 48 Hours</span>
                             </div>
-                            <div class="result-item">
-                                <strong>Faster</strong>
-                                <span>Decision-making - from weekly review cycles to real-time action</span>
+                        <div class="credibility-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                            <span>No Rip-and-Replace</span>
                             </div>
+                        <div class="credibility-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
+                            <span>Restaurant-Built</span>
                         </div>
                     </div>
-                    <blockquote class="case-study-quote">
-                        <p>"We went from spending half our morning in spreadsheets to having everything we need before the first guest walks in."</p>
-                        <cite>- IHOP Franchise Operator</cite>
-                    </blockquote>
-                    <a href="case-studies/ihop-franchise/" class="case-study-cta">Read the full case study →</a>
-                </div>
-            </article>
-
-            <!-- Additional Testimonials -->
-            <div class="testimonials-row">
-                <blockquote class="testimonial-card">
-                    <p>"Foresight predicted our Saturday rush within 3% accuracy. We stopped over-ordering and cut food waste by almost a third."</p>
-                    <cite>- Multi-Unit QSR Operator, Southeast US</cite>
-                </blockquote>
-                <blockquote class="testimonial-card">
-                    <p>"TurnrAgent saved our managers at least an hour a day. They used to dig through three different systems just to answer a simple question."</p>
-                    <cite>- Operations Director, Full-Service Restaurant Group</cite>
-                </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- Integrations -->
-    <section id="integrations" class="integrations-section-v2" aria-label="POS and platform integrations">
-        <div class="container">
-            <h2 class="section-title">Connected to 15+ Platforms You Already Use</h2>
-            <p class="section-subtitle">Real integrations. Real-time data sync. Set up in minutes.</p>
+        <!-- S3: How It Works -->
+        <section class="section" id="how-it-works">
+            <div class="container section-split">
+                <div class="section-text">
+                    <h2 class="section-title reveal">Zero setup on your end.</h2>
+                    <p class="section-subtitle reveal">We connect your tools, configure your metrics, and hand you the keys.</p>
+                            </div>
+                <div class="section-visual reveal">
+                    <div class="steps-col">
+                        <div class="step-row">
+                            <div class="step-icon">
+                                <span class="step-num">1</span>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                            <div><h3>Connect</h3><p>We link your POS, scheduling, and inventory systems.</p></div>
+                            </div>
+                        <div class="step-row">
+                            <div class="step-icon">
+                                <span class="step-num">2</span>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                            <div><h3>See</h3><p>Sales, labor, COGS, turn-time, and forecasts go live.</p></div>
+                            </div>
+                        <div class="step-row">
+                            <div class="step-icon">
+                                <span class="step-num">3</span>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                        </div>
+                            <div><h3>Act</h3><p>AI alerts tell your team what to do next.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
-            <div class="integration-categories">
-                <div class="integration-category">
-                    <h4>POS Systems</h4>
-                    <div class="integration-logos">
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=squareup.com&amp;sz=128" alt="Square POS integration" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">S</span>
+        <!-- S3b: Human Section -->
+        <section class="section human-section">
+            <div class="human-section-overlay"></div>
+            <div class="human-section-content reveal">
+                <p class="human-section-eyebrow">Technology with empathy</p>
+                <h2 class="human-section-headline">Built by people who've worked the floor.</h2>
+                <p class="human-section-sub">We've managed kitchens, balanced covers, and closed out registers at 2 AM. TableTurnr isn't built from a lab. It's built from the line.</p>
                             </div>
-                            <span>Square</span>
+        </section>
+
+        <!-- S4: Operations Pulse -->
+        <section class="section ops-section" id="operations-demo">
+            <div class="container section-split">
+                <div class="section-text">
+                    <h2 class="section-title reveal">Your P&amp;L is already late.</h2>
+                    <p class="section-subtitle reveal">TableTurnr is real-time. Sales, labor, inventory, and alerts. All live. So you can stop chasing numbers and start being where your team needs you.</p>
+                    <div class="scenario-panel reveal">
+                        <div class="scenario-pills" role="tablist" aria-label="Scenarios">
+                            <button class="scenario-pill active" data-scenario="inventory" role="tab" aria-selected="true">TurnrSense</button>
+                            <button class="scenario-pill" data-scenario="staffing" role="tab" aria-selected="false">TurnrForesight</button>
+                            <button class="scenario-pill" data-scenario="turntime" role="tab" aria-selected="false">TurnrOps</button>
+                            <button class="scenario-pill" data-scenario="policy" role="tab" aria-selected="false">TurnrAgent</button>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=toasttab.com&amp;sz=128" alt="Toast" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">T</span>
+                        <div class="scenario-desc" data-ops-title></div>
+                        <div class="scenario-detail" data-ops-summary></div>
                             </div>
-                            <span>Toast</span>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=clover.com&amp;sz=128" alt="Clover" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">C</span>
+                <div class="section-visual reveal">
+                    <div class="product-frame">
+
+                        <!-- TurnrSense Mockup -->
+                        <div class="mock-screen active" data-mock="inventory">
+                            <div class="mock-header">
+                                <span class="mock-module-name">TurnrSense</span>
                             </div>
-                            <span>Clover</span>
+                            <div class="mock-metrics-row">
+                                <div class="mock-metric">
+                                    <span class="mock-metric-label">Net Sales</span>
+                                    <span class="mock-metric-val">$12,480</span>
+                                    <span class="mock-metric-trend up">+3.2%</span>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=lightspeedhq.com&amp;sz=128" alt="Lightspeed" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">L</span>
+                                <div class="mock-metric">
+                                    <span class="mock-metric-label">Labor</span>
+                                    <span class="mock-metric-val">29.1%</span>
+                                    <span class="mock-metric-trend down">-1.4%</span>
                             </div>
-                            <span>Lightspeed</span>
+                                <div class="mock-metric">
+                                    <span class="mock-metric-label">Covers</span>
+                                    <span class="mock-metric-val">186</span>
+                                    <span class="mock-metric-trend up">+12</span>
                         </div>
-                    </div>
-                </div>
-                <div class="integration-category">
-                    <h4>Suppliers &amp; Procurement</h4>
-                    <div class="integration-logos">
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=usfoods.com&amp;sz=128" alt="US Foods" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">U</span>
+                                <div class="mock-metric">
+                                    <span class="mock-metric-label">Avg Check</span>
+                                    <span class="mock-metric-val">$67.10</span>
+                                    <span class="mock-metric-trend up">+$2.40</span>
                             </div>
-                            <span>US Foods</span>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=sysco.com&amp;sz=128" alt="Sysco" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">S</span>
+                            <div class="mock-chart-area">
+                                <span class="mock-chart-title">Revenue Trend ($)</span>
+                                <div class="mock-bars">
+                                    <div class="mock-bar-col"><div class="mock-bar" style="height:85%"></div><span>Mon</span></div>
+                                    <div class="mock-bar-col"><div class="mock-bar" style="height:72%"></div><span>Tue</span></div>
+                                    <div class="mock-bar-col"><div class="mock-bar" style="height:60%"></div><span>Wed</span></div>
+                                    <div class="mock-bar-col"><div class="mock-bar" style="height:95%"></div><span>Thu</span></div>
+                                    <div class="mock-bar-col"><div class="mock-bar" style="height:78%"></div><span>Fri</span></div>
+                                    <div class="mock-bar-col"><div class="mock-bar highlight" style="height:100%"></div><span>Sat</span></div>
+                                    <div class="mock-bar-col"><div class="mock-bar" style="height:68%"></div><span>Sun</span></div>
                             </div>
-                            <span>Sysco</span>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=walmart.com&amp;sz=128" alt="Walmart" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">W</span>
+                            <div class="mock-menu-grid">
+                                <span class="mock-chart-title">Menu Engineering</span>
+                                <div class="mock-menu-cells">
+                                    <div class="mock-menu-cell stars"><strong>Stars</strong><span>4 items</span><small>High profit &amp; popularity</small></div>
+                                    <div class="mock-menu-cell plow"><strong>Plow Horses</strong><span>6 items</span><small>Low profit, high popularity</small></div>
+                                    <div class="mock-menu-cell puzzle"><strong>Puzzles</strong><span>3 items</span><small>High profit, low popularity</small></div>
+                                    <div class="mock-menu-cell dogs"><strong>Dogs</strong><span>2 items</span><small>Low profit &amp; popularity</small></div>
                             </div>
-                            <span>Walmart</span>
-                        </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=costco.com&amp;sz=128" alt="Costco" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">C</span>
-                            </div>
-                            <span>Costco</span>
-                        </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=instacart.com&amp;sz=128" alt="Instacart" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">I</span>
-                            </div>
-                            <span>Instacart</span>
-                        </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=gfs.com&amp;sz=128" alt="Gordon Food Service" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">G</span>
-                            </div>
-                            <span>GFS</span>
-                        </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=pfgc.com&amp;sz=128" alt="Performance Food Group" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">P</span>
-                            </div>
-                            <span>PFG</span>
                         </div>
                     </div>
+
+                        <!-- TurnrForesight Mockup -->
+                        <div class="mock-screen" data-mock="staffing">
+                            <div class="mock-header">
+                                <span class="mock-module-name">TurnrForesight</span>
                 </div>
-                <div class="integration-category">
-                    <h4>Delivery Platforms</h4>
-                    <div class="integration-logos">
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=doordash.com&amp;sz=128" alt="DoorDash" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">D</span>
+                            <div class="mock-forecast-cards">
+                                <div class="mock-forecast-card">
+                                    <span class="mock-forecast-label">Projected Sales</span>
+                                    <span class="mock-forecast-val">$31,944</span>
+                                    <div class="mock-forecast-split">
+                                        <span class="mock-split-tag dine">Dine-In 64%</span>
+                                        <span class="mock-split-tag delivery">Delivery 36%</span>
                             </div>
-                            <span>DoorDash</span>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=ubereats.com&amp;sz=128" alt="Uber Eats" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">U</span>
+                                <div class="mock-forecast-card actual">
+                                    <span class="mock-forecast-label">Actual Sales</span>
+                                    <span class="mock-forecast-val">$31,441</span>
+                                    <div class="mock-forecast-split">
+                                        <span class="mock-split-tag dine">Dine-In 64%</span>
+                                        <span class="mock-split-tag delivery">Delivery 36%</span>
                             </div>
-                            <span>Uber Eats</span>
                         </div>
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=grubhub.com&amp;sz=128" alt="Grubhub" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">G</span>
                             </div>
-                            <span>Grubhub</span>
+                            <div class="mock-chart-area">
+                                <span class="mock-chart-title">Sales vs Forecast</span>
+                                <div class="mock-dual-bars">
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:90%"></div><div class="mock-bar actual" style="height:88%"></div></div><span>Sat</span></div>
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:82%"></div><div class="mock-bar actual" style="height:80%"></div></div><span>Sun</span></div>
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:40%"></div><div class="mock-bar actual" style="height:38%"></div></div><span>Mon</span></div>
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:50%"></div><div class="mock-bar actual" style="height:48%"></div></div><span>Tue</span></div>
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:55%"></div><div class="mock-bar actual" style="height:52%"></div></div><span>Wed</span></div>
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:65%"></div><div class="mock-bar actual" style="height:60%"></div></div><span>Thu</span></div>
+                                    <div class="mock-dual-col"><div class="mock-dual-pair"><div class="mock-bar forecast" style="height:58%"></div><div class="mock-bar actual" style="height:56%"></div></div><span>Fri</span></div>
                         </div>
+                                <div class="mock-legend">
+                                    <span class="mock-legend-item"><span class="mock-dot forecast"></span> Forecast</span>
+                                    <span class="mock-legend-item"><span class="mock-dot actual"></span> Actual</span>
                     </div>
                 </div>
-                <div class="integration-category">
-                    <h4>Reservations</h4>
-                    <div class="integration-logos">
-                        <div class="integration-logo-item">
-                            <div class="integration-logo-wrap">
-                                <img src="https://www.google.com/s2/favicons?domain=opentable.com&amp;sz=128" alt="OpenTable" class="integration-logo" width="32" height="32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-                                <span class="integration-logo-fallback" aria-hidden="true">O</span>
+                            <div class="mock-forecast-accuracy">
+                                <span class="mock-accuracy-label">Forecast Accuracy</span>
+                                <span class="mock-accuracy-val">98.4%</span>
+                                <div class="mock-accuracy-bar"><div class="mock-accuracy-fill" style="width:98.4%"></div></div>
                             </div>
-                            <span>OpenTable</span>
                         </div>
+
+                        <!-- TurnrOps Mockup -->
+                        <div class="mock-screen" data-mock="turntime">
+                            <div class="mock-header">
+                                <span class="mock-module-name">TurnrOps</span>
                     </div>
+                            <div class="mock-tabs-bar">
+                                <span class="mock-tab">SnapTurnr</span>
+                                <span class="mock-tab active">Staffing</span>
+                                <span class="mock-tab">Inventory</span>
+                                <span class="mock-tab">TurnrCart</span>
                 </div>
+                            <div class="mock-staff-section">
+                                <div class="mock-staff-header">Front of House</div>
+                                <div class="mock-staff-grid">
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label"></span>
+                                        <span class="mock-day-label">Mon</span><span class="mock-day-label">Tue</span><span class="mock-day-label">Wed</span><span class="mock-day-label">Thu</span><span class="mock-day-label">Fri</span><span class="mock-day-label">Sat</span><span class="mock-day-label">Sun</span>
             </div>
-
-            <p class="integration-note">Don't see your system? We likely support it. <a href="javascript:void(0)" onclick="openCalendly(); return false;">Talk to us →</a></p>
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label">Host</span>
+                                        <span class="mock-circle red">0%</span><span class="mock-circle red">0%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle red">0%</span><span class="mock-circle purple">200%</span><span class="mock-circle green">100%</span>
         </div>
-    </section>
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label">Server</span>
+                                        <span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle orange">70%</span><span class="mock-circle orange">75%</span><span class="mock-circle orange">89%</span><span class="mock-circle red">67%</span>
+                    </div>
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label">Shift Lead</span>
+                                        <span class="mock-circle purple">150%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle purple">150%</span>
+                    </div>
+                </div>
+                    </div>
+                            <div class="mock-staff-section">
+                                <div class="mock-staff-header">Back of House</div>
+                                <div class="mock-staff-grid">
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label"></span>
+                                        <span class="mock-day-label">Mon</span><span class="mock-day-label">Tue</span><span class="mock-day-label">Wed</span><span class="mock-day-label">Thu</span><span class="mock-day-label">Fri</span><span class="mock-day-label">Sat</span><span class="mock-day-label">Sun</span>
+                </div>
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label">Cook</span>
+                                        <span class="mock-circle purple">133%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle orange">86%</span><span class="mock-circle orange">86%</span>
+                    </div>
+                                    <div class="mock-staff-row">
+                                        <span class="mock-role-label">Prep</span>
+                                        <span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span><span class="mock-circle green">100%</span>
+                </div>
+                    </div>
+                </div>
+                    </div>
 
-    <!-- Features -->
-    <section id="features" class="features-v2" aria-label="Restaurant management features">
-        <div class="container">
-            <h2 class="section-title">Everything You Need in One Place</h2>
-            <p class="section-subtitle">Built specifically for busy restaurant managers who need results, not complexity</p>
-            
-            <div class="features-grid-v2">
-                <div class="feature-card-v2">
-                    <div class="feature-icon-v2"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Real-Time Sales &amp; Revenue Dashboard</h3>
-                    <p>See revenue, guest counts, check sizes, and trends updating live. RevPath heatmaps show exactly which hours make you money - and which don't.</p>
-                    <div class="feature-sub-highlights">
-                        <span class="sub-highlight"><i class="fas fa-calendar-day"></i> Revenue Trend Calendar - spot patterns in a heatmap</span>
-                        <span class="sub-highlight"><i class="fas fa-percentage"></i> Prime Cost Tracking - labor + COGS in real-time</span>
-                        <span class="sub-highlight"><i class="fas fa-th"></i> Dine-In Sales Grid - table-level revenue view</span>
-                        <span class="sub-highlight"><i class="fas fa-user-check"></i> Staff Status - see who's on the floor right now</span>
+                        <!-- TurnrAgent Mockup -->
+                        <div class="mock-screen" data-mock="policy">
+                            <div class="mock-header">
+                                <span class="mock-module-name">TurnrAgent</span>
+                                <span class="mock-badge">AI Restaurant Assistant</span>
                     </div>
-                    <p class="feature-detail-note"><i class="fas fa-expand-arrows-alt"></i> Every chart and heatmap expands to full-screen for deeper analysis - RevPath, revenue trends, sales vs expenses, dine-in grids. Tap to zoom in, pinch to explore.</p>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Make data-driven decisions before the lunch rush, not after.
+                            <div class="mock-chat">
+                                <div class="mock-chat-bubble user">
+                                    <span>This week's sales vs last week</span>
+                </div>
+                                <div class="mock-chat-bubble ai">
+                                    <p class="mock-chat-greeting">Great week! Here's your snapshot:</p>
+                                    <div class="mock-chat-stat"><strong>Sales:</strong> $37,040 vs $27,275 <span class="mock-metric-trend up">+35.8%</span></div>
+                                    <div class="mock-chat-stat"><strong>Guests:</strong> 1,697 vs 1,252 <span class="mock-metric-trend up">+35.5%</span></div>
+                                    <div class="mock-chat-stat"><strong>Avg Check:</strong> $29.07 – $35.68</div>
+                                    <div class="mock-chat-divider"></div>
+                                    <p class="mock-chat-sub">Daily Breakdown:</p>
+                                    <div class="mock-chat-stat"><strong>Best Day:</strong> Thu (Thanksgiving) $10,329 &middot; 294 guests</div>
+                                    <div class="mock-chat-stat"><strong>Steady:</strong> Sat $5,693 &middot; Fri $4,804 &middot; Sun $4,786</div>
+                                    <div class="mock-chat-divider"></div>
+                                    <p class="mock-chat-positive">Your team crushed the holiday volume. Keep this momentum going.</p>
                     </div>
                 </div>
-                <div class="feature-card-v2">
-                    <div class="feature-icon-v2"><i class="fas fa-camera"></i></div>
-                    <h3>SnapTurnr - Invoice Scanning</h3>
-                    <p>Snap a photo of any supplier invoice. SnapTurnr extracts line items, totals, and vendor info automatically. Review, approve, and track - no manual entry.</p>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Eliminate invoice processing time and catch pricing errors instantly.
-                    </div>
-                </div>
-                <div class="feature-card-v2">
-                    <div class="feature-icon-v2"><i class="fas fa-brain"></i></div>
-                    <h3>Foresight - AI Forecasting (94% Accuracy)</h3>
-                    <p>Predict tomorrow's sales and staffing needs with 94% accuracy. Foresight uses your historical data and demand patterns to forecast revenue, labor requirements, and inventory needs.</p>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Stop overstaffing slow nights and understocking busy weekends.
-                    </div>
-                </div>
-                <div class="feature-card-v2">
-                    <div class="feature-icon-v2"><i class="fas fa-building"></i></div>
-                    <h3>Multi-Location Command Center</h3>
-                    <p>Compare performance across every location in real-time. Spot underperformers, share best practices, and standardize operations from one dashboard.</p>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Perfect for franchise operators who need visibility without visiting every store.
-                    </div>
-                </div>
-                <div class="feature-card-v2">
-                    <div class="feature-icon-v2"><i class="fas fa-robot"></i></div>
-                    <h3>TurnrAgent - Ask Your Data Anything</h3>
-                    <p>Type a question like "What were my sales last Tuesday in New York?" and get an instant answer pulled from your real data. No dashboards to click through.</p>
-                    <div class="feature-chat-preview">
-                        <div class="chat-msg user-msg"><span class="chat-label">You:</span> How did our labor cost compare across locations this week?</div>
-                        <div class="chat-msg agent-msg"><span class="chat-label">TurnrAgent:</span> Manhattan ran 28.3% labor cost vs Brooklyn at 24.1%. Manhattan was 2.1% above your target - primarily driven by overtime on Thursday evening shift.</div>
-                    </div>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Get answers in seconds that used to take 30 minutes of digging.
-                    </div>
-                </div>
-                <div class="feature-card-v2">
-                    <div class="feature-icon-v2"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Smart Staff Scheduling</h3>
-                    <p>AI-optimized schedules based on predicted demand, staff performance data, and coverage requirements. See utilization rates and identify overstaffing in real-time.</p>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Reduce labor costs by 15% while maintaining service quality.
-                    </div>
-                </div>
-                <div id="contest" class="feature-card-v2 feature-card-highlight">
-                    <div class="feature-icon-v2" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fas fa-trophy"></i></div>
-                    <div class="feature-new-tag">NEW</div>
-                    <h3>Contest &amp; Leaderboard</h3>
-                    <p>Run staff contests with real-time leaderboards tied to actual sales and performance data. Track individual metrics, rank participants, and celebrate top performers - all driven by live POS data, not guesswork.</p>
-                    <div class="feature-sub-highlights">
-                        <span class="sub-highlight"><i class="fas fa-list-ol"></i> Real-time leaderboard with employee rankings</span>
-                        <span class="sub-highlight"><i class="fas fa-chart-bar"></i> Contest metrics tied to actual sales performance</span>
-                        <span class="sub-highlight"><i class="fas fa-user"></i> Per-employee detail views with stats breakdown</span>
-                        <span class="sub-highlight"><i class="fas fa-sliders-h"></i> Configurable contest periods and filters</span>
-                        <span class="sub-highlight"><i class="fas fa-globe"></i> Works across locations for franchise-wide competitions</span>
-                    </div>
-                    <div class="feature-result">
-                        <strong>Result:</strong> Boost staff motivation and drive measurable revenue increases through friendly competition.
+                            <div class="mock-chat-input">
+                                <span>Ask about sales, staff, operations...</span>
+                                <div class="mock-chat-icons">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
                     </div>
                 </div>
             </div>
 
-            <!-- Feature badges row -->
-            <div class="feature-badges-row">
-                <div class="feature-badge-item">
-                    <i class="fas fa-bell"></i>
-                    <span>Real-time alerts when inventory runs low, forecasts shift, or contests update - pushed straight to your device.</span>
-                </div>
-                <div class="feature-badge-item">
-                    <i class="fas fa-tablet-alt"></i>
-                    <span><strong>Optimized for iPad</strong> - Dedicated layouts for every module. Built for the host stand, the back office, or the boardroom.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TurnrAgent -->
-    <section id="turnragent" class="turnragent-section" aria-label="TurnrAgent AI assistant">
+        <!-- S5: Real Conversations -->
+        <section class="section conversations-section">
         <div class="container">
-            <div class="turnragent-content">
-                <div class="turnragent-text">
-                    <h2>Stop Clicking Through Dashboards. Just Ask.</h2>
-                    <p class="turnragent-subtitle">TurnrAgent is your AI analyst. Ask questions in plain English and get answers from your real restaurant data - sales, labor, inventory, and more.</p>
-                    <ul class="turnragent-features">
-                        <li><i class="fas fa-check-circle"></i> Answers from your real POS and operational data</li>
-                        <li><i class="fas fa-check-circle"></i> Supports multi-location queries and comparisons</li>
-                        <li><i class="fas fa-check-circle"></i> Web search for industry benchmarks and trends</li>
-                        <li><i class="fas fa-check-circle"></i> Available on mobile - ask questions from the floor</li>
-                    </ul>
-                    <button class="btn btn-outline btn-large" onclick="openCalendly()">Book a 15-Min Walkthrough</button>
-                </div>
-                <div class="turnragent-demo">
-                    <div class="chat-demo-card">
-                        <div class="chat-demo-header">
-                            <div class="chat-demo-dot"></div>
-                            <div class="chat-demo-dot"></div>
-                            <div class="chat-demo-dot"></div>
-                            <span>TurnrAgent</span>
-                        </div>
-                        <div class="chat-demo-body">
-                            <div class="chat-bubble user-bubble">
-                                What were my top 5 menu items last week?
-                            </div>
-                            <div class="chat-bubble agent-bubble">
-                                <div class="chat-status"><i class="fas fa-check-circle"></i> Fetching sales data... ✓</div>
-                                <p>Here are your top 5 menu items by revenue for last week:</p>
-                                <ol class="chat-results-list">
-                                    <li><strong>Classic Burger</strong> - $4,230 <span class="trend-up">↑12% vs prior week</span></li>
-                                    <li><strong>Chicken Caesar</strong> - $3,890 <span class="trend-up">↑5%</span></li>
-                                    <li><strong>Fish Tacos</strong> - $3,210 <span class="trend-flat">→ flat</span></li>
-                                    <li><strong>Margherita Pizza</strong> - $2,980 <span class="trend-down">↓3%</span></li>
-                                    <li><strong>Wings Platter</strong> - $2,750 <span class="trend-up">↑8%</span></li>
-                                </ol>
-                                <p class="chat-insight">Your burger sales are trending up - consider featuring it as a weekend special.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <h2 class="section-title reveal">This is what Tuesday looks like.</h2>
+                <p class="section-subtitle reveal">Real scenarios. Real roles. Watch your team work when everyone's connected.</p>
+                <div class="convo-stage" data-convo-feed></div>
         </div>
     </section>
 
-    <!-- SnapTurnr -->
-    <section id="snapturnr" class="snapturnr-section" aria-label="SnapTurnr invoice scanning">
-        <div class="container">
-            <h2 class="section-title">SnapTurnr: Invoices, Handled.</h2>
-            <p class="section-subtitle">Take a photo. We extract the data. You approve and move on.</p>
+        <!-- S6: Integrations -->
+        <section class="section integrations-section">
+            <div class="container section-split">
+                <div class="section-text">
+                    <h2 class="section-title reveal">Plug in. Don't rip out.</h2>
+                    <p class="section-subtitle reveal">POS, suppliers, delivery, reservations, payroll, weather. Already connected.</p>
+                    <div class="integration-benefits reveal">
+                        <div class="int-benefit"><strong>Auto-reorder</strong> TurnrSense builds the cart. US Foods, Sysco, Costco. One tap.</div>
+                        <div class="int-benefit"><strong>Instacart backup</strong> Ad-hoc runs without the liability.</div>
+                        <div class="int-benefit"><strong>Receipt scan</strong> TurnrPulse digitizes invoices. COGS matched. Done.</div>
+                        <div class="int-benefit"><strong>Smart alerts</strong> TurnrOps flags inventory, labor, and costs before they compound.</div>
+                </div>
+                </div>
+                <div class="section-visual reveal">
+                    <div class="integrations-hub">
+                        <svg viewBox="0 0 560 390" fill="none" xmlns="http://www.w3.org/2000/svg" class="hub-svg">
+                            <defs>
+                                <linearGradient id="hubGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ff8533"/>
+                                    <stop offset="100%" stop-color="#e55b00"/>
+                                </linearGradient>
+                                <filter id="hubGlow">
+                                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                            </defs>
 
-            <div class="snapturnr-flow">
-                <div class="flow-step">
-                    <div class="flow-icon">📸</div>
-                    <h4>Snap</h4>
-                    <p>Photograph any supplier invoice</p>
-                </div>
-                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="flow-step">
-                    <div class="flow-icon">🔍</div>
-                    <h4>Extract</h4>
-                    <p>AI reads line items, totals, vendor info</p>
-                </div>
-                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="flow-step">
-                    <div class="flow-icon">✅</div>
-                    <h4>Approve</h4>
-                    <p>Review, edit if needed, and approve in seconds</p>
-                </div>
-            </div>
+                            <ellipse cx="280" cy="195" rx="105" ry="78" stroke="#f0f0f0" stroke-width="1" fill="none" opacity="0.4"/>
 
-            <div class="snapturnr-benefits">
-                <div class="snapturnr-benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Eliminate manual invoice data entry</span>
-                </div>
-                <div class="snapturnr-benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Catch pricing errors and discrepancies automatically</span>
-                </div>
-                <div class="snapturnr-benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Track all invoices with status (pending, approved, flagged)</span>
-                </div>
-                <div class="snapturnr-benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Full audit trail for every invoice</span>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <!-- 5 connection paths -->
+                            <path d="M280,195 Q280,118 280,72" class="flow-path" stroke="#22c55e" stroke-width="1.8" stroke-dasharray="6,5" opacity="0.5"/>
+                            <path d="M280,195 Q140,210 82,148" class="flow-path" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="6,5" opacity="0.5"/>
+                            <path d="M280,195 Q420,210 478,148" class="flow-path" stroke="#ec4899" stroke-width="1.8" stroke-dasharray="6,5" opacity="0.5"/>
+                            <path d="M280,195 Q145,240 103,310" class="flow-path" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="6,5" opacity="0.5"/>
+                            <path d="M280,195 Q415,240 458,310" class="flow-path" stroke="#8b5cf6" stroke-width="1.8" stroke-dasharray="6,5" opacity="0.5"/>
 
-    <!-- Foresight -->
-    <section id="foresight" class="foresight-section" aria-label="Foresight AI forecasting">
-        <div class="container">
-            <h2 class="section-title">Foresight: Know Tomorrow's Numbers Today</h2>
-            <p class="section-subtitle">94% accurate sales and staffing forecasts powered by your historical data.</p>
+                            <!-- Animated flow dots -->
+                            <circle r="4" fill="#22c55e" opacity="0.8"><animateMotion dur="2.4s" repeatCount="indefinite" path="M280,195 Q280,118 280,72"/></circle>
+                            <circle r="4" fill="#3b82f6" opacity="0.8"><animateMotion dur="2.6s" repeatCount="indefinite" path="M82,148 Q140,210 280,195"/></circle>
+                            <circle r="4" fill="#ec4899" opacity="0.8"><animateMotion dur="2.8s" repeatCount="indefinite" path="M478,148 Q420,210 280,195"/></circle>
+                            <circle r="4" fill="#3b82f6" opacity="0.8"><animateMotion dur="2.5s" repeatCount="indefinite" path="M280,195 Q145,240 103,310"/></circle>
+                            <circle r="4" fill="#8b5cf6" opacity="0.8"><animateMotion dur="2.7s" repeatCount="indefinite" path="M458,310 Q415,240 280,195"/></circle>
 
-            <div class="foresight-content">
-                <!-- Chart first: proof/visual anchor -->
-                <div class="foresight-chart">
-                    <div class="chart-card-white">
-                        <div class="chart-header-row">
-                            <div class="chart-title-dark">Predicted vs Actual Revenue</div>
-                            <div class="chart-accuracy-badge">
-                                <i class="fas fa-bullseye"></i>
-                                <span>94.2% Accuracy</span>
-                            </div>
-                        </div>
-                        <svg viewBox="0 0 420 220" class="forecast-chart-v2" aria-hidden="true">
-                            <text x="30" y="42" fill="#999" font-size="9" text-anchor="end">$12k</text>
-                            <text x="30" y="82" fill="#999" font-size="9" text-anchor="end">$9k</text>
-                            <text x="30" y="122" fill="#999" font-size="9" text-anchor="end">$6k</text>
-                            <text x="30" y="162" fill="#999" font-size="9" text-anchor="end">$3k</text>
-                            <line x1="38" y1="38" x2="405" y2="38" stroke="#eee" stroke-width="1"/>
-                            <line x1="38" y1="78" x2="405" y2="78" stroke="#eee" stroke-width="1"/>
-                            <line x1="38" y1="118" x2="405" y2="118" stroke="#eee" stroke-width="1"/>
-                            <line x1="38" y1="158" x2="405" y2="158" stroke="#eee" stroke-width="1"/>
-                            <line x1="38" y1="178" x2="405" y2="178" stroke="#ccc" stroke-width="1"/>
-                            <rect x="52" y="68" width="18" height="110" rx="3" fill="#0066CC"/>
-                            <rect x="72" y="72" width="18" height="106" rx="3" fill="#FFB300"/>
-                            <rect x="112" y="48" width="18" height="130" rx="3" fill="#0066CC"/>
-                            <rect x="132" y="44" width="18" height="134" rx="3" fill="#FFB300"/>
-                            <rect x="172" y="74" width="18" height="104" rx="3" fill="#0066CC"/>
-                            <rect x="192" y="78" width="18" height="100" rx="3" fill="#FFB300"/>
-                            <rect x="232" y="38" width="18" height="140" rx="3" fill="#0066CC"/>
-                            <rect x="252" y="34" width="18" height="144" rx="3" fill="#FFB300"/>
-                            <rect x="292" y="30" width="18" height="148" rx="3" fill="#0066CC"/>
-                            <rect x="312" y="34" width="18" height="144" rx="3" fill="#FFB300"/>
-                            <rect x="352" y="54" width="18" height="124" rx="3" fill="#0066CC"/>
-                            <rect x="372" y="50" width="18" height="128" rx="3" fill="#FFB300"/>
-                            <text x="71" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 1</text>
-                            <text x="131" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 2</text>
-                            <text x="191" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 3</text>
-                            <text x="251" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 4</text>
-                            <text x="311" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 5</text>
-                            <text x="371" y="196" fill="#888" font-size="10" text-anchor="middle">Wk 6</text>
+                            <!-- Flow labels -->
+                            <text x="296" y="140" font-size="11" fill="#22c55e" font-weight="600" font-family="JetBrains Mono, monospace" class="flow-label">orders</text>
+                            <text x="148" y="215" font-size="11" fill="#3b82f6" font-weight="600" font-family="JetBrains Mono, monospace" class="flow-label" style="animation-delay:1.5s">sales</text>
+                            <text x="395" y="215" font-size="11" fill="#ec4899" font-weight="600" font-family="JetBrains Mono, monospace" class="flow-label" style="animation-delay:2.5s">reservations</text>
+                            <text x="148" y="252" font-size="11" fill="#3b82f6" font-weight="600" font-family="JetBrains Mono, monospace" class="flow-label" style="animation-delay:3s">shifts</text>
+                            <text x="395" y="252" font-size="11" fill="#8b5cf6" font-weight="600" font-family="JetBrains Mono, monospace" class="flow-label" style="animation-delay:2s">invoices</text>
+
+                            <!-- Center Hub -->
+                            <g filter="url(#hubGlow)">
+                                <rect x="220" y="160" width="120" height="70" rx="16" fill="url(#hubGrad)"/>
+                            </g>
+                            <defs>
+                                <clipPath id="logoClip"><circle cx="280" cy="180" r="15"/></clipPath>
+                            </defs>
+                            <image href="logo.jpeg" x="265" y="165" width="30" height="30" clip-path="url(#logoClip)"/>
+                            <circle cx="280" cy="180" r="15" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+                            <text x="280" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Outfit, sans-serif">TableTurnr</text>
+                            <text x="280" y="222" text-anchor="middle" font-size="9" fill="#ffe0c0" font-family="Outfit, sans-serif">Central Hub</text>
+
+                            <!-- Pod 1: Suppliers (top center) -->
+                            <rect x="155" y="5" width="250" height="65" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+                            <text x="280" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#166534" font-family="Outfit, sans-serif">Suppliers</text>
+                            <text x="280" y="52" text-anchor="middle" font-size="11.5" fill="#4b5563" font-family="Outfit, sans-serif">US Foods · Sysco · Costco · Instacart</text>
+
+                            <!-- Pod 2: POS & Payments (upper left) -->
+                            <rect x="2" y="112" width="160" height="65" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+                            <text x="82" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af" font-family="Outfit, sans-serif">POS &amp; Payments</text>
+                            <text x="82" y="160" text-anchor="middle" font-size="11.5" fill="#4b5563" font-family="Outfit, sans-serif">Toast · Square · Aloha</text>
+
+                            <!-- Pod 3: Guest & Delivery (upper right) -->
+                            <rect x="398" y="112" width="160" height="65" rx="14" fill="#fdf2f8" stroke="#f9a8d4" stroke-width="1.2"/>
+                            <text x="478" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#9d174d" font-family="Outfit, sans-serif">Guest &amp; Delivery</text>
+                            <text x="478" y="160" text-anchor="middle" font-size="11.5" fill="#4b5563" font-family="Outfit, sans-serif">OpenTable · DoorDash</text>
+
+                            <!-- Pod 4: Workforce (lower left) -->
+                            <rect x="22" y="290" width="160" height="65" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+                            <text x="102" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af" font-family="Outfit, sans-serif">Workforce</text>
+                            <text x="102" y="338" text-anchor="middle" font-size="11.5" fill="#4b5563" font-family="Outfit, sans-serif">Scheduling · Payroll</text>
+
+                            <!-- Pod 5: Finance & Data (lower right) -->
+                            <rect x="378" y="290" width="180" height="65" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.2"/>
+                            <text x="468" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#5b21b6" font-family="Outfit, sans-serif">Finance &amp; Data</text>
+                            <text x="468" y="338" text-anchor="middle" font-size="11.5" fill="#4b5563" font-family="Outfit, sans-serif">Receipts · QuickBooks · Weather</text>
                         </svg>
-                        <div class="chart-legend-dark">
-                            <span class="legend-item-dark"><span class="legend-swatch" style="background:#0066CC;"></span> Forecasted</span>
-                            <span class="legend-item-dark"><span class="legend-swatch" style="background:#FFB300;"></span> Actual</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Four capabilities in a 2x2 grid -->
-                <div class="foresight-capabilities">
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
-                        <div>
-                            <h4>Sales Forecast</h4>
-                            <p>Predict daily and weekly revenue with 94% accuracy</p>
-                        </div>
-                    </div>
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
-                        <div>
-                            <h4>Staffing Forecast</h4>
-                            <p>Know exactly how many staff you need per shift</p>
-                        </div>
-                    </div>
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
-                        <div>
-                            <h4>Demand Planning</h4>
-                            <p>Anticipate busy periods and prep accordingly</p>
-                        </div>
-                    </div>
-                    <div class="foresight-item">
-                        <div class="foresight-item-icon"><i class="fas fa-boxes" aria-hidden="true"></i></div>
-                        <div>
-                            <h4>Inventory Forecast</h4>
-                            <p>Order the right amount, reduce waste</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Staff to Demand callout -->
-                <div class="foresight-staffing-callout">
-                    <div class="callout-icon"><i class="fas fa-user-clock" aria-hidden="true"></i></div>
-                    <div class="callout-content">
-                        <h4>Staff to Demand, Not to Habit</h4>
-                        <p>Foresight doesn't just predict sales; it tells you exactly how many staff you need per shift. Match labor to predicted demand so you're never overstaffed on a slow Tuesday or short-handed on a busy Friday.</p>
-                        <div class="callout-stat">
-                            <i class="fas fa-check-circle" aria-hidden="true"></i>
-                            <span>Staffing forecast synced with sales forecast, both at 94% accuracy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="javascript:void(0)" class="foresight-cta" onclick="openCalendly(); return false;">See Foresight in Action →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Security -->
-    <section id="security" class="security-section" aria-label="Security and compliance">
-        <div class="container">
-            <h2 class="section-title">Enterprise-Grade Security, Restaurant-Simple Setup</h2>
-            <p class="section-subtitle">Your data stays secure. From single-location to 50-unit franchises.</p>
-            <div class="security-grid">
-                <div class="security-item">
-                    <div class="security-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div>
-                        <h4>AWS Cognito Authentication</h4>
-                        <p>Secure login with email verification and password recovery</p>
-                    </div>
-                </div>
-                <div class="security-item">
-                    <div class="security-icon"><i class="fab fa-microsoft"></i></div>
-                    <div>
-                        <h4>Azure Active Directory (MSAL)</h4>
-                        <p>For franchise groups using Microsoft identity</p>
-                    </div>
-                </div>
-                <div class="security-item">
-                    <div class="security-icon"><i class="fas fa-user-lock"></i></div>
-                    <div>
-                        <h4>Role-Based Access Control (RBAC)</h4>
-                        <p>Define roles and permissions per user; control who sees what</p>
-                    </div>
-                </div>
-                <div class="security-item">
-                    <div class="security-icon"><i class="fas fa-database"></i></div>
-                    <div>
-                        <h4>Location-Based Data Isolation</h4>
-                        <p>Each location's data is scoped and protected</p>
-                    </div>
-                </div>
-            </div>
-            <p class="security-note">Whether you're a single-location owner or a 50-unit franchise, your data is locked down.</p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="faq-section" aria-label="Frequently asked questions">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Common questions about TableTurnr</p>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3 class="faq-question">What is the best restaurant management software for franchises?</h3>
-                    <p class="faq-answer">TableTurnr is built for franchise operators. It connects POS, suppliers, and staff data into one AI-powered platform with real-time multi-location dashboards, 94% accurate sales forecasting, automated invoicing (SnapTurnr), and AI assistant (TurnrAgent). Operators report $75K+ average annual savings per location and 80% reduction in daily reporting time.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How does AI help restaurant operations?</h3>
-                    <p class="faq-answer">TableTurnr uses AI for sales and labor forecasting (Foresight) with 94% accuracy, so you can staff and order based on predicted demand. TurnrAgent lets you ask questions in plain English and get answers from your real POS and operational data in seconds. AI also powers invoice extraction (SnapTurnr) and schedule optimization.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How to reduce restaurant labor costs?</h3>
-                    <p class="faq-answer">TableTurnr's Foresight module forecasts demand so you can match labor to actual need instead of habit. Smart Staff Scheduling uses predicted demand and utilization data to reduce overstaffing. Customers report up to 15% labor cost reduction while maintaining service quality.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What POS systems does TableTurnr integrate with?</h3>
-                    <p class="faq-answer">TableTurnr integrates with Square, Toast, Clover, Lightspeed, and 15+ other platforms including US Foods, Sysco, DoorDash, Uber Eats, Grubhub, and OpenTable. Real-time data sync; set up in minutes. If you use a system we don't list, we likely support it. Contact us to confirm.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How accurate is AI sales forecasting for restaurants?</h3>
-                    <p class="faq-answer">TableTurnr's Foresight module delivers 94% accurate sales and staffing forecasts using your historical data and demand patterns. It predicts daily and weekly revenue, labor needs per shift, and inventory requirements so you can stop overstaffing slow nights and understocking busy periods.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How to manage multiple restaurant locations?</h3>
-                    <p class="faq-answer">TableTurnr's Multi-Location Command Center gives you one dashboard to compare performance across every location in real time. Spot underperformers, share best practices, and standardize operations. Franchise operators get real-time visibility without visiting every store, replacing spreadsheets and multiple POS logins.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why TableTurnr -->
-    <section class="why-tableturnr-section" aria-label="Why TableTurnr">
-        <div class="container" style="text-align: center; max-width: 720px; padding: 3rem 1.5rem;">
-            <h2 class="section-title">Why TableTurnr, Why Now</h2>
-            <p style="font-size: 1.1rem; line-height: 1.7; color: var(--tt-text-secondary, #555);">The $900B US restaurant industry runs on razor-thin margins, yet most operators still manage sales, labor, and inventory across disconnected tools and spreadsheets. AI changes that. TableTurnr brings predictive intelligence to the operators who need it most - turning fragmented data into real-time decisions, lower costs, and faster growth.</p>
-        </div>
-    </section>
-
-    <!-- Bottom CTA / Get Started -->
-    <section id="pricing" class="cta-bottom" aria-label="Start free trial">
-        <div class="container">
-            <div class="cta-content">
-                <h2>See Your Restaurant's Data Come Alive</h2>
-                <p>Connect your POS, see real insights in 30 minutes. No credit card required.</p>
-                <div class="cta-buttons">
-                    <button class="btn btn-primary btn-large" onclick="openFreeTrial()">Start Your Free Trial</button>
-                    <button class="btn btn-outline btn-large" onclick="openCalendly()">Book a Walkthrough</button>
-                </div>
-                <p class="cta-trust-signals">Trusted by franchise operators • 30-day ROI • Cancel anytime</p>
-                <div class="cta-badges">
-                    <div class="badge-item">
-                        <div class="badge-container">
-                            <div class="made-in-usa-logo">
-                                <div class="usa-flag">
-                                    <div class="flag-stars">
-                                        <span>★</span><span>★</span><span>★</span><span>★</span>
-                                        <span>★</span><span>★</span><span>★</span><span>★</span>
-                                        <span>★</span><span>★</span><span>★</span><span>★</span>
-                                    </div>
-                                    <div class="flag-stripes">
-                                        <div class="stripe red"></div>
-                                        <div class="stripe white"></div>
-                                        <div class="stripe red"></div>
-                                        <div class="stripe white"></div>
-                                        <div class="stripe red"></div>
-                                        <div class="stripe white"></div>
-                                        <div class="stripe red"></div>
-                                    </div>
-                                </div>
-                                <div class="usa-text">
-                                    <span class="made-text">MADE IN</span>
-                                    <span class="usa-text-large">USA</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="badge-item">
-                        <div class="badge-container">
-                            <div class="lehigh-valley-logo">
-                                <div class="lv-circle">
-                                    <div class="lv-mountains"></div>
-                                    <div class="lv-river"></div>
-                                    <div class="lv-trees"></div>
-                                </div>
-                                <div class="lv-text">
-                                    <span class="made-in-text">MADE IN</span>
-                                    <span class="location-text">NEW YORK, NY</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- S7: Final CTA -->
+        <section class="final-cta story-section-bg" style="background-image:url('images/story-duo-bg.jpg')">
+            <div class="story-section-overlay" style="background:linear-gradient(180deg,rgba(15,23,42,0.78) 0%,rgba(15,23,42,0.60) 50%,rgba(15,23,42,0.72) 100%)"></div>
+            <div class="container" style="position:relative;z-index:2">
+                <h2 class="reveal">Live in 48 hours.</h2>
+                <p class="reveal">We set it up. You run your restaurant.</p>
+                <a href="demo/" class="btn btn-primary reveal">Book a Demo</a>
+                <p class="cta-reassurance reveal">Free demo. Zero commitment.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- As Seen In / Press (placeholder for backlink credibility) -->
-    <section id="as-seen-in" class="as-seen-in-section" aria-label="As seen in">
-        <div class="container">
-            <h2 class="section-title">As Seen In</h2>
-            <p class="section-subtitle">TableTurnr in the press and industry. More coverage coming soon.</p>
-            <div class="as-seen-in-placeholder">
-                <p>Restaurant technology and franchise management coverage. Have a press inquiry? <a href="javascript:void(0)" onclick="openCalendly(); return false;">Contact us</a>.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="footer" aria-label="Site footer">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="TableTurnr_Logo.png" alt="TableTurnr restaurant management software logo" class="footer-logo-img" width="50" height="50" loading="lazy" decoding="async" />
-                        <span class="brand-text">TableTurnr</span>
-                    </div>
-                    <p class="footer-tagline">AI Powered Restaurant Management</p>
-                    <p class="footer-tagline-sub">Made in New York, NY • Backed by 15+ real platform integrations</p>
-                    <div class="footer-social" aria-label="Social media">
-                        <a href="https://www.linkedin.com/company/tableturnr" target="_blank" rel="noopener noreferrer" aria-label="TableTurnr on LinkedIn">LinkedIn</a>
-                        <a href="https://twitter.com/tableturnr" target="_blank" rel="noopener noreferrer" aria-label="TableTurnr on Twitter">Twitter</a>
-                        <a href="https://www.facebook.com/tableturnr" target="_blank" rel="noopener noreferrer" aria-label="TableTurnr on Facebook">Facebook</a>
-                    </div>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>New York, NY</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a data-email="support"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Product</h4>
-                        <a href="#features">Dashboard &amp; Analytics</a>
-                        <a href="#snapturnr">SnapTurnr</a>
-                        <a href="#foresight">Foresight</a>
-                        <a href="#turnragent">TurnrAgent</a>
-                        <a href="#features">Staff Scheduling</a>
-                        <a href="#contest">Contest &amp; Leaderboard</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="#case-studies">Case Studies</a>
-                        <a href="#pricing">Get Started</a>
-                        <a href="team/">Team</a>
+            <div class="footer-row">
+                <a href="./" class="footer-brand">
+                    <img src="logo.jpeg" alt="TableTurnr" width="30" height="30"/>
+                    <span>TableTurnr</span>
+                </a>
+                <nav class="footer-nav">
+                    <a href="platform/">Platform</a>
+                    <a href="customers/">Customers</a>
                         <a href="blog/">Blog</a>
-                        <a href="blog/restaurant-management-tips/">Restaurant Management Tips</a>
-                        <a href="blog/how-to-reduce-restaurant-labor-costs/">How to Reduce Labor Costs</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <a href="#faq">FAQ</a>
-                        <a data-email="support">Contact</a>
-                        <a data-email="sales">Sales</a>
-                        <a data-email="careers">Careers</a>
-                    </div>
-                </div>
+                    <a href="support/">Support</a>
+                    <a href="demo/">Book Demo</a>
+                </nav>
             </div>
             <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; <span id="copyright-year">2025</span> TableTurnr. All rights reserved.</p>
-                </div>
-                <div class="footer-legal" id="privacy-terms">
-                    <a href="privacy/" id="privacy">Privacy Policy</a>
-                    <a href="terms/" id="terms">Terms of Service</a>
+                <p>&copy; <span data-current-year>2026</span> TableTurnr. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy/">Privacy</a>
+                    <a href="terms/">Terms</a>
+                    <a href="cookies/">Cookies</a>
+                    <a href="account-deletion/">Account Deletion</a>
                 </div>
             </div>
         </div>
     </footer>
 
-
-
-    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
-    <script src="emails-config.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="pricing-config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

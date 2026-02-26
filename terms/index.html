@@ -7,8 +7,10 @@
     <meta name="description" content="TableTurnr Terms of Service. Understand the terms governing your use of our AI-powered restaurant management platform." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tableturnr.com/terms/" />
+    <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,24 +24,35 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <nav class="navbar" aria-label="Main navigation">
+
+    <div class="announcement-bar">
+        <div class="container">
+            <p>Go live in 2 days. Full admin support included. <a href="../demo/">Book a demo &rarr;</a></p>
+        </div>
+    </div>
+
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <a href="../" class="nav-brand">
-                <div class="logo-container">
-                    <img src="../TableTurnr_Logo.png" alt="TableTurnr logo" class="main-logo" width="50" height="50">
-                    <span class="brand-text">TableTurnr</span>
-                </div>
+                <img src="../logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
+                <span class="brand-text">TableTurnr</span>
             </a>
-            <div class="nav-links">
-                <a href="../#features">Features</a>
-                <a href="../#pricing">Pricing</a>
-                <a href="../">Home</a>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+
+            <div class="nav-links" id="site-nav">
+                <a href="../platform/">Platform</a>
+                <a href="../customers/">Customers</a>
+                <a href="../blog/">Blog</a>
+                <a href="../demo/" class="nav-cta">Book a Demo</a>
             </div>
         </div>
     </nav>
     <main id="main-content" class="container" style="padding: 120px 20px 80px; max-width: 780px;">
         <h1>Terms of Service</h1>
-        <p style="color: var(--tt-text-secondary, #555); margin-bottom: 2rem;"><em>Last updated: February 14, 2025</em></p>
+        <p style="color: var(--tt-text-secondary, #555); margin-bottom: 2rem;"><em>Last updated: February 12, 2026</em></p>
 
         <h2>1. Acceptance of Terms</h2>
         <p>By accessing or using the TableTurnr platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
@@ -65,13 +78,43 @@
         <h2>8. Contact Us</h2>
         <p>If you have questions about these Terms of Service, please contact us at <strong>support@tableturnr.com</strong>.</p>
 
+        <h2>9. Subscription and Billing</h2>
+        <p>TableTurnr may offer free trials and paid subscriptions. If you subscribe to a paid plan, you agree to provide accurate billing information and authorize recurring charges according to your selected plan. You may cancel renewal at any time before the next billing cycle. Unless required by law, fees already paid are non-refundable.</p>
+
+        <h2>10. Apple EULA</h2>
+        <p>If you access TableTurnr through an iOS application, your use is also subject to Apple's Licensed Application End User License Agreement (Standard EULA), available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: var(--tt-primary, #007AFF);">apple.com/legal/internet-services/itunes/dev/stdeula</a>. In the event of conflict, these Terms govern the relationship between you and TableTurnr to the extent permitted by law.</p>
+
+        <h2>11. Age Requirement</h2>
+        <p>You must be at least 13 years old to use TableTurnr. If you are under the age of majority in your jurisdiction, you may only use the service with the involvement and consent of a parent or legal guardian.</p>
+
+        <h2>12. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless TableTurnr, its affiliates, and its personnel from and against claims, liabilities, damages, losses, and expenses arising out of your misuse of the service, violation of these Terms, or infringement of any rights of another party.</p>
+
+        <h2>13. Governing Law and Disputes</h2>
+        <p>These Terms are governed by the laws of the State of New York, without regard to conflict of laws principles. Any dispute arising under these Terms will be resolved in the state or federal courts located in New York, New York, unless otherwise required by applicable law or agreed through binding arbitration.</p>
+
+        <h2>14. Account Deletion</h2>
+        <p>You may request account deletion at any time. Please review our account deletion instructions at <a href="../account-deletion/" style="color: var(--tt-primary, #007AFF);">tableturnr.com/account-deletion/</a>. Once deletion is confirmed, account access is removed and associated data is deleted or retained only where legally required.</p>
+
+        <h2>15. Changes to Terms</h2>
+        <p>We may revise these Terms from time to time. When updates are made, we will post the revised version and update the \"Last updated\" date. Material changes may also be communicated via in-app notice, website notice, or email.</p>
+
         <p style="margin-top: 2rem;"><a href="../" style="color: var(--tt-primary, #007AFF);">&larr; Back to TableTurnr</a></p>
     </main>
     <footer class="footer" style="margin-top: 3rem;">
         <div class="container">
-            <p style="text-align: center; color: var(--tt-dark-text);">&copy; <span id="copyright-year">2025</span> TableTurnr. <a href="../" style="color: var(--tt-dark-cta);">Home</a> · <a href="../privacy/" style="color: var(--tt-dark-cta);">Privacy Policy</a></p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> TableTurnr. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy/">Privacy</a>
+                    <a href="../terms/">Terms</a>
+                    <a href="../cookies/">Cookies</a>
+                    <a href="../account-deletion/">Account Deletion</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+    <script src="../script.js"></script>
 </body>
 </html>
+

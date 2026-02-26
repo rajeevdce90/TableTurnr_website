@@ -1,0 +1,74 @@
+:root {
+    --navy: #0d0e12;
+    --navy-2: #1e202a;
+    --navy-3: #2a2d38;
+    --surface: #ffffff;
+    --surface-soft: #fff8f0;
+    --surface-deep: #f5f3f0;
+    --cream: #fffdfa;
+    --cream-strong: #fff2e4;
+    --text: #1a1a1a;
+    --text-muted: #6b7280;
+    --text-soft: #8e8e93;
+    --ink: #232b3a;
+    --ink-muted: #596274;
+    --ink-soft: #7a8293;
+    --accent: #ff6b00;
+    --accent-strong: #ff4500;
+    --accent-soft: #ffe7d1;
+    --success: #ff9500;
+    --warning: #ff9500;
+    --info: #5ac8fa;
+    --critical: #ff3b30;
+    --border: #f5f3f0;
+    --border-warm: #eed8c5;
+    --ring: rgba(255, 149, 0, 0.35);
+    --shadow-soft: 0 12px 28px rgba(13, 27, 51, 0.09);
+    --shadow-strong: 0 20px 44px rgba(13, 27, 51, 0.14);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --space-1: 0.375rem;
+    --space-2: 0.625rem;
+    --space-3: 0.875rem;
+    --space-4: 1.1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 2.8rem;
+    --space-8: 4rem;
+    --font-sans: "Outfit", "Inter", "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", "Consolas", "Menlo", monospace;
+    --motion-fast: 160ms;
+    --motion-medium: 220ms;
+    --motion-slow: 520ms;
+    --easing-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    /* Compatibility tokens for existing pages */
+    --tt-bg: var(--surface-soft);
+    --tt-surface: var(--surface);
+    --tt-text: var(--text);
+    --tt-text-secondary: var(--text-muted);
+    --tt-text-muted: var(--text-soft);
+    --tt-primary: var(--accent);
+    --tt-primary-hover: var(--accent-strong);
+    --tt-accent: var(--warning);
+    --tt-success: var(--success);
+    --tt-warning: var(--warning);
+    --tt-info: var(--info);
+    --tt-error: var(--critical);
+    --tt-border: var(--border);
+    --tt-dark-bg: var(--navy);
+    --tt-dark-surface: var(--navy-2);
+    --tt-dark-text: #e4e6eb;
+    --tt-dark-cta: #ff9500;
+    --tt-dark-border: #2e3039;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --motion-fast: 1ms;
+        --motion-medium: 1ms;
+        --motion-slow: 1ms;
+    }
+}

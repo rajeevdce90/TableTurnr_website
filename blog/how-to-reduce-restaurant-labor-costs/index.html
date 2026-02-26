@@ -12,13 +12,15 @@
     <meta property="og:title" content="How to Reduce Restaurant Labor Costs | TableTurnr Blog" />
     <meta property="og:description" content="Learn how to reduce restaurant labor costs with AI forecasting, demand-based scheduling, and restaurant management software." />
     <meta property="og:url" content="https://tableturnr.com/blog/how-to-reduce-restaurant-labor-costs/" />
-    <meta property="og:image" content="https://tableturnr.com/TableTurnr_Logo.png" />
+    <meta property="og:image" content="https://tableturnr.com/og-image.png" />
     <meta property="og:site_name" content="TableTurnr" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="How to Reduce Restaurant Labor Costs | TableTurnr Blog" />
     <meta name="twitter:description" content="Reduce restaurant labor costs with AI forecasting and demand-based scheduling from TableTurnr." />
+    <link rel="stylesheet" href="../../theme.css">
     <link rel="stylesheet" href="../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,11 +28,11 @@
       "headline": "How to Reduce Restaurant Labor Costs",
       "description": "Learn how to reduce restaurant labor costs with AI forecasting, demand-based scheduling, and restaurant management software.",
       "url": "https://tableturnr.com/blog/how-to-reduce-restaurant-labor-costs/",
-      "image": "https://tableturnr.com/TableTurnr_Logo.png",
+      "image": "https://tableturnr.com/logo.jpeg",
       "datePublished": "2025-02-12",
       "dateModified": "2025-02-12",
       "author": { "@type": "Organization", "name": "TableTurnr", "url": "https://tableturnr.com/" },
-      "publisher": { "@type": "Organization", "name": "TableTurnr", "logo": { "@type": "ImageObject", "url": "https://tableturnr.com/TableTurnr_Logo.png" } }
+      "publisher": { "@type": "Organization", "name": "TableTurnr", "logo": { "@type": "ImageObject", "url": "https://tableturnr.com/logo.jpeg" } }
     }
     </script>
     <script type="application/ld+json">
@@ -46,18 +48,29 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <nav class="navbar" aria-label="Main navigation">
+
+    <div class="announcement-bar">
+        <div class="container">
+            <p>Go live in 2 days. Full admin support included. <a href="../../demo/">Book a demo &rarr;</a></p>
+        </div>
+    </div>
+
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <a href="../../" class="nav-brand">
-                <div class="logo-container">
-                    <img src="../../TableTurnr_Logo.png" alt="TableTurnr logo" class="main-logo" width="50" height="50">
-                    <span class="brand-text">TableTurnr</span>
-                </div>
+                <img src="../../logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
+                <span class="brand-text">TableTurnr</span>
             </a>
-            <div class="nav-links">
-                <a href="../../#features">Features</a>
-                <a href="../../#pricing">Pricing</a>
-                <a href="../../">Home</a>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+
+            <div class="nav-links" id="site-nav">
+                <a href="../../platform/">Platform</a>
+                <a href="../../customers/">Customers</a>
+                <a href="../../blog/">Blog</a>
+                <a href="../../demo/" class="nav-cta">Book a Demo</a>
             </div>
         </div>
     </nav>
@@ -69,14 +82,42 @@
             </header>
             <p>Labor is one of the largest expenses in restaurant operations. <strong>Restaurant management software</strong> with AI-driven scheduling can help you align staff to actual demand, not guesswork, so you're not overstaffed on slow nights or short-handed on busy ones.</p>
             <p>TableTurnr's Foresight module delivers 94% accurate sales and labor forecasts. Pair that with real-time <strong>restaurant analytics</strong> and <strong>POS integration</strong>, and you get a clear picture of when you need more or fewer hands. Many operators see up to 15% labor cost reduction while maintaining service levels.</p>
-            <p><a href="../restaurant-management-tips/">← Restaurant Management Tips</a> · <a href="../../">Back to TableTurnr</a></p>
+            <p><a href="../restaurant-management-tips/">â† Restaurant Management Tips</a> Â· <a href="../../">Back to TableTurnr</a></p>
         </article>
     </main>
     <footer class="footer" style="margin-top: 3rem;">
         <div class="container">
-            <p style="text-align: center; color: var(--tt-dark-text);">&copy; <span id="copyright-year">2025</span> TableTurnr. <a href="../../" style="color: var(--tt-dark-cta);">Home</a> · <a href="../restaurant-management-tips/" style="color: var(--tt-dark-cta);">Restaurant Management Tips</a></p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> TableTurnr. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../../privacy/">Privacy</a>
+                    <a href="../../terms/">Terms</a>
+                    <a href="../../cookies/">Cookies</a>
+                    <a href="../../account-deletion/">Account Deletion</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+    <script>
+        document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());
+        (function(){
+            var toggle = document.querySelector('.mobile-menu-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('mobile-menu-open');
+                    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !expanded);
+                });
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.navbar')) {
+                        navLinks.classList.remove('mobile-menu-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
+

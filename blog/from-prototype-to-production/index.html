@@ -17,8 +17,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="From Prototype to Production: How TableTurnr Onboards Your Restaurant" />
     <meta name="twitter:description" content="Learn how TableTurnr takes your restaurant from demo to live production in 7 clear steps." />
+    <link rel="stylesheet" href="../../theme.css">
     <link rel="stylesheet" href="../../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -30,7 +32,7 @@
       "datePublished": "2025-09-01",
       "dateModified": "2025-02-14",
       "author": { "@type": "Organization", "name": "TableTurnr", "url": "https://tableturnr.com/" },
-      "publisher": { "@type": "Organization", "name": "TableTurnr", "logo": { "@type": "ImageObject", "url": "https://tableturnr.com/TableTurnr_Logo.png" } }
+      "publisher": { "@type": "Organization", "name": "TableTurnr", "logo": { "@type": "ImageObject", "url": "https://tableturnr.com/logo.jpeg" } }
     }
     </script>
     <script type="application/ld+json">
@@ -47,18 +49,29 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <nav class="navbar" aria-label="Main navigation">
+
+    <div class="announcement-bar">
+        <div class="container">
+            <p>Go live in 2 days. Full admin support included. <a href="../../demo/">Book a demo &rarr;</a></p>
+        </div>
+    </div>
+
+    <nav class="navbar" aria-label="Primary">
         <div class="container">
             <a href="../../" class="nav-brand">
-                <div class="logo-container">
-                    <img src="../../TableTurnr_Logo.png" alt="TableTurnr logo" class="main-logo" width="50" height="50">
-                    <span class="brand-text">TableTurnr</span>
-                </div>
+                <img src="../../logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
+                <span class="brand-text">TableTurnr</span>
             </a>
-            <div class="nav-links">
-                <a href="../../#features">Features</a>
-                <a href="../">Blog</a>
-                <a href="../../">Home</a>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+
+            <div class="nav-links" id="site-nav">
+                <a href="../../platform/">Platform</a>
+                <a href="../../customers/">Customers</a>
+                <a href="../../blog/">Blog</a>
+                <a href="../../demo/" class="nav-cta">Book a Demo</a>
             </div>
         </div>
     </nav>
@@ -71,7 +84,7 @@
             </header>
 
             <div style="margin-top: 2rem; line-height: 1.8; color: var(--tt-text, #1a1a2e);">
-                <p>So, you've seen a demo of a powerful new restaurant management app. It looks amazing, the features are exactly what you need, and you can already imagine how it will streamline your operations. But then a crucial question hits you: How do you get from this impressive prototype to a fully functioning system running with your restaurant's unique data?</p>
+                <p>So, you've seen a demo of a powerful new restaurant management app. It looks amazing, the features are exactly what you need, and you can already see how it fits your operations. But then a question comes up: How do you get from this impressive prototype to a fully functioning system running with your restaurant's actual data?</p>
 
                 <p>It's a common concern. The transition from a clean, hardcoded prototype to a live production environment handling real-world data can seem daunting. At TableTurnr, we've perfected this process to make it smooth, secure, and surprisingly simple for you.</p>
 
@@ -85,18 +98,46 @@
                 <h2 style="margin-top: 2rem; font-size: 1.4rem;">Ready to Make the Move?</h2>
                 <p>Transitioning to a new restaurant management system is a significant step, but it doesn't have to be a difficult one. With a proven process, a dedicated team, and a powerful platform, TableTurnr is here to guide you every step of the way.</p>
 
-                <p style="margin-top: 1.5rem;"><a href="../../#pricing" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--tt-primary, #007AFF); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600;">Start Your Free Trial Today</a></p>
+                <p style="margin-top: 1.5rem;"><a href="../../demo/" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--tt-primary, #007AFF); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600;">Book Demo</a></p>
             </div>
 
             <hr style="margin: 2.5rem 0; border: none; border-top: 1px solid var(--tt-border, #e0e0e0);" />
-            <p><a href="../">← Back to Blog</a> - <a href="../restaurant-management-tips/">Restaurant Management Tips</a> - <a href="../how-to-reduce-restaurant-labor-costs/">How to Reduce Labor Costs</a></p>
+            <p><a href="../">â† Back to Blog</a> - <a href="../restaurant-management-tips/">Restaurant Management Tips</a> - <a href="../how-to-reduce-restaurant-labor-costs/">How to Reduce Labor Costs</a></p>
         </article>
     </main>
     <footer class="footer" style="margin-top: 3rem;">
         <div class="container">
-            <p style="text-align: center; color: var(--tt-dark-text);">&copy; <span id="copyright-year">2025</span> TableTurnr. <a href="../../" style="color: var(--tt-dark-cta);">Home</a> - <a href="../" style="color: var(--tt-dark-cta);">Blog</a></p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> TableTurnr. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../../privacy/">Privacy</a>
+                    <a href="../../terms/">Terms</a>
+                    <a href="../../cookies/">Cookies</a>
+                    <a href="../../account-deletion/">Account Deletion</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script>document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());</script>
+    <script>
+        document.getElementById('copyright-year') && (document.getElementById('copyright-year').textContent = new Date().getFullYear());
+        (function(){
+            var toggle = document.querySelector('.mobile-menu-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('mobile-menu-open');
+                    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !expanded);
+                });
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.navbar')) {
+                        navLinks.classList.remove('mobile-menu-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
+
