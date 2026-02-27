@@ -381,6 +381,31 @@
         });
     }
 
+    function setupBackToTopButton() {
+        if (!window.matchMedia || !window.matchMedia("(max-width: 767px)").matches) return;
+        if (document.querySelector(".back-to-top")) return;
+
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "back-to-top";
+        btn.setAttribute("aria-label", "Back to top");
+        btn.textContent = "↑";
+
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        document.body.appendChild(btn);
+
+        var updateVisibility = function () {
+            btn.classList.toggle("visible", window.scrollY > 320);
+        };
+
+        updateVisibility();
+        window.addEventListener("scroll", updateVisibility, { passive: true });
+        window.addEventListener("resize", updateVisibility);
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         setCurrentYear();
         setupNavbar();
@@ -389,5 +414,6 @@
         setupDashboardDemo();
         setupConversationFeed();
         setupBlogFilters();
+        setupBackToTopButton();
     });
 })();

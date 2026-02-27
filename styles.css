@@ -784,7 +784,7 @@ a.nav-brand {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 0 15px;
+        padding: 0 20px;
     }
     
     h1 {
@@ -923,7 +923,7 @@ a.nav-brand {
 
     /* Reduce section padding on mobile */
     section {
-        padding: 60px 0 !important;
+        padding: 48px 0 !important;
     }
 
     .integrations-section,
@@ -932,7 +932,7 @@ a.nav-brand {
     .ios-demo-section,
     .features,
     .asktt-section {
-        padding: 50px 0 !important;
+        padding: 40px 0 !important;
     }
 
     /* Improve mobile phone mockup */
@@ -1397,6 +1397,7 @@ a.nav-brand {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     height: 500px;
+    max-height: 70vh;
 }
 
 .restaurant-context-image {
@@ -2413,7 +2414,6 @@ a.nav-brand {
     color: var(--tt-text);
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    white-space: nowrap;
 }
 
 .asktt-description {
@@ -4511,8 +4511,8 @@ a.nav-brand {
     }
 
     .mobile-menu-toggle {
-        min-width: 40px;
-        min-height: 40px;
+        min-width: 44px;
+        min-height: 44px;
         padding: 8px;
     }
 
@@ -4579,7 +4579,7 @@ a.nav-brand {
     .btn {
         padding: 10px 16px;
         font-size: 0.95rem;
-        min-height: 42px;
+        min-height: 44px;
     }
 
     /* Restaurant type cards for small screens - 2x2 grid */
@@ -7589,18 +7589,21 @@ a.nav-cta:hover {
 
     .footer-row {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
+        text-align: center;
     }
 
     .footer-nav {
         gap: 1rem 1.5rem;
+        justify-content: center;
     }
 
     .footer-bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 0.6rem;
+        text-align: center;
     }
 
     .proof-row,
@@ -7673,7 +7676,7 @@ a.nav-cta:hover {
 }
 
 /* ═══════════════════════════════════════════════════
-   HOMEPAGE REDESIGN — Sections 1-7
+   HOMEPAGE REDESIGN - Sections 1-7
    ═══════════════════════════════════════════════════ */
 
 /* ── Scroll Snap + Full-Viewport ────────────────── */
@@ -7711,6 +7714,14 @@ html {
 
 .hero > .container.hero-grid {
     max-width: 1200px;
+}
+
+/* Blog/article hero blocks that use .hero + .story-section-bg but not .hero-grid */
+.hero.story-section-bg > .container:not(.hero-grid) {
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
 }
 
 /* ── Split Layout (text left, visual right) ───── */
@@ -8053,8 +8064,57 @@ html {
     color: #4b5563;
 }
 
-/* ── Steps (How It Works) ───────────────────────── */
+/* ── How It Works cards ─────────────────────────── */
 
+.hiw-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hiw-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--border-subtle, #e5e7eb);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.hiw-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+}
+
+.hiw-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hiw-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ink, #0f172a);
+    margin-bottom: 0.5rem;
+}
+
+.hiw-card p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-muted, #64748b);
+}
+
+/* Legacy steps (unused, kept for subpages) */
 .steps-col {
     display: flex;
     flex-direction: column;
@@ -9308,6 +9368,16 @@ html {
     color: #0f172a;
     line-height: 1.3;
     margin-bottom: 0.5rem;
+}
+
+.blog-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-card h3 a:hover {
+    color: #ff6b00;
+    text-decoration: underline;
 }
 
 .blog-card p {
@@ -10621,4 +10691,1191 @@ html {
     left: 0;
     color: #22c55e;
     font-weight: 700;
+}
+
+/* ============================================
+   COMPREHENSIVE RESPONSIVE - Phone / Tablet / Landscape
+   ============================================ */
+
+img { max-width: 100%; height: auto; }
+
+/* ── Tablet landscape (1024–1280px) ──────────────── */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .container { max-width: 960px; margin: 0 auto; }
+    .hero h1 { font-size: 3rem; }
+    .section-title { font-size: 2.2rem; }
+    h2 { font-size: 2.2rem; }
+    .asktt-content { gap: 3rem; }
+    .duo-side { height: 65vh; }
+    .hero-content { gap: 2.5rem; }
+    .section-split { gap: 3rem; }
+}
+
+/* ── iPad / Tablet portrait (768–1023px) ─────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* ── Global: container, type, spacing ─────────── */
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 0.6rem; }
+    h3 { font-size: 1.3rem; }
+    p { font-size: 1rem; line-height: 1.6; }
+
+    section, .section { padding: 2.5rem 0 !important; }
+
+    .section-title { font-size: 1.6rem; text-align: left; margin-bottom: 0.5rem; }
+    .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        text-align: left;
+        max-width: none;
+        margin: 0 0 0.75rem 0;
+    }
+
+    /* ── All split layouts: keep 2-column ─────────── */
+    .section-split {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 1.5rem;
+        text-align: left;
+        align-items: center;
+    }
+    .section-split .section-text {
+        text-align: left;
+        max-width: none;
+        margin: 0;
+    }
+    .section-split .section-visual {
+        display: flex;
+        justify-content: center;
+    }
+    .section-split.reverse {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    /* ── Homepage hero: 2-column, full viewport ───── */
+    .hero {
+        padding: 80px 0 2rem !important;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        text-align: left;
+    }
+    .hero-text { max-width: 100%; }
+    .hero h1 { font-size: 2.2rem; line-height: 1.15; margin-bottom: 0.6rem; }
+    .hero-subtitle { font-size: 1rem; margin-bottom: 1rem; line-height: 1.55; }
+    .hero-buttons { gap: 0.75rem; }
+    .hero-buttons .btn { padding: 0.6rem 1.2rem; font-size: 0.95rem; }
+    .hero-stats {
+        gap: 0.75rem;
+        margin: 1rem 0;
+    }
+    .hero-stat-val { font-size: 1.5rem; }
+    .hero-stat-lbl { font-size: 0.78rem; }
+    .hero-stat-sep { height: 28px; }
+    .hero-visual { display: flex; justify-content: center; }
+    .hero-showcase { max-width: 360px; }
+    .showcase-frame { border-radius: 10px; }
+    .showcase-chrome { padding: 6px 10px; }
+    .showcase-dots span { width: 7px; height: 7px; }
+    .showcase-title { font-size: 0.7rem; }
+    .showcase-float { display: none; }
+
+    .credibility-items {
+        gap: 0.8rem;
+        justify-content: flex-start;
+    }
+    .credibility-item span { font-size: 0.82rem; }
+
+    /* ── Homepage hero-grid (demo page, etc.) ─────── */
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+    .hero-copy { text-align: left; }
+    .hero-copy h1 { font-size: 2rem; line-height: 1.2; }
+    .hero-sub { font-size: 1rem; line-height: 1.55; }
+    .hero-eyebrow { font-size: 0.88rem; }
+    .hero-actions { gap: 0.6rem; margin-top: 1rem; }
+    .hero-actions .btn { padding: 0.6rem 1.2rem; font-size: 0.92rem; }
+    .eyebrow { font-size: 0.8rem; padding: 0.3rem 0.6rem; margin-bottom: 0.6rem; }
+
+    .proof-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+    }
+    .proof-pill { padding: 0.55rem 0.65rem; }
+    .proof-pill strong { font-size: 0.82rem; display: block; margin-bottom: 0.1rem; }
+    .proof-pill span { font-size: 0.72rem; }
+
+    /* ── Demo page: form compact on iPad ─────────── */
+    .hero-grid .info-card label { margin-bottom: 0.45rem !important; font-size: 0.88rem; }
+    .hero-grid .info-card input,
+    .hero-grid .info-card select { padding: 0.5rem !important; font-size: 0.88rem; }
+    .hero-grid .info-card h3 { font-size: 1.05rem; }
+    .hero-grid .info-card p { font-size: 0.85rem; margin-bottom: 0.6rem !important; }
+
+    /* ── S4 Operations Pulse (homepage) ───────────── */
+    .ops-section .scenario-panel { margin-top: 0.5rem; }
+    .ops-section .scenario-pills { gap: 0.4rem; margin-bottom: 0.6rem; }
+    .ops-section .scenario-pill { padding: 0.35rem 0.8rem; font-size: 0.88rem; }
+    .ops-section .scenario-desc { font-size: 1rem; }
+    .ops-section .scenario-detail { font-size: 0.9rem; }
+
+    /* ── Mockup screens: compact for iPad ─────────── */
+    .product-frame { border-radius: 10px; }
+    .mock-screen { min-height: auto; padding: 0.6rem 0.7rem; }
+    .mock-header { padding: 0.4rem 0; }
+    .mock-module-name { font-size: 0.72rem; }
+    .mock-metric-label { font-size: 0.58rem; }
+    .mock-metric-val { font-size: 0.82rem; }
+    .mock-metric-trend { font-size: 0.58rem; }
+    .mock-metrics-row { grid-template-columns: repeat(4, 1fr); gap: 0.4rem; }
+    .mock-chart-title { font-size: 0.62rem; }
+    .mock-bars { height: 70px; }
+    .mock-bar-col span { font-size: 0.52rem; }
+    .mock-menu-cell { padding: 0.35rem; }
+    .mock-menu-cell strong { font-size: 0.68rem; }
+    .mock-menu-cell span { font-size: 0.58rem; }
+    .mock-menu-cell small { font-size: 0.52rem; display: none; }
+
+    .mock-staff-row { grid-template-columns: 50px repeat(7, 1fr); font-size: 0.55rem; gap: 2px; }
+    .mock-role-label { font-size: 0.6rem; }
+    .mock-heat-row { grid-template-columns: 30px repeat(5, 1fr); gap: 2px; }
+    .mock-heat-time { font-size: 0.52rem; }
+
+    .mock-forecast-cards { gap: 0.5rem; }
+    .mock-forecast-card { padding: 0.5rem; }
+    .mock-forecast-label { font-size: 0.6rem; }
+    .mock-forecast-val { font-size: 0.9rem; }
+    .mock-forecast-split { font-size: 0.55rem; }
+    .mock-chart-dual { height: 60px; }
+
+    .mock-chat-bubble { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
+    .mock-chat-input { padding: 0.4rem 0.6rem; font-size: 0.72rem; }
+
+    /* ── How It Works cards (iPad) ──────────────── */
+    .hiw-cards { gap: 1.25rem; margin-top: 1.5rem; }
+    .hiw-card { padding: 1.5rem 1rem; }
+    .hiw-num { width: 42px; height: 42px; font-size: 1.1rem; }
+    .hiw-card h3 { font-size: 1.15rem; }
+    .hiw-card p { font-size: 0.88rem; }
+
+    /* ── Conversations section (homepage) ─────────── */
+    .conversations-section { padding: 2.5rem 0 !important; }
+    .conversations-section .section-title { font-size: 1.6rem; text-align: center; margin-bottom: 0.4rem; }
+    .conversations-section .section-subtitle { font-size: 0.95rem; text-align: center; margin-bottom: 0.75rem; }
+    .convo-stage { height: auto; max-width: 100%; margin-top: 1.25rem; }
+    .convo-pair { position: relative; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .convo-pair.back { display: none; }
+    .convo-card { height: 340px; border-radius: 12px; }
+    .convo-card-header { padding: 0.6rem 1rem; }
+    .convo-card-title { font-size: 0.95rem; }
+    .convo-card-time { font-size: 0.75rem; }
+    .convo-card-body { padding: 0.6rem 1rem; }
+    .convo-msg { font-size: 0.88rem; padding: 0.5rem 0.75rem; margin-bottom: 0.4rem; }
+
+    /* ── Integrations section (homepage) ──────────── */
+    .integrations-section { padding: 2rem 0 !important; min-height: 100vh; box-sizing: border-box; display: flex; align-items: center; }
+    .integrations-section .section-split {
+        grid-template-columns: 1fr 1.75fr;
+        gap: 0.9rem;
+        align-items: center;
+    }
+    .integrations-section .section-text {
+        text-align: left;
+        max-width: 100%;
+    }
+    .integrations-section .section-visual {
+        justify-content: flex-end;
+        overflow: visible;
+    }
+    .integrations-section .section-title { font-size: 1.55rem; margin-bottom: 0.35rem; text-align: left; }
+    .integrations-section .section-subtitle { font-size: 0.92rem; margin-bottom: 0.55rem; text-align: left; }
+    .integration-benefits {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+        margin-top: 0.55rem;
+    }
+    .int-benefit { font-size: 0; line-height: 0; color: transparent; }
+    .int-benefit strong {
+        font-size: 0.9rem;
+        line-height: 1.35;
+        color: var(--ink, #1C1C1E);
+        display: block;
+        margin-bottom: 0;
+        position: relative;
+        padding-left: 1rem;
+    }
+    .int-benefit strong::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #ff6b00;
+        font-weight: 700;
+    }
+    .integrations-hub {
+        width: 118%;
+        max-width: 760px;
+        margin: 0 0 0 auto;
+    }
+    .hub-svg { width: 100%; height: auto; max-height: 78vh; }
+
+    /* ── Human section (homepage) ─────────────────── */
+    .human-section { padding: 2rem 0 !important; min-height: 100vh !important; display: flex; align-items: center; box-sizing: border-box; }
+    .human-section-headline { font-size: 2rem; margin-bottom: 0.6rem; }
+    .human-section-sub { font-size: 1.05rem; line-height: 1.6; }
+
+    /* ── Ask TT section ──────────────────────────── */
+    .asktt-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    .asktt-title { font-size: 1.8rem; }
+    .asktt-subtitle { font-size: 1rem; }
+    .asktt-description { font-size: 0.85rem; }
+    .asktt-phones .phone-frame { width: 180px; height: 370px; }
+
+    /* ── Customers: story sections ────────────────── */
+    .story-section-bg { padding: 2rem 0 !important; min-height: 100vh; box-sizing: border-box; display: flex; align-items: center; }
+    .story-text-light h2 { font-size: 1.6rem; margin-bottom: 0.4rem; }
+    .story-text-light .section-subtitle { font-size: 0.95rem; line-height: 1.55; margin-bottom: 0.6rem; }
+    .story-text-light .eyebrow { font-size: 0.8rem; margin-bottom: 0.5rem; }
+    .story-text-light blockquote,
+    .story-text-light .story-quote { font-size: 0.95rem; line-height: 1.5; margin: 0.6rem 0; }
+    .story-card-glass { padding: 0; border-radius: 12px; overflow: hidden; }
+    .story-result-card { padding: 0; border-radius: 12px; overflow: hidden; }
+    .story-result-header { padding: 0.6rem 1rem; }
+    .story-result-name { font-size: 0.95rem; }
+    .story-result-type { font-size: 0.75rem; }
+    .story-result-before,
+    .story-result-after { padding: 0.6rem 1rem; }
+    .story-result-label { font-size: 0.72rem; margin-bottom: 0.25rem; }
+    .story-result-before li { font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.2rem; }
+    .story-result-before li:nth-child(n+3) { display: none; }
+    .story-metrics { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+    .story-metric-val { font-size: 1rem; }
+    .story-metric-lbl { font-size: 0.68rem; }
+    .story-modules-used { padding: 0.5rem 1rem; }
+    .story-module-tags { gap: 0.3rem; margin-top: 0.3rem; }
+    .story-module-tag { font-size: 0.68rem; padding: 0.15rem 0.45rem; }
+
+    /* ── Customers: duo cards side-by-side ─────────── */
+    .duo-side {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        max-height: 100vh;
+        gap: 0.75rem;
+        padding: 0 0.75rem;
+    }
+    .duo-card {
+        min-height: auto;
+        height: calc(100vh - 3rem);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .duo-card-spacer { height: 30%; }
+    .duo-card-content { padding: 1.25rem 1.25rem; }
+    .duo-card-eyebrow { font-size: 0.75rem; }
+    .duo-card h3 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+    .duo-card-quote { font-size: 0.88rem; line-height: 1.4; margin-bottom: 0.35rem; }
+    .duo-card-text p { font-size: 0.85rem; line-height: 1.4; }
+    .duo-card .story-attribution { font-size: 0.78rem; margin-bottom: 0.6rem; }
+    .duo-card-metrics { gap: 0.4rem; }
+    .duo-card-val { font-size: 1.05rem; }
+    .duo-card-label { font-size: 0.68rem; }
+
+    /* ── Platform: hero (full-width text) ─────────── */
+    .platform-hero {
+        padding: 80px 0 2rem !important;
+        min-height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .platform-hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .platform-hero .hero-copy {
+        max-width: 600px;
+        text-align: center;
+    }
+    .platform-hero .hero-copy h1 { font-size: 2.2rem; }
+    .platform-hero .hero-sub { font-size: 1.05rem; line-height: 1.55; }
+    .platform-hero .hero-actions { justify-content: center; }
+    .platform-hero .hero-actions .btn { padding: 0.6rem 1.2rem; font-size: 0.92rem; }
+
+    /* ── Platform: feature lists - trim to 3 items ── */
+    .platform-features { margin-top: 0.6rem; gap: 0.4rem; }
+    .platform-features li { font-size: 0.9rem; line-height: 1.45; padding-left: 1.2rem; }
+    .platform-features li:nth-child(n+4) { display: none; }
+
+    /* ── Platform: role-based grid ────────────────── */
+    .platform-roles-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.6rem;
+    }
+    .platform-roles-grid .info-card { padding: 0.75rem; }
+    .platform-roles-grid .info-card h4 { font-size: 0.92rem; margin-bottom: 0.2rem; }
+    .platform-roles-grid .info-card p { font-size: 0.82rem; line-height: 1.4; }
+
+    /* ── Blog grid ────────────────────────────────── */
+    .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .blog-card { padding: 1rem; }
+    .blog-card-title { font-size: 1.05rem; }
+    .blog-card-desc { font-size: 0.9rem; }
+    .blog-filters { gap: 0.5rem; margin-bottom: 1.25rem; }
+    .blog-filter { padding: 0.4rem 0.85rem; font-size: 0.88rem; }
+
+    /* ── Demo: form card compact ──────────────────── */
+    .info-card { padding: 1.25rem; }
+    .info-card h3 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+    .info-card p { font-size: 0.92rem; margin-bottom: 0.6rem; }
+
+    /* ── Card grids ───────────────────────────────── */
+    .card-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    .card-grid .info-card { padding: 1rem; }
+    .card-grid .info-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+    .card-grid .info-card p { font-size: 0.88rem; }
+    .results-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .features-grid-v2 { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .dash-metrics { grid-template-columns: repeat(2, 1fr); }
+
+    /* ── Customer: aggregate stats strip ──────────── */
+    .story-aggregate { gap: 2rem 2.5rem; }
+    .story-agg-val { font-size: 1.8rem; }
+    .story-agg-label { font-size: 0.82rem; }
+    .story-agg-sep { height: 36px; }
+
+    .solution-visual-large {
+        grid-template-columns: 1fr;
+        height: auto;
+        max-height: none;
+    }
+
+    /* ── Final CTA: full viewport ──────────────────── */
+    .final-cta { padding: 2.5rem 0 !important; text-align: center; min-height: 100vh !important; display: flex; align-items: center; box-sizing: border-box; }
+    .final-cta h2 { font-size: 2rem; margin-bottom: 0.6rem; }
+    .final-cta p { font-size: 1.05rem; margin-bottom: 1rem; }
+    .final-cta .container { max-width: 600px; }
+    .final-cta .btn { font-size: 1rem; padding: 0.75rem 2rem; }
+    .cta-buttons { justify-content: center; }
+    .cta-reassurance { font-size: 0.85rem; }
+
+    /* ── Compare table: for iPad ──────────────────── */
+    .compare-table-section { padding: 0 0 2.5rem; }
+    .compare-table { font-size: 0.88rem; }
+    .compare-table th { padding: 0.7rem 0.6rem; font-size: 0.82rem; }
+    .compare-table td { padding: 0.6rem 0.6rem; }
+    .compare-table th.feature-col { min-width: 120px; }
+
+    /* ── CTA band ─────────────────────────────────── */
+    .cta-band { padding: 1.75rem; border-radius: 14px; }
+    .cta-band h3 { font-size: 1.15rem; }
+    .cta-band p { font-size: 0.92rem; }
+
+    /* ── Footer ───────────────────────────────────── */
+    .footer { padding: 2rem 0; }
+    .footer-content { text-align: center; }
+    .footer-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    .footer-links { justify-items: center; }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    .footer-nav { justify-content: center; gap: 0.85rem 1.5rem; font-size: 0.92rem; }
+
+    /* ── Modal ────────────────────────────────────── */
+    .modal-header { padding: 20px 24px 16px; }
+    .modal-body { padding: 16px 24px 24px; }
+    .close-btn { width: 44px; height: 44px; }
+
+    /* ── Legal text pages ─────────────────────────── */
+    main[style*="padding: 120px"] {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+/* ── Phone landscape / small tablet (600–767px) ──── */
+@media (min-width: 600px) and (max-width: 767px) {
+    .container { padding: 0 24px; }
+    .hero h1 { font-size: 2.4rem; }
+    .section-title { font-size: 1.8rem; }
+    h2 { font-size: 1.8rem; }
+    .results-grid { grid-template-columns: repeat(2, 1fr); }
+    .features-grid-v2 { grid-template-columns: repeat(2, 1fr); }
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    .duo-side {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .duo-card { min-height: 50vh; }
+    .mock-metrics-row { grid-template-columns: repeat(2, 1fr); }
+    .mock-staff-row {
+        grid-template-columns: 55px repeat(7, 1fr);
+        font-size: 0.6rem;
+    }
+    .hero-content { text-align: center; }
+    .hero-text { margin: 0 auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-visual { display: flex; justify-content: center; }
+}
+
+/* ── Phone portrait (≤599px) ─────────────────────── */
+@media (max-width: 599px) {
+    .container { padding: 0 20px; }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 0.95rem; line-height: 1.65; }
+
+    .hero {
+        padding: 80px 0 48px;
+        min-height: auto;
+        text-align: center;
+    }
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    .hero-text { max-width: 100%; }
+    .hero h1 { font-size: 2rem; line-height: 1.15; margin-bottom: 0.75rem; }
+    .hero-subtitle { font-size: 1rem; margin-bottom: 1.25rem; line-height: 1.55; }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    .hero-buttons .btn { text-align: center; justify-content: center; }
+    .hero-visual { display: flex; justify-content: center; }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin: 1.25rem 0;
+    }
+    .stat { padding: 0.6rem 0.35rem; border-radius: 10px; }
+    .stat strong { font-size: 1rem; }
+    .stat span { font-size: 0.72rem; line-height: 1.3; }
+
+    section { padding: 48px 0 !important; }
+    .section-title { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-split {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    .section-text { max-width: 100%; }
+
+    .results-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .features-grid-v2 { grid-template-columns: 1fr; gap: 1rem; }
+    .dash-metrics { grid-template-columns: repeat(2, 1fr); }
+    .story-metrics { grid-template-columns: 1fr; gap: 0.5rem; }
+    .blog-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+    .mock-metrics-row { grid-template-columns: repeat(2, 1fr); }
+    .mock-staff-row {
+        grid-template-columns: 45px repeat(7, 1fr);
+        font-size: 0.55rem;
+        gap: 2px;
+        overflow-x: auto;
+    }
+    .mock-heat-row {
+        grid-template-columns: 30px repeat(5, 1fr);
+        gap: 2px;
+    }
+
+    .duo-side {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 1rem;
+        padding: 0;
+    }
+    .duo-card {
+        min-height: 60vh;
+        border-radius: 12px;
+    }
+    .duo-card-spacer { height: 35%; }
+    .duo-card h3 { font-size: 1.2rem; }
+    .duo-card-eyebrow { font-size: 0.72rem; }
+
+    .asktt-title { font-size: 1.8rem; }
+    .asktt-subtitle { font-size: 1.1rem; }
+    .asktt-content { gap: 1.5rem; }
+    .asktt-phones .phone-frame { width: 220px; height: 450px; }
+    .phone-frame { width: 220px; height: 450px; }
+    .phone-mockup { width: 200px; height: 400px; }
+
+    .proof-row,
+    .credibility-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .proof-chip { font-size: 0.72rem; padding: 5px 10px; }
+
+    .modal-header { padding: 16px 16px 12px; }
+    .modal-header h2 { font-size: 1.4rem; }
+    .modal-body { padding: 12px 16px 20px; }
+    .close-btn { width: 44px; height: 44px; }
+
+    .final-cta { text-align: center; }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .cta-reassurance { font-size: 0.85rem; }
+
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-links { grid-template-columns: 1fr; text-align: center; }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1rem;
+    }
+
+    .announcement-bar { font-size: 0.8rem; padding: 6px 0; }
+    .announcement-bar p { font-size: 0.8rem; }
+
+    .story-section-bg { min-height: auto; }
+    .story-text-light h2 { font-size: 1.5rem; }
+    .story-text-light .section-subtitle { font-size: 0.9rem; }
+
+    .platform-features li { font-size: 0.9rem; line-height: 1.5; }
+    .platform-roles-grid { grid-template-columns: 1fr; }
+
+    .card-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+    .compare-table-wrap { -webkit-overflow-scrolling: touch; overflow-x: auto; }
+    .compare-table { font-size: 0.75rem; }
+    .compare-table th,
+    .compare-table td { padding: 6px 5px; white-space: normal; }
+}
+
+/* ── Very small phone (≤380px) ───────────────────── */
+@media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .hero h1 { font-size: 1.75rem; }
+    .hero-subtitle { font-size: 0.92rem; }
+    .section-title { font-size: 1.4rem; }
+    .section-subtitle { font-size: 0.88rem; }
+    h2 { font-size: 1.4rem; }
+    .results-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr; gap: 0.5rem; }
+    .stat { padding: 0.75rem; }
+    .stat strong { font-size: 1.2rem; }
+    .stat span { font-size: 0.78rem; }
+    .asktt-title { font-size: 1.5rem; }
+    .proof-chip { font-size: 0.68rem; padding: 4px 8px; }
+    .duo-card { min-height: 50vh; }
+    .duo-card-eyebrow { font-size: 0.68rem; }
+    .duo-card h3 { font-size: 1.15rem; }
+    .phone-mockup { width: 180px; height: 360px; }
+    .phone-frame { width: 180px; height: 370px; }
+    .asktt-phones .phone-frame { width: 180px; height: 370px; }
+    .blog-card { padding: 1rem; }
+    .mock-metrics-row { grid-template-columns: 1fr; }
+}
+
+/* ── Legal / text pages on mobile ────────────────── */
+@media (max-width: 768px) {
+    main[style*="padding: 120px"] {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+    }
+    .compare-table-wrap { -webkit-overflow-scrolling: touch; }
+    .compare-table { font-size: 0.8rem; }
+    .compare-table th,
+    .compare-table td { padding: 8px 6px; white-space: normal; }
+}
+
+/* ── Landscape orientation helpers ───────────────── */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero { padding-top: 70px; padding-bottom: 40px; min-height: auto; }
+    .duo-card { min-height: 90vh; }
+    section { padding: 36px 0 !important; }
+    .section-split { padding: 36px 0; }
+    .final-cta { padding: 36px 0; }
+    .navbar { padding: 0.4rem 0; }
+    .story-section-bg { min-height: auto; }
+}
+
+/* ── Phone landscape (wider but short) ──────────── */
+@media (orientation: landscape) and (max-height: 500px) and (min-width: 600px) {
+    .hero-content { grid-template-columns: 1fr 1fr; text-align: left; gap: 2rem; }
+    .hero-text { max-width: 100%; }
+    .hero-buttons { flex-direction: row; justify-content: flex-start; }
+    .section-split { grid-template-columns: 1fr 1fr; text-align: left; }
+}
+
+/* ── Subpage hero / section-split on tablet ───────── */
+/* (handled in main iPad block above) */
+
+/* (legacy phone subpage block removed, handled by mobile v2) */
+
+/* ── Mobile short quote: hidden on desktop ─────── */
+.quote-short { display: none; }
+
+/* ── Mobile Deep Review v2 (phone only, <=767px) ── */
+@media (max-width: 767px) {
+
+    /* ── Scroll snap ─────────────────────────────── */
+    html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        scroll-padding-top: 0;
+        overflow-x: hidden;
+    }
+    body { overflow-x: hidden; }
+
+    section, .section, .hero, .final-cta, .story-section-bg {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    /* ── Global section sizing ───────────────────── */
+    section, .section {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        padding: 24px 0 !important;
+        box-sizing: border-box;
+    }
+
+    section > .container,
+    .section > .container { width: 100%; }
+
+    .hero {
+        min-height: 100svh;
+        max-height: 100svh;
+        padding: 48px 0 8px !important;
+        box-sizing: border-box;
+        overflow: hidden;
+        align-items: flex-start !important;
+    }
+
+    .hero > .container.hero-grid {
+        align-content: start !important;
+        padding-top: 0.5rem !important;
+    }
+
+    .hero.story-section-bg > .container:not(.hero-grid) {
+        padding-top: 2.5rem;
+        padding-bottom: 0.4rem;
+    }
+
+    /* ── Hero: text first, visual below ──────────── */
+    .hero-grid,
+    .section-split {
+        grid-template-columns: 1fr !important;
+        gap: 0.4rem !important;
+    }
+
+    .hero-copy { order: 1 !important; text-align: center; }
+    .hero-visual { order: 2 !important; display: flex; justify-content: center; width: 100%; }
+    .hero-showcase { max-width: 92vw; width: 92vw; margin: 0 auto; }
+    .showcase-glow { display: none !important; }
+    .showcase-float { display: none !important; }
+    .showcase-frame { border-radius: 10px !important; }
+    .showcase-chrome { padding: 6px 10px !important; }
+    .showcase-title { font-size: 0.65rem !important; }
+    .showcase-live { font-size: 0.55rem !important; }
+    .showcase-dots span { width: 6px !important; height: 6px !important; }
+
+    .section-split .section-text { order: 1 !important; text-align: center; }
+    .section-split .section-visual { order: 2 !important; justify-content: center; }
+
+    /* ── Homepage hero compact ────────────────────── */
+    .hero h1 { font-size: 1.65rem !important; line-height: 1.1 !important; margin-bottom: 0.15rem !important; }
+    .hero-sub, .hero-subtitle { display: none !important; }
+    .hero-actions { gap: 0.4rem !important; margin-bottom: 0.15rem !important; justify-content: center !important; }
+    .hero-actions .btn { padding: 0.45rem 0.9rem !important; font-size: 0.8rem !important; }
+    .hero-actions .btn-secondary { display: none !important; }
+    .hero-stats { grid-template-columns: repeat(3,1fr) !important; gap: 0.3rem !important; margin: 0.15rem 0 !important; }
+    .hero-stat-val { font-size: 1rem !important; }
+    .hero-stat-lbl { font-size: 0.62rem !important; }
+    .hero-stat-sep { display: none !important; }
+
+    /* ── Subpage heroes (demo, platform, customers) ─ */
+    .hero-grid .hero-copy { text-align: center; }
+    .hero-copy h1 { font-size: 1.65rem !important; line-height: 1.15 !important; margin-bottom: 0.15rem !important; }
+    .hero-sub { font-size: 0.82rem !important; line-height: 1.35 !important; }
+    .hero-eyebrow { font-size: 0.78rem !important; margin-bottom: 0.1rem !important; }
+    .eyebrow { font-size: 0.72rem !important; margin-bottom: 0.1rem !important; }
+
+    .proof-row { grid-template-columns: repeat(2,1fr) !important; gap: 0.4rem !important; margin-top: 0.5rem !important; }
+    .proof-pill { padding: 0.45rem 0.5rem !important; }
+    .proof-pill strong { font-size: 0.78rem !important; display: block; margin-bottom: 0.1rem; }
+    .proof-pill span { font-size: 0.66rem !important; line-height: 1.3 !important; }
+
+    /* Platform + customers heroes: centered on mobile */
+    .platform-hero,
+    .hero.story-section-bg {
+        min-height: 100svh !important;
+        max-height: 100svh !important;
+        padding: 44px 0 8px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+    }
+    .platform-hero {
+        padding-top: 35px !important;
+    }
+    .platform-hero > .container,
+    .hero.story-section-bg > .container {
+        padding-top: 0 !important;
+        text-align: center !important;
+    }
+    /* Blog hero pages use .story-section-bg with non-hero-grid container */
+    .hero.story-section-bg > .container:not(.hero-grid) {
+        align-self: center !important;
+    }
+    .platform-hero .hero-copy,
+    .hero.story-section-bg .hero-copy { text-align: center !important; }
+    /* Raise hero content slightly on mobile (platform, customers, blog) */
+    .hero.platform-hero.story-section-bg > .container,
+    .hero.platform-hero:not(.story-section-bg) > .container,
+    .hero.story-section-bg > .container:not(.hero-grid) {
+        transform: translateY(-11vh) !important;
+    }
+    .platform-hero .hero-actions,
+    .hero.story-section-bg .hero-actions { justify-content: center !important; }
+    .platform-hero .hero-actions .btn-secondary,
+    .hero.platform-hero .hero-actions .btn-secondary { display: none !important; }
+    .platform-hero .hero-sub,
+    .hero.platform-hero .hero-sub { display: none !important; }
+
+    /* ── Demo page form ──────────────────────────── */
+    .hero-grid .info-card { padding: 0.85rem !important; }
+    .hero-grid .info-card h3 { font-size: 0.95rem !important; margin-bottom: 0.25rem !important; }
+    .hero-grid .info-card p { font-size: 0.8rem !important; margin-bottom: 0.5rem !important; }
+    .hero-grid .info-card label { margin-bottom: 0.35rem !important; font-size: 0.82rem !important; }
+    .hero-grid .info-card input,
+    .hero-grid .info-card select { padding: 0.42rem !important; font-size: 0.82rem !important; }
+
+    /* ── S2 How It Works ─────────────────────────── */
+    .hiw-cards { grid-template-columns: repeat(3, 1fr) !important; gap: 0.6rem !important; margin-top: 1rem !important; }
+    .hiw-card { padding: 0.8rem 0.5rem !important; border-radius: 12px !important; }
+    .hiw-num { width: 36px !important; height: 36px !important; font-size: 1rem !important; margin-bottom: 0.5rem !important; }
+    .hiw-card h3 { font-size: 0.92rem !important; margin-bottom: 0 !important; }
+    .hiw-card p { display: none !important; }
+
+    /* ── S3b Human Section ────────────────────────── */
+    .human-section { min-height: 100svh !important; padding: 24px 0 !important; display: flex !important; align-items: center !important; box-sizing: border-box; }
+    .human-section-headline { font-size: 1.5rem !important; margin-bottom: 0.4rem !important; }
+    .human-section-sub { font-size: 0.88rem !important; line-height: 1.5 !important; }
+
+    /* ── S4 Operations Pulse ─────────────────────── */
+    .ops-section .scenario-pills { flex-wrap: wrap; gap: 0.25rem !important; margin-bottom: 0.3rem !important; }
+    .ops-section .scenario-pill { font-size: 0.72rem !important; padding: 0.25rem 0.5rem !important; }
+    .ops-section .scenario-desc { font-size: 0.85rem !important; }
+    .ops-section .scenario-detail { font-size: 0.78rem !important; }
+    .mock-metrics-row { grid-template-columns: repeat(2,1fr) !important; gap: 0.25rem !important; }
+    .mock-metric-label { font-size: 0.52rem !important; }
+    .mock-metric-val { font-size: 0.72rem !important; }
+    .mock-metric-trend { font-size: 0.5rem !important; }
+    .mock-chart-title { font-size: 0.55rem !important; }
+    .mock-bars { height: 50px !important; }
+    .mock-bar-col span { font-size: 0.45rem !important; }
+    .mock-menu-cell { padding: 0.25rem !important; }
+    .mock-menu-cell strong { font-size: 0.6rem !important; }
+    .mock-menu-cell span { font-size: 0.5rem !important; }
+    .mock-menu-cell small { display: none !important; }
+    .mock-role-label { white-space: normal; font-size: 0.52rem !important; }
+    .mock-staff-row { font-size: 0.48rem !important; gap: 1px !important; }
+
+    /* ── S5 Conversations ────────────────────────── */
+    .conversations-section { min-height: 100svh; }
+    .conversations-section .section-title { font-size: 1.3rem !important; margin-bottom: 0.2rem !important; }
+    .conversations-section .section-subtitle { font-size: 0.82rem !important; margin-bottom: 0.4rem !important; }
+    .convo-stage { margin-top: 0.5rem !important; }
+    .convo-pair { grid-template-columns: 1fr !important; }
+    .convo-pair.back { display: none !important; }
+    .convo-card { height: 50svh !important; min-height: 50svh !important; max-height: 50svh !important; border-radius: 10px !important; overflow: hidden !important; }
+    .convo-card-header { padding: 0.4rem 0.65rem !important; }
+    .convo-card-title { font-size: 0.82rem !important; }
+    .convo-card-time { font-size: 0.65rem !important; }
+    .convo-card-body { padding: 0.4rem 0.65rem !important; }
+    .convo-text { font-size: 0.78rem !important; padding: 0.35rem 0.55rem !important; }
+
+    /* ── S6 Integrations ─────────────────────────── */
+    .integrations-section { min-height: 100svh; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
+    .integrations-section .section-split { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+    .integrations-section .section-text { text-align: center !important; order: 1 !important; }
+    .integrations-section .section-visual { order: 2 !important; justify-content: center !important; }
+    .integrations-section .section-title { font-size: 1.35rem !important; text-align: center !important; margin-bottom: 0.2rem !important; }
+    .integrations-section .section-subtitle { font-size: 0.82rem !important; text-align: center !important; margin-bottom: 0.3rem !important; }
+    .integration-benefits { margin-top: 0.3rem !important; gap: 0.2rem !important; display: flex; flex-wrap: wrap; justify-content: center; }
+    .int-benefit { font-size: 0 !important; line-height: 0 !important; color: transparent !important; }
+    .int-benefit strong { font-size: 0.78rem !important; line-height: 1.3 !important; display: inline-block !important; padding-left: 0.8rem !important; }
+    .integrations-hub { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
+    .hub-svg { width: 100% !important; height: auto !important; }
+
+    /* ── Customer story sections ──────────────────── */
+    .story-section-bg { min-height: 100svh !important; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
+    .story-text-light h2 { font-size: 1.25rem !important; margin-bottom: 0.2rem !important; }
+    .story-text-light .section-subtitle { font-size: 0.82rem !important; line-height: 1.4 !important; margin-bottom: 0.3rem !important; }
+    .story-text-light .eyebrow { font-size: 0.65rem !important; margin-bottom: 0.25rem !important; }
+    .story-text-light blockquote,
+    .story-text-light .story-quote { font-size: 0.78rem !important; line-height: 1.35 !important; margin: 0.3rem 0 !important; }
+    .story-text-light .story-attribution { font-size: 0.68rem !important; }
+    .story-result-card, .story-card-glass { border-radius: 10px !important; overflow: hidden; }
+    .story-result-header { padding: 0.4rem 0.65rem !important; }
+    .story-result-name { font-size: 0.82rem !important; }
+    .story-result-type { font-size: 0.62rem !important; }
+    .story-result-before, .story-result-after { padding: 0.35rem 0.65rem !important; }
+    .story-result-label { font-size: 0.58rem !important; margin-bottom: 0.15rem !important; }
+    .story-result-before li { font-size: 0.72rem !important; line-height: 1.3 !important; }
+    .story-result-before li:nth-child(n+3) { display: none !important; }
+    .story-metrics { grid-template-columns: repeat(3,1fr) !important; gap: 0.25rem !important; }
+    .story-metric-val { font-size: 0.85rem !important; }
+    .story-metric-lbl { font-size: 0.55rem !important; }
+    .story-modules-used { padding: 0.3rem 0.65rem !important; }
+    .story-module-tag { font-size: 0.55rem !important; padding: 0.1rem 0.3rem !important; }
+
+    /* ── Customer duo cards ───────────────────────── */
+    .duo-side { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+    .duo-card { min-height: 45svh !important; height: auto !important; }
+    .duo-card-spacer { height: 25% !important; }
+    .duo-card-content { padding: 0.8rem !important; }
+    .duo-card h3 { font-size: 1rem !important; }
+    .duo-card-quote { font-size: 0.75rem !important; line-height: 1.3 !important; }
+    .duo-card .story-attribution { font-size: 0.65rem !important; margin-bottom: 0.35rem !important; }
+    .duo-card-metrics { gap: 0.25rem !important; }
+    .duo-card-val { font-size: 0.85rem !important; }
+    .duo-card-label { font-size: 0.55rem !important; }
+
+    /* ── Customer aggregate strip ─────────────────── */
+    .story-aggregate { gap: 1rem 1.5rem !important; }
+    .story-agg-val { font-size: 1.4rem !important; }
+    .story-agg-label { font-size: 0.68rem !important; }
+    .story-agg-sep { display: none !important; }
+
+    /* ── Platform feature lists ───────────────────── */
+    /* Platform modules: enforce equal "page" height */
+    #mod-sense,
+    #mod-pulse,
+    #mod-ops,
+    #mod-foresight,
+    #mod-agent,
+    .platform-hero ~ .section {
+        height: 100dvh !important;
+        height: 100svh !important;
+        min-height: 100dvh !important;
+        min-height: 100svh !important;
+        display: flex !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+    .platform-hero ~ .section { padding: 24px 0 !important; }
+    .platform-hero ~ .section .section-split { gap: 1rem !important; }
+    .platform-hero ~ .section .section-text { text-align: left !important; }
+    .platform-hero ~ .section .section-title,
+    .platform-hero ~ .section .section-subtitle { text-align: left !important; }
+    .platform-hero ~ .section .section-title { font-size: 1.18rem !important; line-height: 1.35 !important; margin-bottom: 0.4rem !important; }
+    .platform-features { gap: 0.45rem !important; margin-top: 0.55rem !important; }
+    .platform-features { text-align: left !important; justify-items: start !important; }
+    .platform-features li { font-size: 0.86rem !important; line-height: 1.5 !important; text-align: left !important; }
+    .platform-features li:nth-child(n+4) { display: none !important; }
+
+    .platform-roles-grid { grid-template-columns: repeat(2,1fr) !important; gap: 0.5rem !important; }
+    .platform-roles-grid .info-card { padding: 0.6rem !important; }
+    .platform-roles-grid .info-card h4 { font-size: 0.82rem !important; }
+    .platform-roles-grid .info-card p { font-size: 0.7rem !important; }
+
+    /* ── Card / blog grids ────────────────────────── */
+    .card-grid { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+    .card-grid .info-card { padding: 0.75rem !important; }
+    .card-grid .info-card h3 { font-size: 0.92rem !important; }
+    .card-grid .info-card p { font-size: 0.8rem !important; }
+
+    .blog-grid { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+    .blog-card { padding: 0.75rem !important; }
+    .blog-card h3 { font-size: 0.92rem !important; }
+    .blog-card p { font-size: 0.78rem !important; }
+    .blog-card-meta { flex-wrap: wrap; gap: 0.3rem; }
+    .blog-date { white-space: normal; }
+
+    /* ── Reverse splits: text always first on mobile ─ */
+    .section-split.reverse .section-text { order: 1 !important; }
+    .section-split.reverse .section-visual { order: 2 !important; }
+
+    /* ── Platform module mockups: ultra-compact ────── */
+    .product-frame { width: 100%; max-width: 100%; margin: 0 auto; }
+    .mock-screen { padding: 0.35rem 0.45rem !important; min-height: auto !important; overflow: visible !important; }
+    .mock-header { padding: 0.3rem 0.45rem !important; }
+    .mock-module-name { font-size: 0.68rem !important; }
+    .mock-badge { font-size: 0.52rem !important; padding: 0.1rem 0.35rem !important; }
+    .mock-tabs-bar { gap: 0.15rem !important; }
+    .mock-tab { font-size: 0.52rem !important; padding: 0.2rem 0.4rem !important; }
+    .mock-staff-header { font-size: 0.55rem !important; padding: 0.2rem 0.45rem !important; }
+    .mock-day-label { font-size: 0.42rem !important; }
+    .mock-circle { width: 22px !important; height: 22px !important; font-size: 0.38rem !important; }
+    .mock-forecast-cards { gap: 0.3rem !important; }
+    .mock-forecast-card { padding: 0.35rem !important; }
+    .mock-forecast-label { font-size: 0.52rem !important; }
+    .mock-forecast-val { font-size: 0.75rem !important; }
+    .mock-split-tag { font-size: 0.42rem !important; padding: 0.1rem 0.2rem !important; }
+    .mock-chart-area { margin-top: 0.2rem !important; }
+    .mock-dual-bars { height: 45px !important; }
+    .mock-legend { font-size: 0.42rem !important; }
+    .mock-accuracy-label { font-size: 0.5rem !important; }
+    .mock-accuracy-val { font-size: 0.7rem !important; }
+    .mock-chat { gap: 0.3rem !important; padding: 0.3rem !important; }
+    .mock-chat-bubble span, .mock-chat-bubble p { font-size: 0.7rem !important; line-height: 1.3 !important; }
+    .mock-chat-stat { font-size: 0.65rem !important; }
+    .mock-chat-input { padding: 0.3rem 0.45rem !important; }
+    .mock-chat-input span { font-size: 0.6rem !important; }
+    .mock-sense-grid { gap: 0.25rem !important; grid-template-columns: repeat(2,1fr) !important; }
+    .mock-sense-card { padding: 0.3rem !important; }
+    .mock-sense-card .mock-chart-title { font-size: 0.5rem !important; }
+    .mock-sparkline { height: 25px !important; }
+    .mock-sense-row { font-size: 0.52rem !important; }
+    .mock-sense-row strong { font-size: 0.58rem !important; }
+    .mock-util-row span { font-size: 0.48rem !important; }
+    .mock-gauge-svg { width: 36px !important; }
+    .mock-gauge span { font-size: 0.55rem !important; }
+    .mock-gauge small { font-size: 0.42rem !important; }
+    .mock-gauges { gap: 0.5rem !important; }
+    .mock-pulse-row { gap: 0.25rem !important; }
+    .mock-pulse-card { padding: 0.35rem !important; }
+    .mock-pulse-icon { font-size: 0.65rem !important; }
+    .mock-pulse-label { font-size: 0.5rem !important; }
+    .mock-pulse-val { font-size: 0.72rem !important; }
+    .mock-pulse-item { font-size: 0.48rem !important; }
+    .mock-pulse-item strong { font-size: 0.52rem !important; }
+    .mock-pill-pct { font-size: 0.42rem !important; }
+    .mock-revpath { margin-top: 0.2rem !important; }
+    .mock-revpath .mock-chart-title { font-size: 0.5rem !important; }
+    .mock-revpath-stats { font-size: 0.48rem !important; gap: 0.3rem !important; }
+    .mock-revpath-stats strong { font-size: 0.55rem !important; }
+    .mock-heatmap { gap: 0.1rem !important; }
+    .mock-heat-row { gap: 0.1rem !important; }
+    .mock-heat-time { font-size: 0.4rem !important; }
+    .mock-heat-cell { font-size: 0.38rem !important; padding: 0.15rem !important; }
+    .mock-heat-labels span { font-size: 0.38rem !important; }
+
+    /* ── Demo page: form fits viewport ────────────── */
+    .hero-grid > aside.info-card { padding: 0.8rem !important; margin-top: 0 !important; }
+    .hero-grid > aside.info-card h3 { font-size: 0.92rem !important; margin-bottom: 0.2rem !important; }
+    .hero-grid > aside.info-card p { font-size: 0.78rem !important; margin-bottom: 0.4rem !important; }
+    .hero-grid > aside.info-card label { font-size: 0.78rem !important; margin-bottom: 0.35rem !important; }
+    .hero-grid > aside.info-card input,
+    .hero-grid > aside.info-card select { padding: 0.4rem !important; font-size: 0.78rem !important; margin-top: 0.15rem !important; }
+    .hero-grid > aside.info-card .btn { padding: 0.5rem !important; font-size: 0.82rem !important; }
+    #demo-form-feedback { font-size: 0.72rem !important; margin-top: 0.35rem !important; }
+
+    /* ── Demo secondary sections: auto-height ─────── */
+    .card-grid { min-height: 100svh !important; padding: 24px 0 !important; }
+    section:has(.card-grid), section:has(.cta-band) { min-height: 100svh !important; padding: 24px 0 !important; }
+    .cta-band { padding: 1rem !important; border-radius: 12px !important; flex-direction: column; gap: 0.6rem; text-align: center; }
+    .cta-band h3 { font-size: 1rem !important; margin-bottom: 0.15rem !important; }
+    .cta-band p { font-size: 0.82rem !important; }
+    .cta-band .btn { padding: 0.5rem 1.2rem !important; font-size: 0.82rem !important; }
+
+    /* ── Aggregate strip: auto-height, compact ────── */
+    section:has(.story-aggregate) { min-height: 100svh !important; padding: 24px 0 !important; }
+    .story-aggregate { flex-wrap: wrap !important; gap: 0.8rem 1.2rem !important; justify-content: center !important; }
+    .story-agg-val { font-size: 1.2rem !important; }
+    .story-agg-label { font-size: 0.62rem !important; }
+    .story-agg-sep { display: none !important; }
+
+    /* ── Platform roles: tight 2x2 ────────────────── */
+    section:has(.platform-roles-grid) { min-height: 100svh !important; padding: 24px 0 !important; }
+    section:has(.platform-roles-grid) .section-title { font-size: 1.2rem !important; margin-bottom: 0.2rem !important; }
+    section:has(.platform-roles-grid) .section-subtitle { font-size: 0.78rem !important; margin-bottom: 0.5rem !important; }
+    .platform-role-card { padding: 0.55rem !important; }
+    .platform-role-icon svg { width: 20px !important; height: 20px !important; }
+    .platform-role-card h3 { font-size: 0.82rem !important; margin: 0.2rem 0 0.1rem !important; }
+    .platform-role-card p { font-size: 0.68rem !important; line-height: 1.3 !important; }
+
+    /* ── Blog listing page ─────────────────────────── */
+    section:has(.blog-grid) { min-height: 100svh !important; }
+    .blog-filters { gap: 0.3rem !important; margin-bottom: 0.6rem !important; }
+    .blog-filter-btn { font-size: 0.72rem !important; padding: 0.3rem 0.6rem !important; }
+
+    /* ── Compare table ────────────────────────────── */
+    .compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .compare-table { min-width: 760px; }
+    .compare-table th, .compare-table td { white-space: nowrap; }
+    section:has(.compare-table-section), .compare-table-section { min-height: 100svh !important; padding: 24px 0 !important; }
+
+    /* Final consistency pass: every top-level page section same height */
+    main > section {
+        min-height: 100svh !important;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    /* ── Section titles global compact ─────────────── */
+    .section-title { font-size: 1.3rem !important; margin-bottom: 0.15rem !important; }
+    .section-subtitle { font-size: 0.82rem !important; margin-bottom: 0.2rem !important; line-height: 1.4 !important; }
+
+    /* ─── DECLUTTER: hide secondary text on mobile ── */
+
+    /* Hero: hide eyebrow, credibility bar, stat labels */
+    .hero > .container > .hero-grid > .hero-copy > .hero-eyebrow,
+    .hero-eyebrow { display: none !important; }
+    .credibility-bar { display: none !important; }
+    .hero-stat-lbl { display: none !important; }
+
+    /* S2 How It Works: hide subtitle, descriptions hidden via .hiw-card p above */
+    #how-it-works .section-subtitle { display: none !important; }
+
+    /* S3b Human: hide body text, keep headline only */
+    .human-section-eyebrow { display: none !important; }
+    .human-section-sub { display: none !important; }
+
+    /* S4 Ops: hide subtitle, hide scenario detail text */
+    .ops-section .section-subtitle { display: none !important; }
+    .scenario-detail { display: none !important; }
+
+    /* S5 Conversations: hide subtitle */
+    .conversations-section .section-subtitle { display: none !important; }
+
+    /* S6 Integrations: hide subtitle, hide benefit list */
+    .integrations-section .section-subtitle { display: none !important; }
+    .integration-benefits { display: none !important; }
+
+    /* Customer stories: hide long subtitle paragraphs */
+    .story-text-light .section-subtitle { display: none !important; }
+    /* Customer story cards: hide "before" section */
+    .story-result-before { display: none !important; }
+    /* Customer duo cards: hide long quotes */
+    .duo-card-quote { display: none !important; }
+
+    /* Platform modules: hide subtitles, limit feature list to 2 */
+    .platform-hero ~ .section .section-subtitle { display: none !important; }
+    .platform-features li:nth-child(n+3) { display: none !important; }
+
+    /* Platform roles: hide card descriptions */
+    .platform-role-card p { display: none !important; }
+    section:has(.platform-roles-grid) .section-subtitle { display: none !important; }
+
+    /* Demo: hide proof pills, hide info-card descriptions */
+    .hero-grid .proof-row { display: none !important; }
+    .card-grid .info-card p { display: none !important; }
+
+    /* Short/full quote toggle for mobile */
+    .quote-full { display: none !important; }
+    .quote-short { display: block !important; }
+
+    /* ── Final CTA ────────────────────────────────── */
+    .final-cta { min-height: 100svh !important; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
+    .final-cta h2 { font-size: 1.45rem !important; margin-bottom: 0.3rem !important; }
+    .final-cta p { font-size: 0.88rem !important; margin-bottom: 0.6rem !important; }
+    .final-cta .btn { width: 100%; max-width: 280px; }
+    .cta-reassurance { font-size: 0.72rem !important; }
+
+    /* ── Announcement bar: hidden on mobile ────────── */
+    .announcement-bar { display: none !important; }
+
+    /* ── Footer ────────────────────────────────────── */
+    .footer { padding: 1.25rem 0 !important; scroll-snap-align: none; min-height: auto !important; }
+    .footer-row { grid-template-columns: 1fr !important; }
+    .footer-nav { justify-content: center !important; gap: 0.5rem 0.8rem !important; font-size: 0.82rem !important; }
+    .footer-legal a { font-size: 0.78rem; }
+}
+
+/* ── Phone portrait extra compact (<=599px) ──────── */
+@media (max-width: 599px) {
+    .container { padding: 0 16px; }
+    .hero h1 { font-size: 1.55rem !important; }
+    .hero-showcase { max-width: 90vw !important; width: 90vw !important; }
+    .hero-stats { grid-template-columns: repeat(3,1fr) !important; }
+    .convo-card { height: 48svh !important; min-height: 48svh !important; max-height: 48svh !important; }
+}
+
+/* ── Very small phone (<=430px) ──────────────────── */
+@media (max-width: 430px) {
+    .hero h1, .hero-subtitle { display: block !important; }
+    .hero-stats { display: grid !important; }
+    .hero h1 { font-size: 1.45rem !important; }
+    .hero-showcase { max-width: 88vw !important; width: 88vw !important; }
+    .proof-row { grid-template-columns: 1fr !important; }
+    .proof-pill span { font-size: 0.62rem !important; }
+}
+
+/* ── Blog article lists: no bullets ─────────────── */
+.section > .container[style*="max-width:820px"] ul,
+.section > .container[style*="max-width: 820px"] ul { list-style: none; padding-left: 0; }
+.section > .container[style*="max-width:820px"] ul li,
+.section > .container[style*="max-width: 820px"] ul li { padding-left: 0; }
+
+/* ── Back To Top Button (mobile) ─────────────────── */
+.back-to-top {
+    position: fixed;
+    right: 14px;
+    bottom: 18px;
+    z-index: 1300;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 999px;
+    background: #ff6b00;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+    .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ── Safe area for notched phones ────────────────── */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .footer { padding-bottom: env(safe-area-inset-bottom); }
+    .navbar { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    .back-to-top { bottom: calc(12px + env(safe-area-inset-bottom)); }
 }
