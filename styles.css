@@ -11442,26 +11442,20 @@ img { max-width: 100%; height: auto; }
 /* ── Mobile Deep Review v2 (phone only, <=767px) ── */
 @media (max-width: 767px) {
 
-    /* ── Scroll snap ─────────────────────────────── */
+    /* ── Smooth scroll ───────────────────────────── */
     html {
-        scroll-snap-type: y proximity;
         scroll-behavior: smooth;
-        scroll-padding-top: 0;
         overflow-x: hidden;
     }
     body { overflow-x: hidden; }
 
-    section, .section, .hero, .final-cta, .story-section-bg {
-        scroll-snap-align: start;
-        scroll-snap-stop: normal;
-    }
-
-    /* ── Global section sizing ───────────────────── */
+    /* ── Global section sizing: content-driven ──── */
     section, .section {
-        min-height: 100svh;
+        min-height: auto !important;
+        height: auto !important;
         display: flex;
         align-items: center;
-        padding: 24px 0 !important;
+        padding: 3rem 0 !important;
         box-sizing: border-box;
     }
 
@@ -11471,7 +11465,7 @@ img { max-width: 100%; height: auto; }
     .hero {
         min-height: 100svh;
         max-height: 100svh;
-        padding: 44px 0 8px !important;
+        padding: 48px 0 12px !important;
         box-sizing: border-box;
         overflow: hidden;
         align-items: flex-start !important;
@@ -11479,11 +11473,7 @@ img { max-width: 100%; height: auto; }
 
     .hero > .container.hero-grid {
         align-content: start !important;
-        padding-top: 0.35rem !important;
-    }
-
-    .hero-copy {
-        gap: 0 !important;
+        padding-top: 0.5rem !important;
     }
 
     .hero.story-section-bg > .container:not(.hero-grid) {
@@ -11492,10 +11482,13 @@ img { max-width: 100%; height: auto; }
     }
 
     /* ── Hero: text first, visual below ──────────── */
-    .hero-grid,
+    .hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.7rem !important;
+    }
     .section-split {
         grid-template-columns: 1fr !important;
-        gap: 0.5rem !important;
+        gap: 1.5rem !important;
     }
 
     .hero-copy { order: 1 !important; text-align: center; }
@@ -11512,62 +11505,52 @@ img { max-width: 100%; height: auto; }
     .section-split .section-text { order: 1 !important; text-align: center; }
     .section-split .section-visual { order: 2 !important; justify-content: center; }
 
-    /* ── Homepage hero compact ────────────────────── */
-    .hero h1 { font-size: 1.55rem !important; line-height: 1.18 !important; margin-bottom: 0.3rem !important; letter-spacing: -0.01em !important; }
-    .hero-eyebrow { font-size: 0.72rem !important; margin-bottom: 0.2rem !important; letter-spacing: 0.06em !important; text-transform: uppercase !important; opacity: 0.85; }
-    .hero-sub, .hero-subtitle { display: block !important; font-size: 0.82rem !important; line-height: 1.45 !important; margin-bottom: 0.5rem !important; }
-    .hero-actions { gap: 0.45rem !important; margin-bottom: 0.45rem !important; justify-content: center !important; }
-    .hero-actions .btn { padding: 0.45rem 0.9rem !important; font-size: 0.82rem !important; }
+    /* ── Homepage hero ────────────────────────────── */
+    .hero h1 { font-size: 1.75rem !important; line-height: 1.15 !important; margin-bottom: 0.5rem !important; letter-spacing: -0.01em !important; }
+    .hero-eyebrow { font-size: 0.75rem !important; margin-bottom: 0.4rem !important; letter-spacing: 0.06em !important; text-transform: uppercase !important; opacity: 0.85; }
+    .hero-sub, .hero-subtitle { display: block !important; font-size: 0.9rem !important; line-height: 1.5 !important; margin-bottom: 0.75rem !important; }
+    .hero-actions { gap: 0.6rem !important; margin-bottom: 0.6rem !important; justify-content: center !important; }
+    .hero-actions .btn { padding: 0.55rem 1.1rem !important; font-size: 0.88rem !important; }
     .hero-actions .btn-secondary { display: inline-flex !important; }
-    .hero-stats { grid-template-columns: repeat(3,1fr) !important; gap: 0.35rem !important; margin: 0.3rem 0 !important; }
-    .hero-stat-val { font-size: 1rem !important; }
-    .hero-stat-lbl { font-size: 0.62rem !important; line-height: 1.2 !important; }
+    .hero-stats { grid-template-columns: repeat(3,1fr) !important; gap: 0.5rem !important; margin: 0.5rem 0 !important; }
+    .hero-stat-val { font-size: 1.15rem !important; }
+    .hero-stat-lbl { font-size: 0.7rem !important; line-height: 1.25 !important; }
     .hero-stat-sep { display: none !important; }
 
     /* ── Subpage heroes (demo, platform, customers) ─ */
     .hero-grid .hero-copy { text-align: center; }
-    .hero-copy h1 { font-size: 1.7rem !important; line-height: 1.18 !important; margin-bottom: 0.4rem !important; }
-    .hero-sub { font-size: 0.86rem !important; line-height: 1.45 !important; }
-    .hero-eyebrow { font-size: 0.8rem !important; margin-bottom: 0.35rem !important; }
-    .eyebrow { font-size: 0.74rem !important; margin-bottom: 0.25rem !important; }
+    .hero-copy h1 { font-size: 1.8rem !important; line-height: 1.18 !important; margin-bottom: 0.5rem !important; }
+    .hero-sub { font-size: 0.92rem !important; line-height: 1.5 !important; }
+    .hero-eyebrow { font-size: 0.82rem !important; margin-bottom: 0.4rem !important; }
+    .eyebrow { font-size: 0.78rem !important; margin-bottom: 0.3rem !important; }
 
-    .proof-row { grid-template-columns: repeat(2,1fr) !important; gap: 0.4rem !important; margin-top: 0.5rem !important; }
-    .proof-pill { padding: 0.45rem 0.5rem !important; }
-    .proof-pill strong { font-size: 0.78rem !important; display: block; margin-bottom: 0.1rem; }
-    .proof-pill span { font-size: 0.66rem !important; line-height: 1.3 !important; }
+    .proof-row { grid-template-columns: repeat(2,1fr) !important; gap: 0.5rem !important; margin-top: 0.65rem !important; }
+    .proof-pill { padding: 0.55rem 0.6rem !important; }
+    .proof-pill strong { font-size: 0.85rem !important; display: block; margin-bottom: 0.15rem; }
+    .proof-pill span { font-size: 0.72rem !important; line-height: 1.35 !important; }
 
     /* Platform + customers heroes: centered on mobile */
     .platform-hero,
     .hero.story-section-bg {
-        min-height: 100svh !important;
-        max-height: 100svh !important;
-        padding: 44px 0 8px !important;
+        min-height: 80svh !important;
+        max-height: none !important;
+        padding: 4rem 0 3rem !important;
         box-sizing: border-box !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         overflow: hidden !important;
     }
-    .platform-hero {
-        padding-top: 35px !important;
-    }
     .platform-hero > .container,
     .hero.story-section-bg > .container {
         padding-top: 0 !important;
         text-align: center !important;
     }
-    /* Blog hero pages use .story-section-bg with non-hero-grid container */
     .hero.story-section-bg > .container:not(.hero-grid) {
         align-self: center !important;
     }
     .platform-hero .hero-copy,
     .hero.story-section-bg .hero-copy { text-align: center !important; }
-    /* Raise hero content slightly on mobile (platform, customers, blog) */
-    .hero.platform-hero.story-section-bg > .container,
-    .hero.platform-hero:not(.story-section-bg) > .container,
-    .hero.story-section-bg > .container:not(.hero-grid) {
-        transform: translateY(-11vh) !important;
-    }
     .platform-hero .hero-actions,
     .hero.story-section-bg .hero-actions { justify-content: center !important; }
     .platform-hero .hero-actions .btn-secondary,
@@ -11584,22 +11567,22 @@ img { max-width: 100%; height: auto; }
     .hero-grid .info-card select { padding: 0.42rem !important; font-size: 0.82rem !important; }
 
     /* ── S2 How It Works ─────────────────────────── */
-    .hiw-cards { grid-template-columns: repeat(3, 1fr) !important; gap: 0.6rem !important; margin-top: 1rem !important; }
-    .hiw-card { padding: 0.8rem 0.5rem !important; border-radius: 12px !important; }
-    .hiw-num { width: 36px !important; height: 36px !important; font-size: 1rem !important; margin-bottom: 0.5rem !important; }
-    .hiw-card h3 { font-size: 0.92rem !important; margin-bottom: 0.15rem !important; }
-    .hiw-card p { display: block !important; font-size: 0.72rem !important; line-height: 1.35 !important; }
+    .hiw-cards { grid-template-columns: repeat(3, 1fr) !important; gap: 0.75rem !important; margin-top: 1.5rem !important; }
+    .hiw-card { padding: 1rem 0.65rem !important; border-radius: 14px !important; }
+    .hiw-num { width: 40px !important; height: 40px !important; font-size: 1.05rem !important; margin-bottom: 0.6rem !important; }
+    .hiw-card h3 { font-size: 1rem !important; margin-bottom: 0.2rem !important; }
+    .hiw-card p { display: block !important; font-size: 0.78rem !important; line-height: 1.4 !important; }
 
     /* ── S3b Human Section ────────────────────────── */
-    .human-section { min-height: 100svh !important; padding: 24px 0 !important; display: flex !important; align-items: center !important; box-sizing: border-box; }
-    .human-section-headline { font-size: 1.5rem !important; margin-bottom: 0.4rem !important; }
-    .human-section-sub { font-size: 0.88rem !important; line-height: 1.5 !important; }
+    .human-section { padding: 3rem 0 !important; display: flex !important; align-items: center !important; box-sizing: border-box; }
+    .human-section-headline { font-size: 1.6rem !important; margin-bottom: 0.6rem !important; }
+    .human-section-sub { font-size: 0.92rem !important; line-height: 1.55 !important; }
 
     /* ── S4 Operations Pulse ─────────────────────── */
-    .ops-section .scenario-pills { flex-wrap: wrap; gap: 0.25rem !important; margin-bottom: 0.3rem !important; }
-    .ops-section .scenario-pill { font-size: 0.72rem !important; padding: 0.25rem 0.5rem !important; }
-    .ops-section .scenario-desc { font-size: 0.85rem !important; }
-    .ops-section .scenario-detail { font-size: 0.78rem !important; }
+    .ops-section .scenario-pills { flex-wrap: wrap; gap: 0.35rem !important; margin-bottom: 0.5rem !important; }
+    .ops-section .scenario-pill { font-size: 0.78rem !important; padding: 0.3rem 0.6rem !important; }
+    .ops-section .scenario-desc { font-size: 0.9rem !important; }
+    .ops-section .scenario-detail { font-size: 0.82rem !important; }
     .mock-metrics-row { grid-template-columns: repeat(2,1fr) !important; gap: 0.25rem !important; }
     .mock-metric-label { font-size: 0.52rem !important; }
     .mock-metric-val { font-size: 0.72rem !important; }
@@ -11615,70 +11598,69 @@ img { max-width: 100%; height: auto; }
     .mock-staff-row { font-size: 0.48rem !important; gap: 1px !important; }
 
     /* ── S5 Conversations ────────────────────────── */
-    .conversations-section { min-height: 100svh; }
-    .conversations-section .section-title { font-size: 1.3rem !important; margin-bottom: 0.2rem !important; }
-    .conversations-section .section-subtitle { font-size: 0.82rem !important; margin-bottom: 0.4rem !important; }
-    .convo-stage { margin-top: 0.5rem !important; }
+    .conversations-section .section-title { font-size: 1.4rem !important; margin-bottom: 0.35rem !important; }
+    .conversations-section .section-subtitle { font-size: 0.88rem !important; margin-bottom: 0.6rem !important; }
+    .convo-stage { margin-top: 0.75rem !important; }
     .convo-pair { grid-template-columns: 1fr !important; }
     .convo-pair.back { display: none !important; }
-    .convo-card { height: 50svh !important; min-height: 50svh !important; max-height: 50svh !important; border-radius: 10px !important; overflow: hidden !important; }
-    .convo-card-header { padding: 0.4rem 0.65rem !important; }
-    .convo-card-title { font-size: 0.82rem !important; }
-    .convo-card-time { font-size: 0.65rem !important; }
-    .convo-card-body { padding: 0.4rem 0.65rem !important; }
-    .convo-text { font-size: 0.78rem !important; padding: 0.35rem 0.55rem !important; }
+    .convo-card { height: auto !important; min-height: 45svh !important; max-height: none !important; border-radius: 12px !important; overflow: hidden !important; }
+    .convo-card-header { padding: 0.5rem 0.75rem !important; }
+    .convo-card-title { font-size: 0.88rem !important; }
+    .convo-card-time { font-size: 0.7rem !important; }
+    .convo-card-body { padding: 0.5rem 0.75rem !important; }
+    .convo-text { font-size: 0.84rem !important; padding: 0.4rem 0.6rem !important; }
 
     /* ── S6 Integrations ─────────────────────────── */
-    .integrations-section { min-height: 100svh; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
-    .integrations-section .section-split { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+    .integrations-section { display: flex !important; align-items: center !important; box-sizing: border-box; }
+    .integrations-section .section-split { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
     .integrations-section .section-text { text-align: center !important; order: 1 !important; }
     .integrations-section .section-visual { order: 2 !important; justify-content: center !important; }
-    .integrations-section .section-title { font-size: 1.35rem !important; text-align: center !important; margin-bottom: 0.2rem !important; }
-    .integrations-section .section-subtitle { font-size: 0.82rem !important; text-align: center !important; margin-bottom: 0.3rem !important; }
-    .integration-benefits { margin-top: 0.3rem !important; gap: 0.2rem !important; display: flex; flex-wrap: wrap; justify-content: center; }
+    .integrations-section .section-title { font-size: 1.45rem !important; text-align: center !important; margin-bottom: 0.35rem !important; }
+    .integrations-section .section-subtitle { font-size: 0.88rem !important; text-align: center !important; margin-bottom: 0.5rem !important; }
+    .integration-benefits { margin-top: 0.5rem !important; gap: 0.35rem !important; display: flex; flex-wrap: wrap; justify-content: center; }
     .int-benefit { font-size: 0 !important; line-height: 0 !important; color: transparent !important; }
-    .int-benefit strong { font-size: 0.78rem !important; line-height: 1.3 !important; display: inline-block !important; padding-left: 0.8rem !important; }
+    .int-benefit strong { font-size: 0.84rem !important; line-height: 1.35 !important; display: inline-block !important; padding-left: 0.8rem !important; }
     .integrations-hub { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
     .hub-svg { width: 100% !important; height: auto !important; }
 
     /* ── Customer story sections ──────────────────── */
-    .story-section-bg { min-height: 100svh !important; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
-    .story-text-light h2 { font-size: 1.3rem !important; margin-bottom: 0.3rem !important; }
-    .story-text-light .section-subtitle { font-size: 0.9rem !important; line-height: 1.56 !important; margin-bottom: 0.5rem !important; }
-    .story-text-light .eyebrow { font-size: 0.65rem !important; margin-bottom: 0.25rem !important; }
+    .story-section-bg { display: flex !important; align-items: center !important; box-sizing: border-box; padding: 3rem 0 !important; }
+    .story-text-light h2 { font-size: 1.4rem !important; margin-bottom: 0.45rem !important; }
+    .story-text-light .section-subtitle { font-size: 0.92rem !important; line-height: 1.6 !important; margin-bottom: 0.65rem !important; }
+    .story-text-light .eyebrow { font-size: 0.7rem !important; margin-bottom: 0.3rem !important; }
     .story-text-light blockquote,
-    .story-text-light .story-quote { font-size: 0.82rem !important; line-height: 1.5 !important; margin: 0.4rem 0 !important; }
-    .story-text-light .story-attribution { font-size: 0.68rem !important; }
-    .story-result-card, .story-card-glass { border-radius: 10px !important; overflow: hidden; }
-    .story-result-header { padding: 0.4rem 0.65rem !important; }
-    .story-result-name { font-size: 0.82rem !important; }
-    .story-result-type { font-size: 0.62rem !important; }
-    .story-result-before, .story-result-after { padding: 0.35rem 0.65rem !important; }
-    .story-result-label { font-size: 0.58rem !important; margin-bottom: 0.15rem !important; }
-    .story-result-before li { font-size: 0.72rem !important; line-height: 1.3 !important; }
+    .story-text-light .story-quote { font-size: 0.88rem !important; line-height: 1.55 !important; margin: 0.5rem 0 !important; }
+    .story-text-light .story-attribution { font-size: 0.72rem !important; }
+    .story-result-card, .story-card-glass { border-radius: 12px !important; overflow: hidden; }
+    .story-result-header { padding: 0.5rem 0.75rem !important; }
+    .story-result-name { font-size: 0.88rem !important; }
+    .story-result-type { font-size: 0.68rem !important; }
+    .story-result-before, .story-result-after { padding: 0.45rem 0.75rem !important; }
+    .story-result-label { font-size: 0.64rem !important; margin-bottom: 0.2rem !important; }
+    .story-result-before li { font-size: 0.78rem !important; line-height: 1.4 !important; }
     .story-result-before li:nth-child(n+3) { display: none !important; }
-    .story-metrics { grid-template-columns: repeat(3,1fr) !important; gap: 0.25rem !important; }
-    .story-metric-val { font-size: 0.85rem !important; }
-    .story-metric-lbl { font-size: 0.55rem !important; }
-    .story-modules-used { padding: 0.3rem 0.65rem !important; }
-    .story-module-tag { font-size: 0.55rem !important; padding: 0.1rem 0.3rem !important; }
+    .story-metrics { grid-template-columns: repeat(3,1fr) !important; gap: 0.4rem !important; }
+    .story-metric-val { font-size: 0.95rem !important; }
+    .story-metric-lbl { font-size: 0.62rem !important; }
+    .story-modules-used { padding: 0.4rem 0.75rem !important; }
+    .story-module-tag { font-size: 0.6rem !important; padding: 0.15rem 0.35rem !important; }
 
     /* ── Customer duo cards ───────────────────────── */
-    .duo-side { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
-    .duo-card { min-height: 45svh !important; height: auto !important; }
-    .duo-card-spacer { height: 25% !important; }
-    .duo-card-content { padding: 1rem !important; }
-    .duo-card h3 { font-size: 1rem !important; }
-    .duo-card-quote { font-size: 0.82rem !important; line-height: 1.5 !important; }
-    .duo-card .story-attribution { font-size: 0.65rem !important; margin-bottom: 0.35rem !important; }
-    .duo-card-metrics { gap: 0.25rem !important; }
-    .duo-card-val { font-size: 0.85rem !important; }
-    .duo-card-label { font-size: 0.55rem !important; }
+    .duo-side { grid-template-columns: 1fr !important; gap: 1rem !important; }
+    .duo-card { min-height: 40svh !important; height: auto !important; }
+    .duo-card-spacer { height: 20% !important; }
+    .duo-card-content { padding: 1.25rem !important; }
+    .duo-card h3 { font-size: 1.1rem !important; }
+    .duo-card-quote { font-size: 0.88rem !important; line-height: 1.55 !important; }
+    .duo-card .story-attribution { font-size: 0.7rem !important; margin-bottom: 0.4rem !important; }
+    .duo-card-metrics { gap: 0.35rem !important; }
+    .duo-card-val { font-size: 0.95rem !important; }
+    .duo-card-label { font-size: 0.6rem !important; }
 
     /* ── Customer aggregate strip ─────────────────── */
-    .story-aggregate { gap: 1rem 1.5rem !important; }
-    .story-agg-val { font-size: 1.4rem !important; }
-    .story-agg-label { font-size: 0.68rem !important; }
+    .story-aggregate { gap: 1.2rem 1.5rem !important; }
+    .story-agg-val { font-size: 1.5rem !important; }
+    .story-agg-label { font-size: 0.72rem !important; }
     .story-agg-sep { display: none !important; }
 
     /* ── Platform feature lists ───────────────────── */
@@ -11696,33 +11678,33 @@ img { max-width: 100%; height: auto; }
         box-sizing: border-box !important;
         overflow: visible !important;
     }
-    .platform-hero ~ .section { padding: 30px 0 !important; }
-    .platform-hero ~ .section .section-split { gap: 1.25rem !important; }
+    .platform-hero ~ .section { padding: 2.5rem 0 !important; }
+    .platform-hero ~ .section .section-split { gap: 1.5rem !important; }
     .platform-hero ~ .section .section-text { text-align: left !important; }
     .platform-hero ~ .section .section-title,
     .platform-hero ~ .section .section-subtitle { text-align: left !important; }
-    .platform-hero ~ .section .section-title { font-size: 1.24rem !important; line-height: 1.4 !important; margin-bottom: 0.5rem !important; }
-    .platform-hero ~ .section .section-subtitle { font-size: 0.92rem !important; line-height: 1.58 !important; margin-bottom: 0.6rem !important; }
-    .platform-features { gap: 0.55rem !important; margin-top: 0.65rem !important; }
+    .platform-hero ~ .section .section-title { font-size: 1.35rem !important; line-height: 1.35 !important; margin-bottom: 0.6rem !important; }
+    .platform-hero ~ .section .section-subtitle { font-size: 0.95rem !important; line-height: 1.6 !important; margin-bottom: 0.75rem !important; }
+    .platform-features { gap: 0.65rem !important; margin-top: 0.8rem !important; }
     .platform-features { text-align: left !important; justify-items: start !important; }
-    .platform-features li { font-size: 0.92rem !important; line-height: 1.62 !important; text-align: left !important; }
-    .platform-features li:nth-child(n+4) { display: none !important; }
+    .platform-features li { font-size: 0.95rem !important; line-height: 1.6 !important; text-align: left !important; }
+    .platform-features li:nth-child(n+5) { display: none !important; }
 
-    .platform-roles-grid { grid-template-columns: repeat(2,1fr) !important; gap: 0.5rem !important; }
-    .platform-roles-grid .info-card { padding: 0.6rem !important; }
-    .platform-roles-grid .info-card h4 { font-size: 0.82rem !important; }
-    .platform-roles-grid .info-card p { font-size: 0.7rem !important; }
+    .platform-roles-grid { grid-template-columns: repeat(2,1fr) !important; gap: 0.65rem !important; }
+    .platform-roles-grid .info-card { padding: 0.8rem !important; }
+    .platform-roles-grid .info-card h4 { font-size: 0.88rem !important; }
+    .platform-roles-grid .info-card p { font-size: 0.78rem !important; line-height: 1.4 !important; }
 
     /* ── Card / blog grids ────────────────────────── */
-    .card-grid { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
-    .card-grid .info-card { padding: 0.75rem !important; }
-    .card-grid .info-card h3 { font-size: 0.92rem !important; }
-    .card-grid .info-card p { font-size: 0.8rem !important; }
+    .card-grid { grid-template-columns: 1fr !important; gap: 0.85rem !important; }
+    .card-grid .info-card { padding: 1rem !important; }
+    .card-grid .info-card h3 { font-size: 1rem !important; }
+    .card-grid .info-card p { font-size: 0.88rem !important; line-height: 1.5 !important; }
 
-    .blog-grid { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
-    .blog-card { padding: 0.75rem !important; }
-    .blog-card h3 { font-size: 0.92rem !important; }
-    .blog-card p { font-size: 0.78rem !important; }
+    .blog-grid { grid-template-columns: 1fr !important; gap: 0.85rem !important; }
+    .blog-card { padding: 1rem !important; }
+    .blog-card h3 { font-size: 1rem !important; }
+    .blog-card p { font-size: 0.85rem !important; line-height: 1.5 !important; }
     .blog-card-meta { flex-wrap: wrap; gap: 0.3rem; }
     .blog-date { white-space: normal; }
 
@@ -11795,72 +11777,57 @@ img { max-width: 100%; height: auto; }
     .hero-grid > aside.info-card .btn { padding: 0.5rem !important; font-size: 0.82rem !important; }
     #demo-form-feedback { font-size: 0.72rem !important; margin-top: 0.35rem !important; }
 
-    /* ── Demo secondary sections: auto-height ─────── */
-    .card-grid { min-height: 100svh !important; padding: 24px 0 !important; }
-    section:has(.card-grid), section:has(.cta-band) { min-height: 100svh !important; padding: 24px 0 !important; }
-    .cta-band { padding: 1rem !important; border-radius: 12px !important; flex-direction: column; gap: 0.6rem; text-align: center; }
-    .cta-band h3 { font-size: 1rem !important; margin-bottom: 0.15rem !important; }
-    .cta-band p { font-size: 0.82rem !important; }
-    .cta-band .btn { padding: 0.5rem 1.2rem !important; font-size: 0.82rem !important; }
+    /* ── Demo secondary sections ─────────────────── */
+    .card-grid { min-height: auto !important; padding: 2rem 0 !important; }
+    section:has(.card-grid), section:has(.cta-band) { min-height: auto !important; }
+    .cta-band { padding: 1.5rem !important; border-radius: 14px !important; flex-direction: column; gap: 0.8rem; text-align: center; }
+    .cta-band h3 { font-size: 1.1rem !important; margin-bottom: 0.25rem !important; }
+    .cta-band p { font-size: 0.88rem !important; }
+    .cta-band .btn { padding: 0.6rem 1.3rem !important; font-size: 0.88rem !important; }
 
-    /* ── Aggregate strip: auto-height, compact ────── */
-    section:has(.story-aggregate) { min-height: 100svh !important; padding: 24px 0 !important; }
+    /* ── Aggregate strip ────────────────────────── */
+    section:has(.story-aggregate) { min-height: auto !important; }
     .story-aggregate { flex-wrap: wrap !important; gap: 0.8rem 1.2rem !important; justify-content: center !important; }
     .story-agg-val { font-size: 1.2rem !important; }
     .story-agg-label { font-size: 0.62rem !important; }
     .story-agg-sep { display: none !important; }
 
-    /* ── Platform roles: tight 2x2 ────────────────── */
-    section:has(.platform-roles-grid) { min-height: 100svh !important; padding: 24px 0 !important; }
-    section:has(.platform-roles-grid) .section-title { font-size: 1.2rem !important; margin-bottom: 0.2rem !important; }
-    section:has(.platform-roles-grid) .section-subtitle { font-size: 0.78rem !important; margin-bottom: 0.5rem !important; }
-    .platform-role-card { padding: 0.55rem !important; }
-    .platform-role-icon svg { width: 20px !important; height: 20px !important; }
-    .platform-role-card h3 { font-size: 0.82rem !important; margin: 0.2rem 0 0.1rem !important; }
-    .platform-role-card p { font-size: 0.68rem !important; line-height: 1.3 !important; }
+    /* ── Platform roles: 2x2 grid ──────────────── */
+    section:has(.platform-roles-grid) { min-height: auto !important; }
+    section:has(.platform-roles-grid) .section-title { font-size: 1.35rem !important; margin-bottom: 0.35rem !important; }
+    section:has(.platform-roles-grid) .section-subtitle { font-size: 0.88rem !important; margin-bottom: 0.65rem !important; }
+    .platform-role-card { padding: 0.75rem !important; }
+    .platform-role-icon svg { width: 22px !important; height: 22px !important; }
+    .platform-role-card h3 { font-size: 0.9rem !important; margin: 0.25rem 0 0.15rem !important; }
+    .platform-role-card p { font-size: 0.78rem !important; line-height: 1.4 !important; }
 
     /* ── Blog listing page ─────────────────────────── */
-    section:has(.blog-grid) { min-height: 100svh !important; }
-    .blog-filters { gap: 0.3rem !important; margin-bottom: 0.6rem !important; }
-    .blog-filter-btn { font-size: 0.72rem !important; padding: 0.3rem 0.6rem !important; }
+    section:has(.blog-grid) { min-height: auto !important; }
+    .blog-filters { gap: 0.4rem !important; margin-bottom: 0.8rem !important; }
+    .blog-filter-btn { font-size: 0.8rem !important; padding: 0.35rem 0.7rem !important; }
 
     /* ── Compare table ────────────────────────────── */
     .compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .compare-table { min-width: 760px; }
     .compare-table th, .compare-table td { white-space: nowrap; }
-    section:has(.compare-table-section), .compare-table-section { min-height: 100svh !important; padding: 24px 0 !important; }
+    section:has(.compare-table-section), .compare-table-section { min-height: auto !important; }
 
-    /* Final consistency pass: every top-level page section same height */
+    /* Content-driven section heights — no forced 100svh */
     main > section {
-        min-height: 100svh !important;
-        padding-top: 24px !important;
-        padding-bottom: 24px !important;
-    }
-
-    /* Relax compression for platform + customers on mobile */
-    main > #mod-sense,
-    main > #mod-pulse,
-    main > #mod-ops,
-    main > #mod-foresight,
-    main > #mod-agent,
-    main > #story-sarah,
-    main > #story-farhad,
-    main > #story-maria {
         min-height: auto !important;
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        align-items: flex-start !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
     }
 
     #story-sarah .section-split,
-    #story-farhad .section-split { gap: 1rem !important; }
+    #story-farhad .section-split { gap: 1.5rem !important; }
     #story-sarah .section-text,
     #story-farhad .section-text,
     #story-maria .duo-card-text { text-align: left !important; }
 
-    /* ── Section titles global compact ─────────────── */
-    .section-title { font-size: 1.36rem !important; margin-bottom: 0.22rem !important; }
-    .section-subtitle { font-size: 0.88rem !important; margin-bottom: 0.3rem !important; line-height: 1.48 !important; }
+    /* ── Section titles global ───────────────────── */
+    .section-title { font-size: 1.5rem !important; margin-bottom: 0.5rem !important; }
+    .section-subtitle { font-size: 0.95rem !important; margin-bottom: 0.6rem !important; line-height: 1.55 !important; }
 
     /* ─── Balanced mobile content density (restore key copy) ── */
     .hero-eyebrow { display: block !important; }
@@ -11909,79 +11876,53 @@ img { max-width: 100%; height: auto; }
     .quote-full { display: block !important; }
     .quote-short { display: none !important; }
 
-    /* ── Home page only: concise mobile copy ───────── */
+    /* ── Home page hero: no subtitle, spread out ─── */
     .hero:not(.story-section-bg) .hero-sub { display: none !important; }
     .hero:not(.story-section-bg) .hero-actions .btn-secondary { display: inline-flex !important; }
-    .hero:not(.story-section-bg) .hero-stat-lbl { display: block !important; font-size: 0.65rem !important; }
-    .hero:not(.story-section-bg) h1 { font-size: 1.65rem !important; margin-bottom: 0.45rem !important; }
-    .hero:not(.story-section-bg) .hero-eyebrow { margin-bottom: 0.3rem !important; }
-    .hero:not(.story-section-bg) .hero-actions { margin-top: 0.15rem !important; margin-bottom: 0.55rem !important; }
-    .hero:not(.story-section-bg) .hero-stats { margin: 0.5rem 0 !important; }
-
-    #how-it-works .section-subtitle { display: none !important; }
-    #how-it-works .hiw-card p { display: none !important; }
-
-    .human-section-sub { display: none !important; }
-
-    .ops-section .section-subtitle { display: none !important; }
-    .ops-section .scenario-detail { display: none !important; }
-
-    .conversations-section .section-subtitle { display: none !important; }
-
-    .integrations-section .section-subtitle { display: none !important; }
-    .integrations-section .integration-benefits { gap: 0.25rem !important; }
-    .integrations-section .int-benefit {
-        font-size: 0 !important;
-        line-height: 0 !important;
-        color: transparent !important;
-    }
-    .integrations-section .int-benefit strong {
-        display: inline-block !important;
-        font-size: 0.82rem !important;
-        line-height: 1.35 !important;
-        color: #0f172a !important;
-        margin-right: 0 !important;
-    }
+    .hero:not(.story-section-bg) .hero-stat-lbl { display: block !important; font-size: 0.7rem !important; }
+    .hero:not(.story-section-bg) h1 { font-size: 1.85rem !important; margin-bottom: 0.6rem !important; }
+    .hero:not(.story-section-bg) .hero-eyebrow { margin-bottom: 0.45rem !important; font-size: 0.78rem !important; }
+    .hero:not(.story-section-bg) .hero-actions { margin-top: 0.25rem !important; margin-bottom: 0.7rem !important; }
+    .hero:not(.story-section-bg) .hero-stats { margin: 0.6rem 0 !important; gap: 0.6rem !important; }
+    .hero:not(.story-section-bg) .hero-stat-val { font-size: 1.2rem !important; }
 
     /* ── Final CTA ────────────────────────────────── */
-    .final-cta { min-height: 100svh !important; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
-    .final-cta h2 { font-size: 1.45rem !important; margin-bottom: 0.3rem !important; }
-    .final-cta p { font-size: 0.88rem !important; margin-bottom: 0.6rem !important; }
-    .final-cta .btn { width: 100%; max-width: 280px; }
-    .cta-reassurance { font-size: 0.72rem !important; }
+    .final-cta { min-height: 60svh !important; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 3rem 0 !important; }
+    .final-cta h2 { font-size: 1.55rem !important; margin-bottom: 0.5rem !important; }
+    .final-cta p { font-size: 0.92rem !important; margin-bottom: 0.8rem !important; }
+    .final-cta .btn { width: 100%; max-width: 300px; font-size: 0.92rem !important; padding: 0.65rem 1.2rem !important; }
+    .cta-reassurance { font-size: 0.78rem !important; }
 
     /* ── Announcement bar: hidden on mobile ────────── */
     .announcement-bar { display: none !important; }
 
     /* ── Footer ────────────────────────────────────── */
     .footer {
-        padding: 1.25rem 0 !important;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
+        padding: 1.5rem 0 !important;
         min-height: auto !important;
     }
     .footer-row { grid-template-columns: 1fr !important; }
-    .footer-nav { justify-content: center !important; gap: 0.5rem 0.8rem !important; font-size: 0.82rem !important; }
-    .footer-legal a { font-size: 0.78rem; }
+    .footer-nav { justify-content: center !important; gap: 0.6rem 0.9rem !important; font-size: 0.85rem !important; }
+    .footer-legal a { font-size: 0.8rem; }
 }
 
 /* ── Phone portrait extra compact (<=599px) ──────── */
 @media (max-width: 599px) {
     .container { padding: 0 16px; }
-    .hero h1 { font-size: 1.55rem !important; }
-    .hero-showcase { max-width: 90vw !important; width: 90vw !important; }
+    .hero h1 { font-size: 1.65rem !important; }
+    .hero-showcase { max-width: 92vw !important; width: 92vw !important; }
     .hero-stats { grid-template-columns: repeat(3,1fr) !important; }
-    .convo-card { height: 48svh !important; min-height: 48svh !important; max-height: 48svh !important; }
 }
 
 /* ── Very small phone (<=430px) ──────────────────── */
 @media (max-width: 430px) {
     .hero h1, .hero-subtitle { display: block !important; }
     .hero-stats { display: grid !important; }
-    .hero h1 { font-size: 1.45rem !important; }
-    .hero-showcase { max-width: 88vw !important; width: 88vw !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .hero-showcase { max-width: 90vw !important; width: 90vw !important; }
     .proof-row { grid-template-columns: 1fr !important; }
-    .proof-pill span { font-size: 0.62rem !important; }
+    .proof-pill span { font-size: 0.65rem !important; }
+    section, .section { padding: 2.5rem 0 !important; }
 }
 
 /* ── Blog article lists: no bullets ─────────────── */
