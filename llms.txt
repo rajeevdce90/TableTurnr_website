@@ -1,0 +1,74 @@
+# TableTurnr
+
+> AI-powered operations command center for restaurant teams.
+
+TableTurnr gives restaurant managers, shift leads, and staff a single platform to track sales, labor, inventory, and table turn-time in real time. It replaces fragmented spreadsheets and disconnected tools with one unified view, powered by AI forecasting and proactive alerts.
+
+## Key Facts
+
+- Product: Restaurant operations intelligence platform (Web, iOS, Android)
+- Founded: 2025
+- Website: https://tableturnr.com
+- Demo: https://tableturnr.com/demo/
+
+## What TableTurnr Does
+
+- **Business 360 Dashboard**: Real-time sales, labor, COGS, and service metrics in one screen
+- **Demand Forecasting**: AI-driven sales forecasts with 94%+ accuracy by daypart and location
+- **Staffing Intelligence**: Demand-based scheduling that reduces overtime and improves coverage
+- **Inventory Alerts**: Automated reorder triggers, waste tracking, and COGS anomaly detection
+- **Turn-Time Optimization**: Table turn-time analytics to maximize throughput during peak hours
+- **TurnrAgent**: AI assistant that provides proactive alerts, SOP answers, and shift-ready briefs
+- **Role-Based Access**: Custom views for GMs, shift leads, kitchen staff, and regional directors
+
+## Who It's For
+
+- Restaurant general managers
+- Franchise owners and operators
+- Regional directors managing multi-unit operations
+- Shift leads and front-of-house staff
+
+## Results
+
+- 15–25% more revenue per location
+- 3+ hours saved daily per manager
+- 5-in-1 tool consolidation (replaces separate POS analytics, labor tools, inventory systems, forecasting spreadsheets, and communication tools)
+
+## Pages
+
+- [Homepage](https://tableturnr.com/)
+- [Platform Overview](https://tableturnr.com/platform/)
+- [Customer Stories](https://tableturnr.com/customers/)
+- [IHOP Franchise Case Study](https://tableturnr.com/customers/ihop-franchise/)
+- [Book a Demo](https://tableturnr.com/demo/)
+- [Compare vs Competitors](https://tableturnr.com/compare/)
+- [Blog](https://tableturnr.com/blog/)
+- [Support](https://tableturnr.com/support/)
+- [Resources](https://tableturnr.com/resources/)
+
+## Blog Articles
+
+- [Why Restaurants Still Run on Guesswork in 2026](https://tableturnr.com/blog/why-restaurants-still-run-on-guesswork-2026/)
+- [Why 73% of Restaurant Tech Fails in Year One](https://tableturnr.com/blog/why-restaurant-tech-fails-in-year-one/)
+- [What 200 Operators Said About Their Biggest Time Waste](https://tableturnr.com/blog/what-200-operators-said-about-time-waste/)
+- [Staff Retention and Technology: What the Data Shows](https://tableturnr.com/blog/staff-retention-and-technology-data/)
+- [Restaurant Management Tips](https://tableturnr.com/blog/restaurant-management-tips/)
+- [Menu Engineering: The Matrix That Prints Money](https://tableturnr.com/blog/menu-engineering-the-matrix-that-prints-money/)
+- [How to Reduce Restaurant Labor Costs](https://tableturnr.com/blog/how-to-reduce-restaurant-labor-costs/)
+- [From Prototype to Production: How TableTurnr Onboards Your Restaurant](https://tableturnr.com/blog/from-prototype-to-production/)
+- [From 8% to 14% Margins: A Franchise Owner's Journey](https://tableturnr.com/blog/from-8-to-14-margins-franchise-journey/)
+- [Forecast Accuracy: Why 98% Changes Everything](https://tableturnr.com/blog/forecast-accuracy-why-98-changes-everything/)
+- [5 Metrics Every GM Should Check Before 9 AM](https://tableturnr.com/blog/five-metrics-every-gm-before-9am/)
+- [The Demo That Changed How a Regional Director Runs Meetings](https://tableturnr.com/blog/demo-that-changed-regional-director-meetings/)
+- [The Death of the Monthly P&L](https://tableturnr.com/blog/death-of-the-monthly-pl/)
+- [The $2.8 Trillion Problem: Data Gaps in Restaurant Ops](https://tableturnr.com/blog/data-gaps-restaurant-ops/)
+- [Building for the GM, Not the CTO](https://tableturnr.com/blog/building-for-the-gm-not-the-cto/)
+- [AI in Restaurants: Beyond the Hype](https://tableturnr.com/blog/ai-in-restaurants-beyond-hype/)
+- [48 Hours to Live: What the First Two Days Look Like](https://tableturnr.com/blog/48-hours-to-live-first-two-days/)
+
+## Legal
+
+- [Privacy Policy](https://tableturnr.com/privacy/)
+- [Terms of Service](https://tableturnr.com/terms/)
+- [Cookie Policy](https://tableturnr.com/cookies/)
+- [Account Deletion](https://tableturnr.com/account-deletion/)

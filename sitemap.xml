@@ -67,6 +67,90 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tableturnr.com/blog/why-restaurants-still-run-on-guesswork-2026/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/why-restaurant-tech-fails-in-year-one/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/what-200-operators-said-about-time-waste/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/staff-retention-and-technology-data/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/menu-engineering-the-matrix-that-prints-money/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/forecast-accuracy-why-98-changes-everything/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/five-metrics-every-gm-before-9am/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/from-8-to-14-margins-franchise-journey/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/demo-that-changed-regional-director-meetings/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/death-of-the-monthly-pl/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/data-gaps-restaurant-ops/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/building-for-the-gm-not-the-cto/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/ai-in-restaurants-beyond-hype/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tableturnr.com/blog/48-hours-to-live-first-two-days/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://tableturnr.com/privacy/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>yearly</changefreq>
@@ -104,17 +188,4 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Legacy paths kept for migration continuity -->
-  <url>
-    <loc>https://tableturnr.com/case-studies/ihop-franchise/</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://tableturnr.com/team/</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
 </urlset>

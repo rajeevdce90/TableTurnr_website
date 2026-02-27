@@ -11419,10 +11419,10 @@ img { max-width: 100%; height: auto; }
 
     /* ── Homepage hero compact ────────────────────── */
     .hero h1 { font-size: 1.65rem !important; line-height: 1.1 !important; margin-bottom: 0.15rem !important; }
-    .hero-sub, .hero-subtitle { display: none !important; }
+    .hero-sub, .hero-subtitle { display: block !important; font-size: 0.84rem !important; line-height: 1.4 !important; margin-bottom: 0.3rem !important; }
     .hero-actions { gap: 0.4rem !important; margin-bottom: 0.15rem !important; justify-content: center !important; }
     .hero-actions .btn { padding: 0.45rem 0.9rem !important; font-size: 0.8rem !important; }
-    .hero-actions .btn-secondary { display: none !important; }
+    .hero-actions .btn-secondary { display: inline-flex !important; }
     .hero-stats { grid-template-columns: repeat(3,1fr) !important; gap: 0.3rem !important; margin: 0.15rem 0 !important; }
     .hero-stat-val { font-size: 1rem !important; }
     .hero-stat-lbl { font-size: 0.62rem !important; }
@@ -11475,9 +11475,9 @@ img { max-width: 100%; height: auto; }
     .platform-hero .hero-actions,
     .hero.story-section-bg .hero-actions { justify-content: center !important; }
     .platform-hero .hero-actions .btn-secondary,
-    .hero.platform-hero .hero-actions .btn-secondary { display: none !important; }
+    .hero.platform-hero .hero-actions .btn-secondary { display: inline-flex !important; }
     .platform-hero .hero-sub,
-    .hero.platform-hero .hero-sub { display: none !important; }
+    .hero.platform-hero .hero-sub { display: block !important; }
 
     /* ── Demo page form ──────────────────────────── */
     .hero-grid .info-card { padding: 0.85rem !important; }
@@ -11491,8 +11491,8 @@ img { max-width: 100%; height: auto; }
     .hiw-cards { grid-template-columns: repeat(3, 1fr) !important; gap: 0.6rem !important; margin-top: 1rem !important; }
     .hiw-card { padding: 0.8rem 0.5rem !important; border-radius: 12px !important; }
     .hiw-num { width: 36px !important; height: 36px !important; font-size: 1rem !important; margin-bottom: 0.5rem !important; }
-    .hiw-card h3 { font-size: 0.92rem !important; margin-bottom: 0 !important; }
-    .hiw-card p { display: none !important; }
+    .hiw-card h3 { font-size: 0.92rem !important; margin-bottom: 0.15rem !important; }
+    .hiw-card p { display: block !important; font-size: 0.72rem !important; line-height: 1.35 !important; }
 
     /* ── S3b Human Section ────────────────────────── */
     .human-section { min-height: 100svh !important; padding: 24px 0 !important; display: flex !important; align-items: center !important; box-sizing: border-box; }
@@ -11593,14 +11593,13 @@ img { max-width: 100%; height: auto; }
     #mod-foresight,
     #mod-agent,
     .platform-hero ~ .section {
-        height: 100dvh !important;
-        height: 100svh !important;
         min-height: 100dvh !important;
         min-height: 100svh !important;
+        height: auto !important;
         display: flex !important;
         align-items: center !important;
         box-sizing: border-box !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
     .platform-hero ~ .section { padding: 24px 0 !important; }
     .platform-hero ~ .section .section-split { gap: 1rem !important; }
@@ -11610,7 +11609,7 @@ img { max-width: 100%; height: auto; }
     .platform-hero ~ .section .section-title { font-size: 1.18rem !important; line-height: 1.35 !important; margin-bottom: 0.4rem !important; }
     .platform-features { gap: 0.45rem !important; margin-top: 0.55rem !important; }
     .platform-features { text-align: left !important; justify-items: start !important; }
-    .platform-features li { font-size: 0.86rem !important; line-height: 1.5 !important; text-align: left !important; }
+    .platform-features li { font-size: 0.9rem !important; line-height: 1.55 !important; text-align: left !important; }
     .platform-features li:nth-child(n+4) { display: none !important; }
 
     .platform-roles-grid { grid-template-columns: repeat(2,1fr) !important; gap: 0.5rem !important; }
@@ -11743,57 +11742,55 @@ img { max-width: 100%; height: auto; }
     }
 
     /* ── Section titles global compact ─────────────── */
-    .section-title { font-size: 1.3rem !important; margin-bottom: 0.15rem !important; }
-    .section-subtitle { font-size: 0.82rem !important; margin-bottom: 0.2rem !important; line-height: 1.4 !important; }
+    .section-title { font-size: 1.36rem !important; margin-bottom: 0.22rem !important; }
+    .section-subtitle { font-size: 0.88rem !important; margin-bottom: 0.3rem !important; line-height: 1.48 !important; }
 
-    /* ─── DECLUTTER: hide secondary text on mobile ── */
-
-    /* Hero: hide eyebrow, credibility bar, stat labels */
-    .hero > .container > .hero-grid > .hero-copy > .hero-eyebrow,
-    .hero-eyebrow { display: none !important; }
+    /* ─── Balanced mobile content density (restore key copy) ── */
+    .hero-eyebrow { display: block !important; }
     .credibility-bar { display: none !important; }
-    .hero-stat-lbl { display: none !important; }
+    .hero-stat-lbl { display: block !important; font-size: 0.64rem !important; line-height: 1.2 !important; }
 
-    /* S2 How It Works: hide subtitle, descriptions hidden via .hiw-card p above */
-    #how-it-works .section-subtitle { display: none !important; }
+    #how-it-works .section-subtitle { display: block !important; }
 
-    /* S3b Human: hide body text, keep headline only */
-    .human-section-eyebrow { display: none !important; }
-    .human-section-sub { display: none !important; }
+    .human-section-eyebrow { display: block !important; }
+    .human-section-sub { display: block !important; }
 
-    /* S4 Ops: hide subtitle, hide scenario detail text */
-    .ops-section .section-subtitle { display: none !important; }
-    .scenario-detail { display: none !important; }
+    .ops-section .section-subtitle { display: block !important; }
+    .scenario-detail { display: block !important; font-size: 0.8rem !important; line-height: 1.4 !important; }
 
-    /* S5 Conversations: hide subtitle */
-    .conversations-section .section-subtitle { display: none !important; }
+    .conversations-section .section-subtitle { display: block !important; }
 
-    /* S6 Integrations: hide subtitle, hide benefit list */
-    .integrations-section .section-subtitle { display: none !important; }
-    .integration-benefits { display: none !important; }
+    .integrations-section .section-subtitle { display: block !important; }
+    .integration-benefits { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 0.35rem !important; }
+    .int-benefit {
+        font-size: 0.76rem !important;
+        line-height: 1.35 !important;
+        color: #64748b !important;
+    }
+    .int-benefit strong {
+        font-size: 0.82rem !important;
+        color: #0f172a !important;
+        display: inline !important;
+        padding-left: 0 !important;
+        margin-right: 0.2rem !important;
+    }
 
-    /* Customer stories: hide long subtitle paragraphs */
-    .story-text-light .section-subtitle { display: none !important; }
-    /* Customer story cards: hide "before" section */
-    .story-result-before { display: none !important; }
-    /* Customer duo cards: hide long quotes */
-    .duo-card-quote { display: none !important; }
+    .story-text-light .section-subtitle { display: block !important; }
+    .story-result-before { display: block !important; }
+    .duo-card-quote { display: block !important; }
 
-    /* Platform modules: hide subtitles, limit feature list to 2 */
-    .platform-hero ~ .section .section-subtitle { display: none !important; }
-    .platform-features li:nth-child(n+3) { display: none !important; }
+    .platform-hero ~ .section .section-subtitle { display: block !important; }
+    .platform-features li:nth-child(n+5) { display: none !important; }
 
-    /* Platform roles: hide card descriptions */
-    .platform-role-card p { display: none !important; }
-    section:has(.platform-roles-grid) .section-subtitle { display: none !important; }
+    .platform-role-card p { display: block !important; }
+    section:has(.platform-roles-grid) .section-subtitle { display: block !important; }
 
-    /* Demo: hide proof pills, hide info-card descriptions */
-    .hero-grid .proof-row { display: none !important; }
-    .card-grid .info-card p { display: none !important; }
+    .hero-grid .proof-row { display: grid !important; }
+    .card-grid .info-card p { display: block !important; }
 
-    /* Short/full quote toggle for mobile */
-    .quote-full { display: none !important; }
-    .quote-short { display: block !important; }
+    /* Show fuller quotes on mobile */
+    .quote-full { display: block !important; }
+    .quote-short { display: none !important; }
 
     /* ── Final CTA ────────────────────────────────── */
     .final-cta { min-height: 100svh !important; display: flex !important; align-items: center !important; box-sizing: border-box; padding: 24px 0 !important; }
