@@ -3,24 +3,28 @@ window.OPERATIONS_SCENARIOS = [
         id: "inventory",
         title: "Stockout in 19 hours.",
         summary: "TurnrSense flags it. Cart builds automatically. One tap to reorder from US Foods, Costco, or Instacart.",
+        mobileSummary: "Flagged. Cart built. One tap to reorder.",
         image: "images/product-2.jpg"
     },
     {
         id: "staffing",
         title: "Friday needs 2 more servers.",
         summary: "TurnrForesight spots the gap. Available staff pinged. Shift filled before you check.",
+        mobileSummary: "Gap spotted. Staff pinged. Shift filled.",
         image: "images/product-5.png"
     },
     {
         id: "turntime",
         title: "Tables turning 12 min slow.",
         summary: "TurnrOps catches the drift live. Resets prioritized. That's 7 more covers per hour recovered.",
+        mobileSummary: "Drift caught. Resets prioritized. 7 more covers/hr.",
         image: "images/product-4.png"
     },
     {
         id: "policy",
         title: "Staff has a policy question.",
         summary: "TurnrAgent answers from your uploaded docs. Unsure? Escalates to you. Always grounded, never guessing.",
+        mobileSummary: "Answered from your docs. Unsure? Escalates to you.",
         image: "images/product-3.jpg"
     }
 ];

@@ -118,9 +118,11 @@
         var mockScreens = document.querySelectorAll("[data-mock]");
         var idx = 0;
 
+        var isMobile = window.matchMedia("(max-width: 767px)");
+
         function render(s) {
             if (titleEl) titleEl.textContent = s.title;
-            if (summaryEl) summaryEl.textContent = s.summary;
+            if (summaryEl) summaryEl.textContent = (isMobile.matches && s.mobileSummary) ? s.mobileSummary : s.summary;
             mockScreens.forEach(function (m) {
                 m.classList.toggle("active", m.getAttribute("data-mock") === s.id);
             });
