@@ -11579,6 +11579,14 @@ img { max-width: 100%; height: auto; }
     .human-section-sub { font-size: 0.92rem !important; line-height: 1.55 !important; }
 
     /* ── S4 Operations Pulse ─────────────────────── */
+    .ops-section {
+        min-height: 100svh !important;
+        height: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        box-sizing: border-box;
+        padding: 3rem 0 !important;
+    }
     .ops-section .scenario-pills { flex-wrap: wrap; gap: 0.35rem !important; margin-bottom: 0.5rem !important; }
     .ops-section .scenario-pill { font-size: 0.78rem !important; padding: 0.3rem 0.6rem !important; }
     .ops-section .scenario-desc { font-size: 0.9rem !important; }
