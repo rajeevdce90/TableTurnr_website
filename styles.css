@@ -8267,7 +8267,7 @@ html {
 
 .human-section {
     position: relative;
-    background: url('../images/human-section-bg.png') center/cover no-repeat;
+    background: url('images/human-section-bg.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
