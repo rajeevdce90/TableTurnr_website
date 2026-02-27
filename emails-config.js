@@ -10,7 +10,7 @@ const TABLETURNR_EMAILS = {
     support: 'support@tableturnr.com',
 
     // Sales inquiries
-    sales: 'sales@vigilense.ai',
+    sales: 'sales@tableturnr.com',
 
     // Security related
     security: 'security@tableturnr.com',

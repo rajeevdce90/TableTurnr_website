@@ -43,7 +43,7 @@ async function submitToGoogleForms(data) {
             mode: 'no-cors' // Required for Google Forms
         });
         
-        // Send email notification to chandan.dce07@gmail.com
+        // Send email notification to sales@tableturnr.com
         await sendEmailNotification(data);
         
         // Also save to localStorage as backup
@@ -73,7 +73,7 @@ async function sendEmailNotification(data) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                to: 'chandan.dce07@gmail.com',
+                to: 'sales@tableturnr.com',
                 subject: `🚨 New TableTurnr Demo Request - ${data.restaurant_name}`,
                 html: `
                     <h2>New Demo Request Received!</h2>
