@@ -53,8 +53,8 @@
 
             <div class="nav-links" id="site-nav">
                 <a href="../platform/">Platform</a>
-                <a href="../customers/">Customers</a>
-                <a href="../blog/">Blog</a>
+                <a href="../customers/">Success Stories</a>
+                <a href="../blog/">Resources</a>
                 <a href="../demo/" class="nav-cta">Book a Demo</a>
             </div>
         </div>
@@ -79,7 +79,7 @@
                 <aside class="info-card reveal" style="padding:1.3rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.5);box-shadow:0 8px 32px rgba(0,0,0,0.2);">
                     <h3 style="margin-bottom:0.4rem;">Book your demo</h3>
                     <p style="margin-bottom:0.95rem;">Fill this out and we'll be in touch within 24 hours.</p>
-                    <form id="demo-form" novalidate>
+                    <form id="demo-form" action="https://formspree.io/f/xqeypzlw" method="POST" novalidate>
                         <label style="display:block; margin-bottom:0.65rem;">
                             Full name
                             <input type="text" name="name" required style="width:100%; margin-top:0.25rem; padding:0.65rem; border-radius:10px; border:1px solid #c8d8f5;" />
@@ -165,9 +165,8 @@
         (function () {
             var form = document.getElementById("demo-form");
             var feedback = document.getElementById("demo-form-feedback");
-            if (!form || !feedback) {
-                return;
-            }
+            var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+            if (!form || !feedback) return;
 
             form.addEventListener("submit", function (event) {
                 event.preventDefault();
@@ -177,13 +176,32 @@
                     return;
                 }
 
-                if (typeof gtag === "function") {
-                    gtag("event", "demo_form_submitted", { event_category: "conversion", event_label: "website_demo_form" });
-                }
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Submitting...";
+                feedback.textContent = "";
 
-                feedback.textContent = "Thanks. Your request is submitted. We will follow up shortly with next steps.";
-                feedback.style.color = "#166534";
-                form.reset();
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { "Accept": "application/json" }
+                }).then(function (response) {
+                    if (response.ok) {
+                        if (typeof gtag === "function") {
+                            gtag("event", "demo_form_submitted", { event_category: "conversion", event_label: "website_demo_form" });
+                        }
+                        feedback.textContent = "Thanks! Your request is submitted. We\u2019ll follow up within 24 hours.";
+                        feedback.style.color = "#166534";
+                        form.reset();
+                    } else {
+                        throw new Error("Form submission failed");
+                    }
+                }).catch(function () {
+                    feedback.textContent = "Something went wrong. Please try again or email us directly.";
+                    feedback.style.color = "#b91c1c";
+                }).finally(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Submit request";
+                });
             });
         })();
     </script>

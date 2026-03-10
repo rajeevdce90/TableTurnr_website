@@ -7,6 +7,13 @@ window.OPERATIONS_SCENARIOS = [
         image: "images/product-2.jpg"
     },
     {
+        id: "pulse",
+        title: "Your P&L is always current.",
+        summary: "TurnrPulse breaks down sales, labor, COGS, and operating costs in real time. RevPATH heatmap shows revenue per table hour so you know exactly where every dollar goes.",
+        mobileSummary: "Sales, labor, COGS broken down live. RevPATH shows revenue per table hour.",
+        image: "images/product-2.jpg"
+    },
+    {
         id: "staffing",
         title: "Friday needs 2 more servers.",
         summary: "TurnrForesight spots the gap. Available staff pinged. Shift filled before you check.",
