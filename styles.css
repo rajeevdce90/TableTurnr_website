@@ -5707,7 +5707,7 @@ html {
    ============================================ */
 .section.tools-strip-section {
     align-items: flex-start;
-    padding: 4rem 0 2.5rem;
+    padding: 6rem 0 2.5rem;
     background:
         radial-gradient(120% 90% at 0% 0%, rgba(255, 140, 51, 0.10) 0%, transparent 46%),
         radial-gradient(120% 90% at 100% 100%, rgba(59, 130, 246, 0.11) 0%, transparent 48%),
@@ -5747,11 +5747,11 @@ html {
 }
 
 .tools-strip-title {
-    font-size: 0.88rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #374151;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: #0f172a;
+    margin-bottom: 2rem;
     font-weight: 700;
     text-align: center;
 }
@@ -5870,6 +5870,7 @@ html {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem 1.75rem;
     align-items: stretch;
+    margin-top: 3.5rem;
 }
 
 .tools-strip-category {
@@ -7545,6 +7546,7 @@ body {
     gap: 0.6rem;
     text-decoration: none;
     flex-shrink: 0;
+    margin-left: -0.75rem;
 }
 
 .navbar .main-logo {
