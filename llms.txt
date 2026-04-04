@@ -46,25 +46,15 @@ TableTurnr gives restaurant managers, shift leads, and staff a single platform t
 - [Support](https://tableturnr.com/support/)
 - [Resources](https://tableturnr.com/resources/)
 
-## Blog Articles
+## Blog Articles (7 guides)
 
-- [Why Restaurants Still Run on Guesswork in 2026](https://tableturnr.com/blog/why-restaurants-still-run-on-guesswork-2026/)
-- [Why 73% of Restaurant Tech Fails in Year One](https://tableturnr.com/blog/why-restaurant-tech-fails-in-year-one/)
-- [What 200 Operators Said About Their Biggest Time Waste](https://tableturnr.com/blog/what-200-operators-said-about-time-waste/)
-- [Staff Retention and Technology: What the Data Shows](https://tableturnr.com/blog/staff-retention-and-technology-data/)
-- [Restaurant Management Tips](https://tableturnr.com/blog/restaurant-management-tips/)
-- [Menu Engineering: The Matrix That Prints Money](https://tableturnr.com/blog/menu-engineering-the-matrix-that-prints-money/)
-- [How to Reduce Restaurant Labor Costs](https://tableturnr.com/blog/how-to-reduce-restaurant-labor-costs/)
-- [From Prototype to Production: How TableTurnr Onboards Your Restaurant](https://tableturnr.com/blog/from-prototype-to-production/)
-- [From 8% to 14% Margins: A Franchise Owner's Journey](https://tableturnr.com/blog/from-8-to-14-margins-franchise-journey/)
-- [Forecast Accuracy: Why 98% Changes Everything](https://tableturnr.com/blog/forecast-accuracy-why-98-changes-everything/)
-- [5 Metrics Every GM Should Check Before 9 AM](https://tableturnr.com/blog/five-metrics-every-gm-before-9am/)
-- [The Demo That Changed How a Regional Director Runs Meetings](https://tableturnr.com/blog/demo-that-changed-regional-director-meetings/)
-- [The Death of the Monthly P&L](https://tableturnr.com/blog/death-of-the-monthly-pl/)
-- [The $2.8 Trillion Problem: Data Gaps in Restaurant Ops](https://tableturnr.com/blog/data-gaps-restaurant-ops/)
-- [Building for the GM, Not the CTO](https://tableturnr.com/blog/building-for-the-gm-not-the-cto/)
-- [AI in Restaurants: Beyond the Hype](https://tableturnr.com/blog/ai-in-restaurants-beyond-hype/)
-- [48 Hours to Live: What the First Two Days Look Like](https://tableturnr.com/blog/48-hours-to-live-first-two-days/)
+- [Restaurant Management Tips: The Complete Operator's Guide](https://tableturnr.com/blog/restaurant-management-tips/)
+- [Forecasting & Daily Operating Control](https://tableturnr.com/blog/forecast-accuracy-why-98-changes-everything/) (forecast accuracy, morning metrics, daily P&L)
+- [The $2.8 Trillion Problem: Data Gaps in Restaurant Ops](https://tableturnr.com/blog/data-gaps-restaurant-ops/) (includes themes from time-waste and guesswork articles)
+- [How to Cut Labor Costs Without Cutting Staff](https://tableturnr.com/blog/how-to-reduce-restaurant-labor-costs/) (includes retention and scheduling fairness)
+- [Menu Engineering & Margin](https://tableturnr.com/blog/menu-engineering-the-matrix-that-prints-money/) (matrix + franchise margin case)
+- [Why 73% of Restaurant Tech Fails in Year One](https://tableturnr.com/blog/why-restaurant-tech-fails-in-year-one/) (GM-first design, AI evaluation)
+- [From Prototype to Production](https://tableturnr.com/blog/from-prototype-to-production/) (onboarding, first 48 hours, rollout meetings)
 
 ## Legal
 
