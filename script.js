@@ -313,24 +313,31 @@
         obs.observe(sectionEl);
     }
 
-    function openCalendlyWidget() {
-        var calendlyUrl = "https://calendly.com/lightspeed-insights/30min";
-        if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
-            window.Calendly.initPopupWidget({ url: calendlyUrl });
-            return;
+    var calendlyUrl = "https://calendly.com/rajeev-tableturnr/30min";
+
+    function ensureCalendlyAssets(cb) {
+        if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "https://assets.calendly.com/assets/external/widget.css";
+            document.head.appendChild(link);
         }
-        window.open(calendlyUrl, "_blank", "width=900,height=680");
+        if (window.Calendly) { cb(); return; }
+        var script = document.createElement("script");
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.onload = cb;
+        script.onerror = function () { window.open(calendlyUrl, "_blank"); };
+        document.head.appendChild(script);
     }
 
     window.openCalendly = function openCalendly() {
-        if (!window.Calendly) {
-            var script = document.createElement("script");
-            script.src = "https://assets.calendly.com/assets/external/widget.js";
-            script.onload = openCalendlyWidget;
-            document.head.appendChild(script);
-            return;
-        }
-        openCalendlyWidget();
+        ensureCalendlyAssets(function () {
+            if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
+                window.Calendly.initPopupWidget({ url: calendlyUrl });
+            } else {
+                window.open(calendlyUrl, "_blank");
+            }
+        });
     };
 
     window.openFreeTrial = function openFreeTrial() {

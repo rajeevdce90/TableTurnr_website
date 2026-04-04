@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | TableTurnr</title>
-    <meta name="description" content="TableTurnr pricing is tailored to your operation. Contact our team for a custom quote based on your locations, roles, and modules." />
+    <meta name="description" content="Simple, transparent pricing for TableTurnr. Choose Starter, Growth, or Enterprise to run smarter restaurants." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tableturnr.com/pricing/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Pricing | TableTurnr" />
-    <meta property="og:description" content="Pricing tailored to your restaurant operation. Contact sales for a custom quote." />
+    <meta property="og:description" content="Simple, transparent pricing. Choose the plan that fits your restaurant scale." />
     <meta property="og:url" content="https://tableturnr.com/pricing/" />
     <meta property="og:image" content="https://tableturnr.com/og-image.png" />
     <meta property="og:site_name" content="TableTurnr" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Pricing | TableTurnr" />
-    <meta name="twitter:description" content="Pricing tailored to your restaurant operation. Contact sales for a custom quote." />
+    <meta name="twitter:description" content="Simple, transparent pricing. Choose the plan that fits your restaurant scale." />
     <meta name="twitter:image" content="https://tableturnr.com/og-image.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,10 +32,60 @@
       gtag("js", new Date());
       gtag("config", "G-3MS0DYYYXY");
     </script>
+    <style>
+        .pricing-hero-section{background:url('../images/pricing1.png') center/cover no-repeat;padding:4rem 0 5rem;position:relative;overflow:visible}
+        .pricing-hero-section::before{content:'';position:absolute;inset:0;background:linear-gradient(165deg,rgba(13,14,18,.88) 0%,rgba(30,32,42,.82) 50%,rgba(42,45,56,.78) 100%)}
+        .pricing-hero-section h1{color:#fff;text-align:center;margin-bottom:.5rem}
+        .pricing-hero-section .hero-sub{color:rgba(255,255,255,.7);text-align:center;max-width:580px;margin:0 auto}
+
+        .pricing-toggle{display:inline-flex;align-items:center;gap:.25rem;background:rgba(255,255,255,.1);border-radius:999px;padding:5px;margin-top:1.25rem}
+        .pricing-toggle button{padding:.55rem 1.5rem;border:none;border-radius:999px;font-family:var(--font-sans);font-size:.95rem;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.65);transition:all var(--motion-fast) var(--easing-standard)}
+        .pricing-toggle button.active{background:#fff;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+        .pricing-toggle .annual-group{display:inline-flex;align-items:center;gap:0}
+        .pricing-toggle .annual-group button{padding-right:.2rem}
+        .pricing-toggle .save-badge{font-size:.8rem;font-weight:600;color:var(--accent);background:rgba(255,107,0,.18);padding:.2rem .65rem;border-radius:999px}
+
+        .pricing-hero-section .container{max-width:1620px;padding:0 12px}
+
+        .pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;width:90%;max-width:1620px;margin:2.5rem auto 0;align-items:stretch;padding:0}
+        @media(max-width:1200px){.pricing-cards{grid-template-columns:repeat(2,minmax(0,1fr));width:94%;max-width:980px}}
+        @media(max-width:768px){.pricing-cards{grid-template-columns:1fr;width:100%;max-width:460px;padding:0 12px}}
+
+        .price-card{display:grid;grid-template-rows:2rem 5rem 3.6rem 4.2rem 2rem 1fr;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.25rem 2rem;position:relative;text-align:left;transition:box-shadow var(--motion-medium) var(--easing-standard)}
+        .price-card:hover{box-shadow:var(--shadow-strong)}
+        .price-card.featured{border:2px solid var(--accent);box-shadow:0 8px 32px rgba(0,0,0,.18)}
+        .price-card .popular-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;padding:.3rem 1rem;border-radius:999px;white-space:nowrap;letter-spacing:.02em}
+        .price-card h3{font-size:1.35rem;margin:0;align-self:end}
+        .price-card .tier-desc{color:var(--text-muted);font-size:.92rem;line-height:1.5;align-self:start;margin:0}
+        .price-amount{display:flex;align-items:flex-end;gap:.2rem;font-size:2.6rem;font-weight:800;color:var(--text);line-height:1;align-self:center;white-space:nowrap}
+        .price-amount span{font-size:.95rem;font-weight:500;color:var(--text-muted)}
+        .price-amount.custom-price{font-size:1.95rem;letter-spacing:.01em}
+        .price-card .tier-cta{display:flex;align-items:center;justify-content:center;width:100%;height:3rem;border-radius:var(--radius-sm);font-weight:600;font-size:.95rem;text-decoration:none;align-self:center;transition:all var(--motion-fast) var(--easing-standard)}
+        .tier-cta-primary{background:var(--accent);color:#fff;border:none}
+        .tier-cta-primary:hover{background:var(--accent-strong)}
+        .tier-cta-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+        .tier-cta-outline:hover{background:var(--accent);color:#fff}
+
+        .tier-features-label{font-weight:700;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin:0;align-self:start;padding:.5rem 0 .4rem 0;border-bottom:1px solid var(--border)}
+        .tier-features{list-style:none;padding:0;margin:0;display:grid;grid-template-rows:repeat(8,3rem);gap:0;align-content:start}
+        .tier-features li{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--text-muted);line-height:1.4;padding:.35rem 0;border-bottom:1px solid var(--border)}
+        .tier-features li:last-child{border-bottom:none}
+        .tier-features li svg{flex-shrink:0}
+        .tier-features li.spacer{visibility:hidden;border-bottom:none}
+
+        .compare-section{overflow-x:auto;-webkit-overflow-scrolling:touch}
+        .compare-table{width:100%;border-collapse:collapse;min-width:700px;font-size:.9rem}
+        .compare-table th,.compare-table td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--border)}
+        .compare-table thead th{position:sticky;top:0;background:var(--surface);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
+        .compare-table thead th:not(:first-child){text-align:center;min-width:130px}
+        .compare-table td:not(:first-child){text-align:center;color:var(--text-muted)}
+        .compare-table .group-row td{font-weight:700;font-size:1.05rem;color:var(--text);background:var(--surface-deep);padding-top:1rem;padding-bottom:.65rem;border-bottom:2px solid var(--border)}
+        .compare-table .check{color:var(--accent);font-weight:700}
+        .compare-table .dash{color:#cbd5e1}
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
 
     <nav class="navbar" aria-label="Primary">
         <div class="container">
@@ -43,13 +93,12 @@
                 <img src="../logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
                 <span class="brand-text">TableTurnr</span>
             </a>
-
             <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
-
             <div class="nav-links" id="site-nav">
                 <a href="../platform/">Platform</a>
+                <a href="../pricing/">Pricing</a>
                 <a href="../customers/">Success Stories</a>
                 <a href="../blog/">Resources</a>
                 <a href="../demo/" class="nav-cta">Book a Demo</a>
@@ -59,76 +108,176 @@
 
     <main id="main-content">
 
-        <section class="hero platform-hero" style="background:var(--tt-bg)">
-            <div class="container" style="text-align:center;max-width:780px">
-                <p class="hero-eyebrow reveal" style="color:var(--tt-accent,#ff6b00)">Pricing</p>
-                <h1 class="reveal">Built for your operation,<br>priced for your reality.</h1>
-                <p class="hero-sub reveal">Every restaurant is different. Your pricing should reflect your locations, team size, and the modules you need.</p>
-            </div>
-        </section>
+        <!-- Hero + Pricing Cards -->
+        <section class="pricing-hero-section">
+            <div class="container" style="text-align:center;position:relative;z-index:1">
+                <h1 class="reveal">Simple, transparent pricing</h1>
+                <p class="hero-sub reveal">Everything you need to run smarter restaurants. Choose the plan that fits your scale.</p>
+                <div class="pricing-toggle reveal" id="billing-toggle">
+                    <button type="button" class="active" data-billing="monthly">Monthly</button>
+                    <span class="annual-group">
+                        <button type="button" data-billing="annual">Annual</button>
+                        <span class="save-badge">Save 10%</span>
+                    </span>
+                </div>
+                <div class="pricing-cards reveal">
 
-        <section class="section">
-            <div class="container" style="max-width:900px">
-                <div class="card-grid" style="gap:1.5rem">
+                    <!-- Starter -->
+                    <div class="price-card">
+                        <h3>Starter</h3>
+                        <p class="tier-desc">For independent restaurants getting started with data-driven decisions.</p>
+                        <div class="price-amount" data-monthly="149" data-annual="134"><span>$</span>149<span>/month</span></div>
+                        <a href="../demo/" class="tier-cta tier-cta-outline">Start Free Trial</a>
+                        <p class="tier-features-label">What's included</p>
+                        <ul class="tier-features">
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Up to 3 locations</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 5 team members</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Core analytics dashboard</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Revenue &amp; expense tracking</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> AI assistant access</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 200 invoice scans/month</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 30-day free trial</li>
+                            <li class="spacer">&nbsp;</li>
+                        </ul>
+                    </div>
 
-                    <article class="info-card reveal" style="text-align:center;padding:2.5rem 2rem">
-                        <div style="font-size:2rem;margin-bottom:0.75rem">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--tt-primary,#007AFF)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <h3>All-in-One Platform</h3>
-                        <p style="margin-bottom:1.5rem">Every plan includes Business 360 dashboard, demand forecasting, staffing intelligence, inventory alerts, and turn-time optimization.</p>
-                        <p style="font-size:0.9rem;color:var(--tt-text-secondary,#666)">No per-module fees. No surprise add-ons.</p>
-                    </article>
+                    <!-- Growth (featured) -->
+                    <div class="price-card featured">
+                        <span class="popular-tag">Most Popular</span>
+                        <h3>Growth</h3>
+                        <p class="tier-desc">For growing restaurant groups that need deeper insights and automation.</p>
+                        <div class="price-amount" data-monthly="249" data-annual="224"><span>$</span>249<span>/month</span></div>
+                        <a href="../demo/" class="tier-cta tier-cta-primary">Start Free Trial</a>
+                        <p class="tier-features-label">What's included</p>
+                        <ul class="tier-features">
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Up to 10 locations</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 25 team members</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Advanced analytics &amp; forecasting</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Menu engineering &amp; shift coverage</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Custom role-based access</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 1,000 invoice scans/month</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> TurnrCart ordering</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 30-day free trial</li>
+                        </ul>
+                    </div>
 
-                    <article class="info-card reveal" style="text-align:center;padding:2.5rem 2rem">
-                        <div style="font-size:2rem;margin-bottom:0.75rem">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--tt-primary,#007AFF)" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                        </div>
-                        <h3>Scales With You</h3>
-                        <p style="margin-bottom:1.5rem">Pricing adapts to your number of locations and team size. Single-unit operators and 50-location franchises both get a plan that fits.</p>
-                        <p style="font-size:0.9rem;color:var(--tt-text-secondary,#666)">From 1 location to 100+.</p>
-                    </article>
-
-                    <article class="info-card reveal" style="text-align:center;padding:2.5rem 2rem">
-                        <div style="font-size:2rem;margin-bottom:0.75rem">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--tt-primary,#007AFF)" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <h3>Full Admin Support</h3>
-                        <p style="margin-bottom:1.5rem">Every plan includes onboarding, data migration, POS integration, team training, and ongoing support at no extra cost.</p>
-                        <p style="font-size:0.9rem;color:var(--tt-text-secondary,#666)">Go live in 48 hours.</p>
-                    </article>
+                    <!-- Enterprise -->
+                    <div class="price-card">
+                        <h3>Enterprise</h3>
+                        <p class="tier-desc">For large-scale operations with custom needs and dedicated support.</p>
+                        <div class="price-amount custom-price" data-monthly="" data-annual="">Custom Pricing</div>
+                        <a href="../demo/" class="tier-cta tier-cta-outline">Talk to Us</a>
+                        <p class="tier-features-label">What's included</p>
+                        <ul class="tier-features">
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited locations &amp; team members</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Fully customizable permissions</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 12-month forecasting</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Full inventory management</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Custom approval workflows</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> 99.9% uptime SLA</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Dedicated account manager</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Priority SLA &amp; phone support</li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-        <section class="section" style="background:var(--tt-surface,#f8f9fb)">
-            <div class="container" style="max-width:700px;text-align:center">
-                <h2 class="section-title reveal">What's included in every plan</h2>
-                <div style="text-align:left;max-width:520px;margin:2rem auto 0">
-                    <ul style="list-style:none;padding:0;display:grid;gap:0.85rem">
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Business 360 real-time dashboard</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> AI demand forecasting (TurnrForesight)</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Staffing intelligence and labor optimization</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Inventory alerts, COGS tracking, and reorder triggers</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Table turn-time optimization</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> TurnrAgent AI assistant with proactive alerts</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Role-based access (GM, shift lead, regional director)</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> POS, scheduling, and supplier integrations</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Dedicated onboarding and admin support</li>
-                        <li class="reveal" style="display:flex;align-items:flex-start;gap:0.75rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Web, iOS, and Android access</li>
-                    </ul>
+        <!-- Feature Comparison -->
+
+        <section class="section" style="background:var(--surface)">
+            <div class="container" style="max-width:1100px">
+                <h2 class="section-title reveal" style="text-align:center">Compare all features</h2>
+                <p class="reveal" style="text-align:center;color:var(--text-muted);margin-bottom:2.5rem">A detailed breakdown of everything included in each plan.</p>
+                <div class="compare-section reveal">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Starter</th>
+                                <th>Growth</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Access & Roles -->
+                            <tr class="group-row"><td colspan="4">Access &amp; Roles</td></tr>
+                            <tr><td>Locations</td><td>Up to 3</td><td>Up to 10</td><td>Unlimited</td></tr>
+                            <tr><td>Team Members</td><td>Up to 5</td><td>Up to 25</td><td>Unlimited</td></tr>
+                            <tr><td>Roles</td><td>Admin, Manager, GM</td><td>Custom role-based access</td><td>Fully customizable permissions</td></tr>
+                            <tr><td>Data Filters</td><td>1D, 7D, 30D</td><td>All filters (incl. 90D, 180D, YTD)</td><td>All filters</td></tr>
+
+                            <!-- Core Analytics (TurnrSense) -->
+                            <tr class="group-row"><td colspan="4">Core Analytics (TurnrSense)</td></tr>
+                            <tr><td>Dashboard Access</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Revenue Trends</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Dine-in vs Delivery</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Staff Utilization</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Table Turn Time</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Shift Coverage</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Server Efficiency</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Menu Engineering</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+
+                            <!-- Financial Insights (TurnrTally) -->
+                            <tr class="group-row"><td colspan="4">Financial Insights (TurnrTally)</td></tr>
+                            <tr><td>Revenue vs Expenses</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Revenue Breakdown</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Expense Breakdown</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Revenue Comparison</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Efficiency Ratios</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>RevPATH</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+
+                            <!-- AI & Automation (TurnrAgent) -->
+                            <tr class="group-row"><td colspan="4">AI &amp; Automation (TurnrAgent)</td></tr>
+                            <tr><td>AI Assistant Access</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>SOP &amp; Policy Q&amp;A</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Context-Aware Insights</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Visual Insights (charts/graphs)</td><td class="dash">&mdash;</td><td>Limited</td><td>Advanced</td></tr>
+                            <tr><td>Cross-location Intelligence</td><td class="dash">&mdash;</td><td>Limited</td><td class="check">&check;</td></tr>
+
+                            <!-- Operations & Workflow -->
+                            <tr class="group-row"><td colspan="4">Operations &amp; Workflow</td></tr>
+                            <tr><td>Staffing Dashboard</td><td>Basic</td><td>Advanced</td><td>Full</td></tr>
+                            <tr><td>FOH/BOH Coverage Grid</td><td class="check">&check;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Staff Performance Insights</td><td>Top 5 employees</td><td>Full team</td><td>Full team</td></tr>
+                            <tr><td>Loaned Staff Tracking</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>TurnrCart (Ordering)</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Contest Boards</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+                            <tr><td>Inventory Management</td><td>Basic</td><td>Advanced</td><td>Full Suite</td></tr>
+
+                            <!-- Invoice Processing (SnapTurnr) -->
+                            <tr class="group-row"><td colspan="4">Invoice Processing (SnapTurnr)</td></tr>
+                            <tr><td>Invoice Scanning</td><td>Up to 200/month</td><td>Up to 1000/month</td><td>Unlimited</td></tr>
+                            <tr><td>Approval Workflows</td><td class="dash">&mdash;</td><td class="check">&check;</td><td>Custom workflows</td></tr>
+
+                            <!-- Forecasting & Advanced Capabilities -->
+                            <tr class="group-row"><td colspan="4">Forecasting &amp; Advanced Capabilities</td></tr>
+                            <tr><td>TurnrForecast</td><td>Up to 1 month</td><td>Up to 6 months</td><td>Up to 12 months</td></tr>
+                            <tr><td>Usage Analytics (Admin)</td><td class="dash">&mdash;</td><td class="check">&check;</td><td class="check">&check;</td></tr>
+
+                            <!-- Support & Reliability -->
+                            <tr class="group-row"><td colspan="4">Support &amp; Reliability</td></tr>
+                            <tr><td>Email Support</td><td>24x7</td><td>24x7</td><td>24x7</td></tr>
+                            <tr><td>Live Chat</td><td class="dash">&mdash;</td><td>24x5</td><td>24x5</td></tr>
+                            <tr><td>Phone Support</td><td class="dash">&mdash;</td><td>24x5</td><td>24x5</td></tr>
+                            <tr><td>Uptime SLA</td><td>Standard</td><td>99.5%</td><td>99.9%</td></tr>
+                            <tr><td>Dedicated Account Manager</td><td class="dash">&mdash;</td><td class="dash">&mdash;</td><td class="check">&check;</td></tr>
+                            <tr><td>Priority SLA</td><td class="dash">&mdash;</td><td class="dash">&mdash;</td><td class="check">&check;</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
+        <!-- CTA -->
         <section class="final-cta story-section-bg" style="background-image:url('../images/cta-chefs-bg.jpg')">
             <div class="story-section-overlay" style="background:linear-gradient(180deg,rgba(15,23,42,0.78) 0%,rgba(15,23,42,0.60) 50%,rgba(15,23,42,0.72) 100%)"></div>
             <div class="container" style="position:relative;z-index:2;text-align:center">
-                <h2 class="reveal">Get pricing for your operation</h2>
-                <p class="reveal">Tell us about your restaurants and we'll build a custom quote in 24 hours.</p>
+                <h2 class="reveal">Ready to transform your restaurant operations?</h2>
+                <p class="reveal">Start your 30-day free trial today. No credit card required.</p>
                 <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
-                    <a href="../demo/" class="btn btn-primary">Book a Demo</a>
+                    <a href="../demo/" class="btn btn-primary">Get Started Free</a>
                     <a href="mailto:sales@tableturnr.com" class="btn btn-secondary" style="border-color:rgba(255,255,255,0.3);color:#fff">Email Sales</a>
                 </div>
                 <p class="cta-reassurance reveal">Free demo. Zero commitment. No credit card required.</p>
@@ -146,6 +295,7 @@
                 </a>
                 <nav class="footer-nav">
                     <a href="../platform/">Platform</a>
+                    <a href="../pricing/">Pricing</a>
                     <a href="../customers/">Success Stories</a>
                     <a href="../blog/">Resources</a>
                     <a href="../support/">Support</a>
@@ -165,5 +315,28 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        (function () {
+            var toggle = document.getElementById("billing-toggle");
+            if (!toggle) return;
+            var buttons = toggle.querySelectorAll("button[data-billing]");
+            var amounts = document.querySelectorAll(".price-amount[data-monthly]");
+
+            function setBilling(mode) {
+                buttons.forEach(function (b) { b.classList.toggle("active", b.dataset.billing === mode); });
+                amounts.forEach(function (el) {
+                    var m = el.dataset.monthly;
+                    var a = el.dataset.annual;
+                    if (!m && !a) return;
+                    var val = mode === "annual" ? a : m;
+                    el.innerHTML = "<span>$</span>" + val + "<span>/month</span>";
+                });
+            }
+
+            buttons.forEach(function (b) {
+                b.addEventListener("click", function () { setBilling(b.dataset.billing); });
+            });
+        })();
+    </script>
 </body>
 </html>
