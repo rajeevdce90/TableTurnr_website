@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=20260404" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=20260404" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=20260404" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20260404" />
+    <link rel="manifest" href="/site.webmanifest?v=20260404" />
+    <title>ROI Calculator | TableTurnr</title>
+    <meta name="description" content="Calculate your restaurant's potential ROI from TableTurnr. See savings across labour, food cost, forecasting, and admin with transparent, editable assumptions." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tableturnr.com/roi-calculator/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ROI Calculator | TableTurnr" />
+    <meta property="og:description" content="See exactly how much TableTurnr can save your restaurant operation — with transparent assumptions you can adjust." />
+    <meta property="og:url" content="https://tableturnr.com/roi-calculator/" />
+    <meta property="og:image" content="https://tableturnr.com/og-image.png" />
+    <meta property="og:site_name" content="TableTurnr" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ROI Calculator | TableTurnr" />
+    <meta name="twitter:description" content="Transparent ROI calculator for restaurant operations — see savings by module." />
+    <meta name="twitter:image" content="https://tableturnr.com/og-image.png" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"TableTurnr ROI Calculator","description":"Calculate potential ROI from restaurant operations intelligence.","url":"https://tableturnr.com/roi-calculator/","applicationCategory":"BusinessApplication","publisher":{"@type":"Organization","name":"TableTurnr","url":"https://tableturnr.com"}}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../theme.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="calculator.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MS0DYYYXY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-3MS0DYYYXY");
+    </script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Primary">
+        <div class="container">
+            <a href="../" class="nav-brand">
+                <img src="../logo.jpeg" alt="TableTurnr" class="main-logo" width="36" height="36" />
+                <span class="brand-text">TableTurnr</span>
+            </a>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="nav-links" id="site-nav">
+                <a href="../platform/">Platform</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Pricing <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:3px"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="../pricing/">Plans &amp; Pricing</a>
+                        <a href="../roi-calculator/">ROI Calculator <span class="nav-new-badge">NEW</span></a>
+                    </div>
+                </div>
+                <a href="../customers/">Success Stories</a>
+                <a href="../blog/">Resources</a>
+                <a href="../demo/" class="nav-cta">Book a Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="roi-calc">
+        <div class="roi-progress">
+            <div class="roi-progress-inner">
+                <div class="roi-progress-bar"><div class="roi-progress-fill" id="roi-progress-fill" style="width:0%"></div></div>
+                <div class="roi-progress-steps">
+                    <span class="roi-progress-step active" data-step="1">1. Your Business</span>
+                    <span class="roi-progress-step" data-step="2">2. Fine-Tune</span>
+                    <span class="roi-progress-step" data-step="3">3. Your ROI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 1 — BUSINESS PROFILE -->
+        <div class="roi-step active" data-step="1">
+            <div class="roi-wrap">
+                <h2 class="roi-step-title">Tell us about your business</h2>
+                <p class="roi-step-sub">We'll set industry benchmarks and tailor the analysis to your segment.</p>
+
+                <div class="roi-field-group">
+                    <label class="roi-label" for="roi-segment">Restaurant segment</label>
+                    <select class="roi-select" id="roi-segment" aria-label="Restaurant segment">
+                        <option value="fine_dining">Fine Dining</option>
+                        <option value="casual_dining" selected>Casual Dining</option>
+                        <option value="fast_casual">Fast Casual</option>
+                        <option value="qsr">QSR</option>
+                        <option value="coffee_bakery">Coffee &amp; Bakery</option>
+                        <option value="ghost_kitchen">Ghost Kitchen</option>
+                        <option value="franchise">Franchise Group</option>
+                    </select>
+                </div>
+
+                <div class="roi-row">
+                    <div class="roi-field-group">
+                        <label class="roi-label" for="roi-revenue">Annual revenue per location</label>
+                        <div class="roi-input-with-prefix">
+                            <select class="roi-prefix" id="roi-currency" aria-label="Currency" style="border-radius:8px 0 0 8px;min-width:60px">
+                                <option value="USD">$</option>
+                                <option value="GBP">&pound;</option>
+                                <option value="EUR">&euro;</option>
+                                <option value="AUD">A$</option>
+                            </select>
+                            <input type="number" class="roi-input" id="roi-revenue" value="1200000" min="50000" step="10000" aria-label="Annual revenue per location" />
+                        </div>
+                    </div>
+                    <div class="roi-field-group">
+                        <label class="roi-label" for="roi-locations">Number of locations</label>
+                        <input type="number" class="roi-input" id="roi-locations" value="1" min="1" max="500" aria-label="Number of locations" />
+                    </div>
+                </div>
+
+                <div class="roi-field-group">
+                    <label class="roi-label" for="roi-pos">Current POS system</label>
+                    <select class="roi-select" id="roi-pos" aria-label="Current POS system">
+                        <option value="toast">Toast</option>
+                        <option value="square">Square</option>
+                        <option value="lightspeed">Lightspeed</option>
+                        <option value="clover">Clover</option>
+                        <option value="revel">Revel</option>
+                        <option value="aloha">Aloha</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div id="roi-step1-errors"></div>
+
+                <div class="roi-step-nav">
+                    <div></div>
+                    <button class="roi-btn roi-btn-primary" id="roi-step1-next">Continue <span aria-hidden="true">&rarr;</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 2 — FINE-TUNE -->
+        <div class="roi-step" data-step="2">
+            <div class="roi-wrap">
+                <h2 class="roi-step-title">Fine-tune your numbers</h2>
+                <p class="roi-step-sub">We've pre-filled industry averages for <strong id="roi-segment-label">Casual Dining</strong>. Adjust anything that differs from your operation.</p>
+
+                <div class="roi-key-metrics">
+                    <div class="roi-key-metric">
+                        <div class="roi-label-row">
+                            <label class="roi-label" for="roi-labour-pct">Labour cost %</label>
+                            <span class="roi-benchmark" data-benchmark-for="roi-labour-pct">Industry avg: 33%</span>
+                        </div>
+                        <input type="number" class="roi-input" id="roi-labour-pct" value="33" min="10" max="60" step="0.5" aria-label="Labour cost percentage" />
+                    </div>
+                    <div class="roi-key-metric">
+                        <div class="roi-label-row">
+                            <label class="roi-label" for="roi-food-pct">Food cost %</label>
+                            <span class="roi-benchmark" data-benchmark-for="roi-food-pct">Industry avg: 32%</span>
+                        </div>
+                        <input type="number" class="roi-input" id="roi-food-pct" value="32" min="10" max="50" step="0.5" aria-label="Food cost percentage" />
+                    </div>
+                    <div class="roi-key-metric">
+                        <div class="roi-label-row">
+                            <label class="roi-label" for="roi-waste-pct">Food waste %</label>
+                            <span class="roi-benchmark" data-benchmark-for="roi-waste-pct">Industry avg: 8%</span>
+                        </div>
+                        <input type="number" class="roi-input" id="roi-waste-pct" value="8" min="2" max="20" step="0.5" aria-label="Food waste percentage" />
+                    </div>
+                    <div class="roi-key-metric">
+                        <div class="roi-label-row">
+                            <label class="roi-label" for="roi-forecast-acc">Forecast accuracy %</label>
+                            <span class="roi-benchmark" data-benchmark-for="roi-forecast-acc">Industry avg: 68%</span>
+                        </div>
+                        <input type="number" class="roi-input" id="roi-forecast-acc" value="68" min="40" max="95" step="1" aria-label="Forecast accuracy percentage" />
+                    </div>
+                </div>
+
+                <details class="roi-advanced-toggle">
+                    <summary>Advanced settings</summary>
+                    <div class="roi-advanced-body">
+                        <div class="roi-row">
+                            <div class="roi-field-group">
+                                <label class="roi-label" for="roi-manager-rate">Manager hourly rate</label>
+                                <input type="number" class="roi-input" id="roi-manager-rate" value="22" min="10" max="80" step="0.5" aria-label="Manager hourly rate" />
+                            </div>
+                            <div class="roi-field-group">
+                                <label class="roi-label" for="roi-overtime-incidents">Overtime incidents/month</label>
+                                <input type="number" class="roi-input" id="roi-overtime-incidents" value="8" min="0" max="60" aria-label="Overtime incidents per month" />
+                            </div>
+                        </div>
+                        <div class="roi-row">
+                            <div class="roi-field-group">
+                                <label class="roi-label" for="roi-sched-hours">Scheduling hours/week</label>
+                                <input type="number" class="roi-input" id="roi-sched-hours" value="6" min="0" max="40" aria-label="Scheduling hours per week" />
+                            </div>
+                            <div class="roi-field-group">
+                                <label class="roi-label" for="roi-invoices-week">Invoices/week</label>
+                                <input type="number" class="roi-input" id="roi-invoices-week" value="25" min="0" max="200" aria-label="Invoices per week" />
+                            </div>
+                        </div>
+                        <div class="roi-row">
+                            <div class="roi-field-group">
+                                <label class="roi-label" for="roi-reporting-hours">Reporting hours/week</label>
+                                <input type="number" class="roi-input" id="roi-reporting-hours" value="4" min="0" max="20" aria-label="Reporting hours per week" />
+                            </div>
+                            <div class="roi-field-group">
+                                <label class="roi-label" for="roi-variance-pct">Purchase variance %</label>
+                                <input type="number" class="roi-input" id="roi-variance-pct" value="3" min="0" max="10" step="0.5" aria-label="Purchase variance percentage" />
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <div id="roi-step2-warnings"></div>
+
+                <div class="roi-step-nav">
+                    <button class="roi-btn roi-btn-ghost" id="roi-step2-back"><span aria-hidden="true">&larr;</span> Back</button>
+                    <button class="roi-btn roi-btn-primary" id="roi-step2-next">Calculate My ROI <span aria-hidden="true">&rarr;</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3 — RESULTS -->
+        <div class="roi-step" data-step="3">
+            <div class="roi-wrap roi-wrap-wide">
+
+                <div id="roi-negative-msg" class="roi-negative-msg">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="#EF4444"/></svg>
+                    Net ROI is negative at this volume. Try increasing locations or revenue.
+                </div>
+
+                <!-- Scenario Cards -->
+                <div class="roi-scenario-cards" id="roi-scenario-cards">
+                    <div class="roi-scenario-card" data-scenario="conservative">
+                        <div class="roi-scenario-badge">Conservative</div>
+                        <div class="roi-scenario-savings" id="roi-sc-con-savings">$0</div>
+                        <div class="roi-scenario-sublabel">annual net savings</div>
+                        <div class="roi-scenario-details">
+                            <div class="roi-scenario-row"><span>Payback</span><strong id="roi-sc-con-payback">—</strong></div>
+                            <div class="roi-scenario-row"><span>ROI</span><strong id="roi-sc-con-roi">—</strong></div>
+                            <div class="roi-scenario-row"><span>Cost</span><strong id="roi-sc-con-cost">—</strong></div>
+                        </div>
+                    </div>
+                    <div class="roi-scenario-card featured" data-scenario="balanced">
+                        <div class="roi-scenario-recommended">Recommended</div>
+                        <div class="roi-scenario-badge">Balanced</div>
+                        <div class="roi-scenario-savings" id="roi-sc-bal-savings">$0</div>
+                        <div class="roi-scenario-sublabel">annual net savings</div>
+                        <div class="roi-scenario-details">
+                            <div class="roi-scenario-row"><span>Payback</span><strong id="roi-sc-bal-payback">—</strong></div>
+                            <div class="roi-scenario-row"><span>ROI</span><strong id="roi-sc-bal-roi">—</strong></div>
+                            <div class="roi-scenario-row"><span>Cost</span><strong id="roi-sc-bal-cost">—</strong></div>
+                        </div>
+                    </div>
+                    <div class="roi-scenario-card" data-scenario="optimistic">
+                        <div class="roi-scenario-badge">Optimistic</div>
+                        <div class="roi-scenario-savings" id="roi-sc-opt-savings">$0</div>
+                        <div class="roi-scenario-sublabel">annual net savings</div>
+                        <div class="roi-scenario-details">
+                            <div class="roi-scenario-row"><span>Payback</span><strong id="roi-sc-opt-payback">—</strong></div>
+                            <div class="roi-scenario-row"><span>ROI</span><strong id="roi-sc-opt-roi">—</strong></div>
+                            <div class="roi-scenario-row"><span>Cost</span><strong id="roi-sc-opt-cost">—</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Savings Waterfall -->
+                <h3 class="roi-section-title">Where Your Savings Come From</h3>
+                <div class="roi-chart-container">
+                    <div class="roi-waterfall" id="roi-waterfall"></div>
+                </div>
+
+                <!-- Module Cards -->
+                <h3 class="roi-section-title">Savings by Module</h3>
+                <div class="roi-cards-grid">
+                    <div class="roi-module-card">
+                        <div class="roi-module-header">
+                            <div class="roi-module-ring" id="roi-ring-labour"></div>
+                            <div>
+                                <h4>Scheduling &amp; Labour</h4>
+                                <div class="roi-module-total" id="roi-mod-labour-total">$0</div>
+                            </div>
+                        </div>
+                        <div id="roi-card-labour"></div>
+                    </div>
+                    <div class="roi-module-card">
+                        <div class="roi-module-header">
+                            <div class="roi-module-ring" id="roi-ring-food"></div>
+                            <div>
+                                <h4>Food &amp; Inventory</h4>
+                                <div class="roi-module-total" id="roi-mod-food-total">$0</div>
+                            </div>
+                        </div>
+                        <div id="roi-card-food"></div>
+                    </div>
+                    <div class="roi-module-card">
+                        <div class="roi-module-header">
+                            <div class="roi-module-ring" id="roi-ring-forecast"></div>
+                            <div>
+                                <h4>Revenue Forecasting</h4>
+                                <div class="roi-module-total" id="roi-mod-forecast-total">$0</div>
+                            </div>
+                        </div>
+                        <div id="roi-card-forecast"></div>
+                    </div>
+                    <div class="roi-module-card">
+                        <div class="roi-module-header">
+                            <div class="roi-module-ring" id="roi-ring-admin"></div>
+                            <div>
+                                <h4>Admin &amp; Back-Office</h4>
+                                <div class="roi-module-total" id="roi-mod-admin-total">$0</div>
+                            </div>
+                        </div>
+                        <div id="roi-card-admin"></div>
+                    </div>
+                </div>
+
+                <!-- Sensitivity -->
+                <h3 class="roi-section-title">Sensitivity Analysis</h3>
+                <div class="roi-chart-container">
+                    <div class="roi-chart-title">Net ROI vs. Annual Revenue per Location</div>
+                    <div id="roi-chart-sensitivity"></div>
+                </div>
+
+                <!-- CTA -->
+                <div class="roi-cta-strip">
+                    <a href="../demo/" class="roi-btn roi-btn-primary roi-btn-lg" id="roi-book-demo">Book a Demo</a>
+                    <a href="../customers/" class="roi-btn roi-btn-outline">See Success Stories</a>
+                    <button class="roi-btn roi-btn-outline" id="roi-download-pdf">Download PDF</button>
+                    <button class="roi-btn roi-btn-outline" id="roi-share">Share Results</button>
+                    <button class="roi-btn roi-btn-ghost" id="roi-step3-back"><span aria-hidden="true">&larr;</span> Adjust Inputs</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top:0">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> TableTurnr. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy/">Privacy</a>
+                    <a href="../terms/">Terms</a>
+                    <a href="../cookies/">Cookies</a>
+                    <a href="../account-deletion/">Account Deletion</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="benchmarks.js"></script>
+    <script src="charts.js"></script>
+    <script src="calculator.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
