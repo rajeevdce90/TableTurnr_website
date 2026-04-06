@@ -46,8 +46,9 @@ TableTurnr gives restaurant managers, shift leads, and staff a single platform t
 - [Support](https://tableturnr.com/support/)
 - [Resources](https://tableturnr.com/resources/)
 
-## Blog Articles (7 guides)
+## Blog Articles (8 guides)
 
+- [Staff Retention and Technology: What the Data Shows](https://tableturnr.com/blog/staff-retention-and-technology-data/) (turnover costs, scheduling stability, leading indicators)
 - [Restaurant Management Tips: The Complete Operator's Guide](https://tableturnr.com/blog/restaurant-management-tips/)
 - [Forecasting & Daily Operating Control](https://tableturnr.com/blog/forecast-accuracy-why-98-changes-everything/) (forecast accuracy, morning metrics, daily P&L)
 - [The $2.8 Trillion Problem: Data Gaps in Restaurant Ops](https://tableturnr.com/blog/data-gaps-restaurant-ops/) (includes themes from time-waste and guesswork articles)
