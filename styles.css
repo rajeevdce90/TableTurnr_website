@@ -7894,16 +7894,21 @@ html {
 /* Footer social links */
 .footer-social {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     margin-bottom: 1rem;
+    align-items: center;
 }
 .footer-social a {
     color: var(--tt-dark-cta);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.2s ease;
 }
 .footer-social a:hover {
-    text-decoration: underline;
+    opacity: 0.75;
 }
 
 /* FAQ Section (SEO) */
